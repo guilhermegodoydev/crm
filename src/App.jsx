@@ -22,14 +22,14 @@ export default function App() {
     }
   ]);
 
-  function onDelClienteClick(id) {
+  function deletarCliente(id) {
     setClientes(clientes.filter(cliente => cliente.id !== id));
   }
 
   return (
     <div>
       <ClienteForm />
-      <ClienteList clientes={clientes} onDelClienteClick={onDelClienteClick} />
+      <ClienteList clientes={clientes} deletarCliente={deletarCliente} />
     </div>
   )
 }

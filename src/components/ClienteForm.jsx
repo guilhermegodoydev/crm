@@ -1,0 +1,42 @@
+const estiloInput = "border border-gray-300 rounded-sm block w-full";
+
+export default function ClienteForm() {
+    return (
+        <div>
+            <h1>Cadastro do Cliente</h1>
+            <form className="shadow-md p-4 bg-white rounded-sm border-2 border-gray-200 flex flex-col space-y-2">
+                
+                <div>
+                    <label htmlFor="nome">Nome:</label>
+                    <input type="text" id="nome" className={estiloInput}/>
+                </div>
+
+                <div>
+                    <label htmlFor="email">E-mail:</label>
+                    <input type="email" id="email" className={estiloInput}/>
+                </div>
+
+                <div className="flex gap-4">
+                    <div className="flex-1">
+                        <label htmlFor="telefone">Telefone:</label>
+                        <input type="tel" id="telefone" className={estiloInput}/>
+                    </div>
+                    <div className="flex-1">
+                        <label htmlFor="status">Status:</label>
+                        <select id="status" className={estiloInput}>
+                            <option value="ativo">Ativo</option>
+                            <option value="inativo">Inativo</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div>
+                    <label htmlFor="observacoes">Observações:</label>
+                    <textarea id="observacoes" className={estiloInput}></textarea>
+                </div>
+
+                <button className="mt-4">Enviar</button>
+            </form>
+        </div>
+    )
+}

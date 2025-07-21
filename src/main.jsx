@@ -2,7 +2,7 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import App from './App.jsx'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import ClienteEditPage from './pages/clienteEditPage.jsx'
+import ClienteEdit from './pages/ClienteEdit.jsx'
 
 const router = createBrowserRouter([
   {
@@ -11,7 +11,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/clientEdit",
-    element: <ClienteEditPage />
+    element: <ClienteEdit />
   }
 ])
 

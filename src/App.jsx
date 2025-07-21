@@ -26,9 +26,13 @@ export default function App() {
     setClientes(clientes.filter(cliente => cliente.id !== id));
   }
 
+  function adicionarCliente(novoCliente) {
+    setClientes([...clientes, { id: clientes.length + 1, ...novoCliente }]);
+  }
+
   return (
     <div>
-      <ClienteForm />
+      <ClienteForm adicionarCliente={adicionarCliente} />
       <ClienteList clientes={clientes} deletarCliente={deletarCliente} />
     </div>
   )

@@ -17,44 +17,41 @@ export default function ClienteForm({ adicionarCliente }) {
     }
 
     return (
-        <div>
-            <h1>Cadastro do Cliente</h1>
-            <form className="shadow-md p-4 bg-white rounded-sm border-2 border-gray-200 flex flex-col space-y-2">
-                
-                <div>
-                    <label htmlFor="nome">Nome:</label>
-                    <input type="text" id="nome" className={estiloInput} onChange={alterar}/>
-                </div>
+        <form className="card flex flex-col space-y-2">
+            
+            <div>
+                <label htmlFor="nome">Nome:</label>
+                <input type="text" id="nome" className={estiloInput} onChange={alterar}/>
+            </div>
 
-                <div>
-                    <label htmlFor="email">E-mail:</label>
-                    <input type="email" id="email" className={estiloInput} onChange={alterar}/>
-                </div>
+            <div>
+                <label htmlFor="email">E-mail:</label>
+                <input type="email" id="email" className={estiloInput} onChange={alterar}/>
+            </div>
 
-                <div className="flex gap-4">
-                    <div className="flex-1">
-                        <label htmlFor="telefone">Telefone:</label>
-                        <input type="tel" id="telefone" className={estiloInput} onChange={alterar}/>
-                    </div>
-                    <div className="flex-1">
-                        <label htmlFor="status">Status:</label>
-                        <select id="status" className={estiloInput} onChange={alterar}>
-                            <option value="ativo">Ativo</option>
-                            <option value="inativo">Inativo</option>
-                        </select>
-                    </div>
+            <div className="flex gap-4">
+                <div className="flex-1">
+                    <label htmlFor="telefone">Telefone:</label>
+                    <input type="tel" id="telefone" className={estiloInput} onChange={alterar}/>
                 </div>
-
-                <div>
-                    <label htmlFor="observacoes">Observações:</label>
-                    <textarea id="observacoes" className={estiloInput} onChange={alterar}></textarea>
+                <div className="flex-1">
+                    <label htmlFor="status">Status:</label>
+                    <select id="status" className={estiloInput} onChange={alterar}>
+                        <option value="ativo">Ativo</option>
+                        <option value="inativo">Inativo</option>
+                    </select>
                 </div>
+            </div>
 
-                <button className="mt-4" onClick={(e) => {
-                    e.preventDefault();
-                    adicionarCliente(novoCliente)
-                }}>Enviar</button>
-            </form>
-        </div>
+            <div>
+                <label htmlFor="observacoes">Observações:</label>
+                <textarea id="observacoes" className={estiloInput} onChange={alterar}></textarea>
+            </div>
+
+            <button className="mt-4" onClick={(e) => {
+                e.preventDefault();
+                adicionarCliente(novoCliente)
+            }}>Enviar</button>
+        </form>
     )
 }

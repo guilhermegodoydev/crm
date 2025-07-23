@@ -1,4 +1,4 @@
-import ClienteForm from "./components/ClienteForm";
+import Header from "./components/Header";
 import ClienteList from "./components/ClienteList";
 import { useState } from "react";
 
@@ -32,7 +32,7 @@ export default function App() {
 
   return (
     <div>
-      <ClienteForm adicionarCliente={adicionarCliente} />
+      <Header />
       <ClienteList clientes={clientes} deletarCliente={deletarCliente} />
     </div>
   )

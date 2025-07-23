@@ -13,7 +13,7 @@ export default function ClienteCard({ cliente, deletarCliente }) {
     }
 
     return (
-        <div className="relative shadow-md p-4 bg-white rounded-sm border-2 border-gray-200 mb-4">
+        <div className="card relative mb-4">
             <h1>{cliente.nome}</h1>
             <p>{cliente.email}</p>
             <p>{cliente.telefone}</p>

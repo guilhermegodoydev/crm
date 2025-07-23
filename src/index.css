@@ -5,3 +5,9 @@
         @apply bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-600 transition-colors duration-300 cursor-pointer;
     }
 }
+
+@layer utilities {
+    .card {
+        @apply shadow-md p-4 bg-white rounded-sm border-2 border-gray-200;
+    }
+}

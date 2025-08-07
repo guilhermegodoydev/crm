@@ -61,5 +61,3 @@ export const patch = async (id, propName, propNewValue) => {
   );
   return res.rows;
 };
-
-selectAll();

@@ -2,8 +2,7 @@ import { pool } from "../db/db.js";
 
 export const selectAll = async () => {
   const res = await pool.query("SELECT * FROM customer");
-  //return res.rows;
-  console.log(res.rows);
+  return res.rows;
 };
 
 export const selectById = async (id) => {
@@ -20,10 +19,10 @@ export const create = async (
   description
 ) => {
   const res = await pool.query(
-    `INSERT INTO customer(name,email,phone,address,source,created_at,description) VALUES ($1,$2,$3,$4,$5,now(),$6)`,
+    `INSERT INTO customer(name,email,phone,address,source,created_at,description) VALUES ($1,$2,$3,$4,$5,now(),$6) RETURNING *`,
     [name, email, phone, address, source, description]
   );
-  console.log(res.rows);
+  return res.rows;
 };
 
 export const update = async (
@@ -36,7 +35,7 @@ export const update = async (
   description
 ) => {
   const res = await pool.query(
-    `UPDATE customer SET name = $1, email = $2, phone = $3, address = $4, source = $5, description = $6 WHERE id = $7`,
+    `UPDATE customer SET name = $1, email = $2, phone = $3, address = $4, source = $5, description = $6 WHERE id = $7 RETURNING *`,
     [name, email, phone, address, source, description, id]
   );
   return res.rows;

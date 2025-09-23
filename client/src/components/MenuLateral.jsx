@@ -3,7 +3,7 @@ import { useState } from 'react';
 
 const estiloElementos = "flex gap-4 cursor-pointer border-b border-white text-white p-2 hover:bg-blue-700 hover:font-bold";
 
-function MenuLateral() {
+export default function MenuLateral() {
     const [visivel, setVisivel] = useState(false);
 
     return (
@@ -27,5 +27,3 @@ function MenuLateral() {
         </div>
     )   
 }
-
-export default MenuLateral;

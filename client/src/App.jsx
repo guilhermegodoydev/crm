@@ -1,8 +1,12 @@
+import GraficoClientes from "./components/graficos/GraficoClientes";
 import MenuLateral from "./components/MenuLateral";
 
 function App() {
     return (
-        <MenuLateral/>        
+        <main>
+            <MenuLateral/>   
+            <GraficoClientes/>     
+        </main>
     )
 }
 

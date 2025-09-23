@@ -6,8 +6,7 @@ function App() {
     return (
         <main>
             <MenuLateral/>   
-            <GraficoClientes/>     
-            <GraficoVendas/>
+            
         </main>
     )
 }

@@ -1,10 +1,10 @@
-export default function FiltroGrafico({produtos, label}) {
+export default function FiltroGrafico({opcoes, label, onChange}) {
     return (
         <div className="flex gap-5">
-            <p>{label}</p>
-            <select name="produtos" id="produtos" className="w-35"> 
-                {produtos.map(produto => (
-                   <option key={produto.id} value={produto.id}>{produto.nome}</option> 
+            <label htmlFor="produtos">{label}</label>
+            <select name="produtos" id="produtos" className="w-35 border rounded-sm bg-gray-100" onChange={onChange}> 
+                {opcoes.map(opcao => (
+                   <option key={opcao.id} value={opcao.id}>{opcao.nome}</option> 
                 ))}
             </select>
         </div>

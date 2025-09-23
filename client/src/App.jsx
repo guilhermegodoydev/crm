@@ -1,4 +1,5 @@
 import GraficoClientes from "./components/graficos/GraficoClientes";
+import GraficoVendas from "./components/graficos/GraficoVendas";
 import MenuLateral from "./components/MenuLateral";
 
 function App() {
@@ -6,6 +7,7 @@ function App() {
         <main>
             <MenuLateral/>   
             <GraficoClientes/>     
+            <GraficoVendas/>
         </main>
     )
 }

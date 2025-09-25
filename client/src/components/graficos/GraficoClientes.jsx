@@ -15,13 +15,13 @@ const dados = [
     { nome: "Dezembro", novosClientes: 1100, regular: 800, premium: 300 },
 ];
 
-export default function GraficoClientes() {
+export default function GraficoClientes({ className }) {
     return (
-        <div style={{height: 300}}>
+        <div className={`h-75 w-full ${className}`}>
             <h1>Gráfico de Novos Clientes</h1>
             <ResponsiveContainer>
                 <LineChart data={dados}>
-                    <CartesianGrid strokeDasharray="4 4"/>
+                    <CartesianGrid strokeDasharray="3 3"/>
                     <XAxis dataKey="nome"/>
                     <YAxis dataKey="novosClientes"/>
                     <Line dataKey="novosClientes" name="Novos Clientes" type="monotone" stroke="#0d00ffff"/>

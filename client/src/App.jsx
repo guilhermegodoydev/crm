@@ -1,11 +1,11 @@
-import GraficoNovosClientes from "./components/graficos/GraficoNovosClientes";
 import MenuLateral from "./components/MenuLateral";
+import Dashboard from "./screens/Dashboard";
 
 function App() {
     return (
         <main>
             <MenuLateral/>   
-            <GraficoNovosClientes/>
+            <Dashboard />
         </main>
     )
 }

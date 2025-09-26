@@ -11,7 +11,7 @@ const dados = [
 
 export default function Funil({ className }) {
     return (
-        <div className={`w-full h-96 ${className}`}>
+        <div className={className}>
             <ResponsiveContainer>
                 <BarChart data={dados}>
                     <CartesianGrid strokeDasharray="3 3"/>

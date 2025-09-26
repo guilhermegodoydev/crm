@@ -22,7 +22,7 @@ export default function GraficoClientes({ className }) {
     const taxaFormatada = `${taxaPositiva ? '+' : ''} ${Math.abs(taxaCrescimento)}%`;
 
     return (
-        <div className={`h-75 w-full ${className}`}>
+        <div className={className}>
             <h1>Gráfico de Novos Clientes</h1>
             <p className={taxaPositiva ? "text-green-500" : "text-red-500"}>Taxa de Crescimento: {taxaFormatada}</p>
             <ResponsiveContainer>

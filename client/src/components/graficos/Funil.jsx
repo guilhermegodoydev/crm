@@ -1,4 +1,4 @@
-import { Bar, BarChart, Legend, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
+import { Bar, BarChart, LabelList, Legend, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
 
 const dados = [
     { nome: 'Lead Capturado', regular: 4000, premium: 2400, },
@@ -11,11 +11,12 @@ const dados = [
 
 export default function Funil({ className }) {
     return (
-        <div className={className}>
+        <div className={`container-grafico ${className}`}>
+            <h2>Funil de Vendas</h2>
             <ResponsiveContainer>
                 <BarChart data={dados} layout="vertical">
                     <XAxis type="number"/>
-                    <YAxis dataKey="nome" type="category"/>
+                    <YAxis dataKey="nome" type="category" width={95}/>
                     <Bar dataKey="regular" stackId="a" fill="#4400ffff"/>
                     <Bar dataKey="premium" stackId="a" fill="#00aeffff"/>
                     <Tooltip/>

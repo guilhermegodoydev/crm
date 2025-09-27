@@ -9,7 +9,8 @@ const dados = [
 
 export default function GraficoOrigemClientes({ className }) {
     return (
-        <div className={className}>
+        <div className={`container-grafico ${className}`}>
+            <h2>Origem dos Clientes</h2>
             <ResponsiveContainer>
                 <PieChart>
                     <Pie data={dados} dataKey="clientes" nameKey="origem" cx="50%" cy="50%" outerRadius={80}>

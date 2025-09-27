@@ -22,9 +22,8 @@ export default function GraficoClientes({ className }) {
     const taxaFormatada = `${taxaPositiva ? '+' : ''} ${Math.abs(taxaCrescimento)}%`;
 
     return (
-        <div className={className}>
-            <h1>Gráfico de Novos Clientes</h1>
-            <p className={taxaPositiva ? "text-green-500" : "text-red-500"}>Taxa de Crescimento: {taxaFormatada}</p>
+        <div className={`container-grafico ${className}`}>
+            <h2>Gráfico de Novos Clientes</h2>
             <ResponsiveContainer>
                 <LineChart data={dados}>
                     <CartesianGrid strokeDasharray="3 3"/>

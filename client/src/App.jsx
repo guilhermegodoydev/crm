@@ -1,11 +1,13 @@
+import { Outlet } from "react-router-dom";
 import MenuLateral from "./components/MenuLateral";
-import Dashboard from "./screens/Dashboard";
 
 function App() {
     return (
-        <main>
+        <main className="flex">
             <MenuLateral/>   
-            <Dashboard />
+            <div className="flex-1 p-6 overflow-hidden">
+                <Outlet/>
+            </div>
         </main>
     )
 }

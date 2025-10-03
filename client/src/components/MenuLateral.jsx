@@ -10,12 +10,12 @@ export default function MenuLateral() {
         <nav className={`bg-blue-500 w-min h-screen top-0 p-2`}>
             <ul>
                 <li className={estiloElementos}>
-                    <Link to="/">
+                    <Link to="/" aria-label="Clique para ir à página de dashboar">
                         <ChartNoAxesCombined />
                     </Link>
                 </li>
                 <li className={estiloElementos}>
-                    <Link to="/clientes">
+                    <Link to="/clientes" aria-label="Clique para ir à página de clientes">
                         <UsersRound />
                     </Link>
                 </li>

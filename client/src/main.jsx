@@ -6,6 +6,7 @@ import App from "./App.jsx"
 import Dashboard from "./screens/Dashboard.jsx";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Clientes from "./screens/Clientes.jsx";
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Dashboard/>
+      },
+      {
+        path: "/clientes",
+        element: <Clientes/>
       }
     ]
   }

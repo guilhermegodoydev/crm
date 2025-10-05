@@ -1,7 +1,5 @@
+import { GraficoBarras, GraficoLinhas, GraficoPizza} from "../components/graficos";
 import Card from "../components/Card";
-import GraficoBarras from "../components/graficos/GraficoBarras";
-import GraficoLinhas from "../components/graficos/GraficoLinhas";
-import GraficoPizza from "../components/graficos/GraficoPizza";
 
 const dadosGraficoPizza = [
     { id: 1, origem: 'Indicação', clientes: 400 },

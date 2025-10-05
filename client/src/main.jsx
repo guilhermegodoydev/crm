@@ -7,6 +7,7 @@ import Dashboard from "./screens/Dashboard.jsx";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Clientes from "./screens/Clientes.jsx";
+import Etapas from "./screens/Etapas.jsx";
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
       {
         path: "/clientes",
         element: <Clientes/>
+      },
+      {
+        path: "/etapas",
+        element: <Etapas/>
       }
     ]
   }

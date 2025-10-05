@@ -4,6 +4,14 @@
     h1,h2,h3,h4,h5,h6 {
         @apply text-2xl font-semibold;
     }
+
+    progress::-webkit-progress-bar {
+        @apply rounded-xl bg-gray-300;
+    }
+
+    progress::-webkit-progress-value {
+        @apply bg-blue-500 rounded-xl;
+    }
 }
 
 @layer components {

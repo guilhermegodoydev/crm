@@ -1,25 +1,26 @@
-import { useState, useMemo } from "react";
-import { CabecalhoOrdenavel } from "../Tabela";
+import CabecalhoOrdenavel from "./CabecalhoOrdenavel.jsx";
 import { ordenar } from "../../utils";
+import { useMemo, useState } from "react";
 
-export default function Tabela({dadosTabela, colunas = [{chave, label, ordenavel, tipo}]}) {
-    const [ordenado, setOrdenado] = useState({campo: "nome", ativo: false});
+export default function Tabela({dadosTabela, colunas}) {
+    const [ordenado, setOrdenado] = useState({campo: "nome", ativo: true});
 
-    const alterarCampo = (campo) => {
+    const alterarOrdenacao = (campo) => {
         setOrdenado(prev => ({
             campo,
             ativo: prev.campo === campo ? !prev.ativo : true
         }));
     };
 
-    const dados = useMemo(() => {
-        let tipoOrdenacao = ordenado.ativo ? "asc" : "desc";
-        return ordenar(dadosTabela, ordenado.campo, tipoOrdenacao);
-    }, [ordenado, dadosTabela]);
+    const tipoOrdenacao = ordenado.ativo ? "asc" : "desc";
+
+    const dados = useMemo(() => 
+        ordenar(dadosTabela, ordenado.campo, tipoOrdenacao),
+    [dadosTabela, ordenado]); 
 
     return (
-        <table>
-            <thead className="text-white bg-blue-500">
+        <table className="w-full">
+            <thead className="text-white bg-blue-500 sticky top-0">
                 <tr>
                     {colunas.map(c => (
                         c.ordenavel ? (
@@ -29,7 +30,7 @@ export default function Tabela({dadosTabela, colunas = [{chave, label, ordenavel
                                 ordenado = {ordenado.campo === c.chave ? ordenado.ativo : false}
                                 tipo={c.tipo}
                                 direcao = {ordenado.campo === c.chave ? (ordenado.ativo ? "asc" : "desc"): null}
-                                onClick={() => alterarCampo(c.chave)}
+                                onClick={() => alterarOrdenacao(c.chave)}
                                 ariaLabel={`Clique para ordenar por ${c.label}`}
                             /> 
                         ) : (

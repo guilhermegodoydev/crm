@@ -1,8 +1,9 @@
-import CabecalhoOrdenavel from "../components/CabecalhoOrdenavel.jsx";
-import ordenar from "../utils/ordenar.js";
-import filtrar from "../utils/filtrar.js";
-import { useMemo, useState } from "react";
+import { useMemo, useState, useRef} from "react";
 import Filtro from "../components/Filtro.jsx";
+import { Tabela } from "../components/tabela";
+import { filtrar } from "../utils";
+import CardMetrica from "../components/CardMetrica.jsx";
+import { Search } from "lucide-react";
 
 const clientes = [
   {
@@ -10,234 +11,261 @@ const clientes = [
     nome: "Amanda Costa",
     idade: 28,
     observacao: "Compra com frequência produtos em promoção.",
-    tipoCliente: "regular",
+    tipo: "Pessoa Física",
+    categoria: "regular",
     negociosFechados: 12,
-    status: "ativo",
-    origem: "Não especificado"
+    status: "ativo"
   },
   {
     id: 2,
     nome: "Bruno Lima",
     idade: 45,
     observacao: "Tem alto ticket médio e prefere lançamentos.",
-    tipoCliente: "vip",
+    tipo: "Pessoa Física",
+    categoria: "vip",
     negociosFechados: 27,
-    status: "ativo",
-    origem: "site"
+    status: "ativo"
   },
   {
     id: 3,
     nome: "Carla Mendes",
     idade: 34,
     observacao: "Costuma comprar sazonalmente, principalmente no final do ano.",
-    tipoCliente: "regular",
+    tipo: "Pessoa Física",
+    categoria: "regular",
     negociosFechados: 8,
-    status: "ativo",
-    origem: "site"
+    status: "ativo"
   },
   {
     id: 4,
     nome: "Daniel Rocha",
     idade: 51,
     observacao: "Fechou pacotes de serviços anuais nos últimos 3 anos.",
-    tipoCliente: "vip",
+    tipo: "Pessoa Física",
+    categoria: "vip",
     negociosFechados: 22,
-    status: "inativo",
-    origem: "redes sociais"
+    status: "inativo"
   },
   {
     id: 5,
     nome: "Elaine Souza",
     idade: 39,
     observacao: "Interessada em soluções sustentáveis e ecológicas.",
-    tipoCliente: "regular",
+    tipo: "Pessoa Física",
+    categoria: "regular",
     negociosFechados: 9,
-    status: "lead",
-    origem: "redes sociais"
+    status: "ativo"
   },
   {
     id: 6,
     nome: "Felipe Oliveira",
     idade: 26,
     observacao: "Ativo nas redes sociais e responde bem a campanhas de e-mail.",
-    tipoCliente: "vip",
+    tipo: "Pessoa Física",
+    categoria: "vip",
     negociosFechados: 18,
-    status: "lead",
-    origem: "redes sociais"
+    status: "inativo"
   },
   {
     id: 7,
     nome: "Gabriela Martins",
     idade: 31,
     observacao: "Costuma comprar por indicação de influenciadores.",
-    tipoCliente: "regular",
+    tipo: "Pessoa Física",
+    categoria: "regular",
     negociosFechados: 6,
-    status: "lead",
-    origem: "indicação"
+    status: "ativo"
   },
   {
     id: 8,
     nome: "Henrique Silva",
     idade: 58,
     observacao: "Valoriza atendimento personalizado e suporte rápido.",
-    tipoCliente: "vip",
+    tipo: "Empresarial",
+    categoria: "vip",
     negociosFechados: 30,
-    status: "lead",
-    origem: "site"
+    status: "ativo"
   },
   {
     id: 9,
     nome: "Isabela Torres",
     idade: 23,
     observacao: "Procura sempre opções com parcelamento.",
-    tipoCliente: "regular",
+    tipo: "Empresarial",
+    categoria: "regular",
     negociosFechados: 5,
-    status: "inativo",
-    origem: "redes sociais"
+    status: "inativo"
   },
   {
     id: 10,
     nome: "João Batista",
     idade: 47,
     observacao: "Aumentou a frequência de compras nos últimos 6 meses.",
-    tipoCliente: "vip",
+    tipo: "Empresarial",
+    categoria: "vip",
     negociosFechados: 24,
-    status: "inativo",
-    origem: "site"
+    status: "inativo"
   },
   {
     id: 11,
     nome: "Karina Lopes",
     idade: 36,
     observacao: "Participa de programas de fidelidade.",
-    tipoCliente: "vip",
+    tipo: "Pessoa Física",
+    categoria: "vip",
     negociosFechados: 21,
-    status: "lead",
-    origem: "evento"
+    status: "inativo"
   },
   {
     id: 12,
     nome: "Leandro Cunha",
     idade: 29,
     observacao: "Demonstra interesse por combos e kits promocionais.",
-    tipoCliente: "regular",
+    tipo: "Empresarial",
+    categoria: "regular",
     negociosFechados: 11,
-    status: "ativo",
-    origem: "indicação"
+    status: "ativo"
   },
   {
     id: 13,
     nome: "Mariana Teixeira",
     idade: 41,
     observacao: "Tem alto volume de compras corporativas.",
-    tipoCliente: "vip",
+    tipo: "Pessoa Física",
+    categoria: "vip",
     negociosFechados: 28,
-    status: "ativo",
-    origem: "evento"
+    status: "ativo"
   },
   {
     id: 14,
     nome: "Nicolas Ribeiro",
     idade: 33,
     observacao: "Fez upgrade de plano duas vezes no último ano.",
-    tipoCliente: "vip",
+    tipo: "Pessoa Física",
+    categoria: "vip",
     negociosFechados: 25,
-    status: "inativo",
-    origem: "evento"
+    status: "inativo"
   },
   {
     id: 15,
     nome: "Olívia Fernandes",
     idade: 37,
     observacao: "Prefere compras presenciais, mesmo com canal digital disponível.",
-    tipoCliente: "regular",
+    tipo: "Pessoa Física",
+    categoria: "regular",
     negociosFechados: 10,
-    status: "lead",
-    origem: "indicação"
+    status: "ativo"
   },
   {
     id: 16,
     nome: "Paulo Henrique",
     idade: 60,
     observacao: "Cliente antigo, valoriza estabilidade e confiança.",
-    tipoCliente: "vip",
+    tipo: "Pessoa Física",
+    categoria: "vip",
     negociosFechados: 29,
-    status: "lead",
-    origem: "site"
+    status: "ativo"
   },
   {
     id: 17,
     nome: "Quésia Barros",
     idade: 22,
     observacao: "Primeira compra recente, ainda em fase de onboarding.",
-    tipoCliente: "regular",
+    tipo: "Pessoa Física",
+    categoria: "regular",
     negociosFechados: 5,
-    status: "inativo",
-    origem: "campanha no X"
+    status: "inativo"
   },
   {
     id: 18,
     nome: "Ricardo Almeida",
     idade: 50,
     observacao: "Atende a várias unidades da empresa.",
-    tipoCliente: "vip",
+    tipo: "Pessoa Física",
+    categoria: "vip",
     negociosFechados: 26,
-    status: "ativo",
-    origem: "site"
+    status: "ativo"
   },
   {
     id: 19,
     nome: "Sara Nunes",
     idade: 40,
     observacao: "Reduziu consumo após mudança de gestor.",
-    tipoCliente: "regular",
+    tipo: "Empresarial",
+    categoria: "regular",
     negociosFechados: 7,
-    status: "ativo",
-    origem: "site"
+    status: "ativo"
   },
   {
     id: 20,
     nome: "Thiago Moreira",
     idade: 35,
     observacao: "Interesse em parcerias de longo prazo.",
-    tipoCliente: "vip",
+    tipo: "Pessoa Física",
+    categoria: "vip",
     negociosFechados: 20,
-    status: "lead",
-    origem: "site"
+    status: "ativo"
+  }
+];
+
+const colunas = [
+  { chave: "nome", label: "Nome", ordenavel: true, tipo: "texto" },
+  { chave: "idade", label: "Idade", ordenavel: true, tipo: "numero" },
+  { chave: "observacao", label: "Observação", ordenavel: false, tipo: "texto" },
+  { chave: "tipo", label: "Tipo Cliente", ordenavel: false, tipo: "texto" },
+  { chave: "negociosFechados", label: "Negócios Fechados", ordenavel: true, tipo: "numero" },
+  { chave: "status", label: "Status", ordenavel: false, tipo: "texto" }
+];
+
+const contarQtCli = (categoria) => {
+    if (!categoria)
+      return clientes.length;
+    else 
+      return clientes.filter(cli => cli.categoria.toLowerCase() === categoria.toLowerCase()).length;
+}
+
+const tamanhoCirculo = 105;
+
+const cardsMetricas = [
+  {
+    titulo: "Clientes",
+    valor: contarQtCli(),
+    taxaCrescimento: 35
+  },
+  {
+    titulo: "Regular",
+    valor: contarQtCli("regular"),
+    taxaCrescimento: 20
+  },
+  {
+    titulo: "Vips",
+    valor: contarQtCli("vip"),
+    taxaCrescimento: -15
   }
 ];
 
 export default function Clientes() {
-  const [ordenado, setOrdenado] = useState({campo: "nome", ativo: false});
-  const [filtrado, setFiltrado] = useState({tipoCliente: "", status: ""});
+  const [filtrado, setFiltrado] = useState({nome: ""});
+  const tempoDigitacao = useRef(null);
 
-  const alterarCampo = (campo) => {
-    setOrdenado((prev) => ({
-      campo: campo,
-      ativo: prev.campo === campo ? !prev.ativo : true
-    }));
-    if (ordenado.campo == campo) 
-      setOrdenado({campo: campo, ativo: !ordenado.ativo});
-    else 
-      setOrdenado({campo: campo, ativo: true});
+  const handleFiltroOnChange = (campo, valor) => {
+    setFiltrado(prev => ({...prev, [campo]: valor}));
   };
 
-  const dados = useMemo(() => {
-    let tipoOrdenacao = ordenado.ativo ? "asc" : "desc";
+  const buscar = (valor) => {
+    if (tempoDigitacao.current) 
+      clearTimeout(tempoDigitacao.current)
 
-    let resultado = ordenar([...clientes], ordenado.campo, tipoOrdenacao);
-
-    resultado = filtrar(resultado, filtrado)
-
-    return resultado;
-  }, [ordenado, filtrado]);
+    tempoDigitacao.current = setTimeout(() => {
+      setFiltrado((prev) => ({...prev, nome: valor}))
+    }, 500);
+  };
 
   const filtros = [
     {
-      label: "Tipo do Cliente:",
-      id: "tCliente",
-      nome: "tCliente",
-      onChange: (e) => setFiltrado((prev) => ({...filtrado, tipoCliente: e.target.value})),
+      label: "Categoria:",
+      nome: "categoriaCliente",
+      onChange: (e) => handleFiltroOnChange("categoria", e.target.value),
       opcoes: [
         {texto: "Não Filtrar", valor: ""},
         {texto: "Regular", valor: "regular"},
@@ -246,92 +274,61 @@ export default function Clientes() {
     },
     {
       label: "Status:",
-      id: "stCliente",
       nome: "stCliente",
-      onChange: (e) => setFiltrado((prev) => ({...prev, status: e.target.value})),
+      onChange: (e) => handleFiltroOnChange("status", e.target.value),
       opcoes: [
         {texto: "Não Filtrar", valor: ""},
         {texto: "Ativo", valor: "ativo"},
-        {texto: "Inativo", valor: "inativo"},
-        {texto: "Lead", valor: "lead"}
+        {texto: "Inativo", valor: "inativo"}
       ]
     },
     {
-      label: "Origem",
-      id: "orCliente",
-      nome: "orCliente",
-      onChange: (e) => setFiltrado((prev) => ({...prev, origem: e.target.value})),
-      opcoes : [
+      label: "Tipo:",
+      nome: "tipoCliente",
+      onChange: (e) => handleFiltroOnChange("tipo", e.target.value),
+      opcoes: [
         {texto: "Não Filtrar", valor: ""},
-        {texto: "Site", valor: "Site"},
-        {texto: "Evento", valor: "Evento"},
-        {texto: "Rede Social", valor: "Rede social"},
-        {texto: "Indicação", valor: "Indicação"},
-        {texto: "Não especificado" , valor: "Não especificado"}
+        {texto: "Pessoa Física", valor: "Pessoa Física"},
+        {texto: "Empresarial", valor: "Empresarial"}
       ]
     }
   ];
 
+  const dados = useMemo(() => 
+    filtrar([...clientes], filtrado),
+  [filtrado]);
+
   return (
-      <section>
-        <div className="flex gap-10 mb-5">
-          {filtros.map(f => (
-            <Filtro
-              id={f.id}
-              nome={f.nome}
-              label={f.label}
-              onChange={f.onChange}
-              opcoes={f.opcoes}
-            />
-          ))}
-        </div>
-          <table className="w-full shadow-md">
-              <thead className="text-white bg-blue-500">
-                  <tr>
-                      <CabecalhoOrdenavel
-                          titulo="Nome"
-                          ordenado = {ordenado.campo === "nome" ? ordenado.ativo : false}
-                          tipo={"texto"}
-                          direcao = {ordenado.campo === "nome" ? (ordenado.ativo ? "asc" : "desc"): null}
-                          onClick={() => alterarCampo("nome")}
-                          ariaLabel = "Clique para ordenar os nomes em A-Z ou Z-A"
-                      />
-                      <CabecalhoOrdenavel
-                          titulo="Idade"
-                          ordenado = {ordenado.campo === "idade" ? ordenado.ativo : false}
-                          tipo="numero"
-                          direcao = {ordenado.campo === "idade" ? (ordenado.ativo ? "asc" : "desc"): null}
-                          onClick={() => alterarCampo("idade")}
-                          ariaLabel = "Clique para ordenar a idade"
-                      />
-                      <th>Observação</th>
-                      <th>Tipo Cliente</th>
-                      <CabecalhoOrdenavel
-                          titulo="Negócios Fechados"
-                          ordenado = {ordenado.campo === "negociosFechados" ? ordenado.ativo : false}
-                          tipo="numero"
-                          direcao = {ordenado.campo === "negociosFechados" ? (ordenado.ativo ? "asc" : "desc"): null}
-                          onClick={() => alterarCampo("negociosFechados")}
-                          ariaLabel="Clique para ordenar a quantidade de negócios fechados"
-                      />
-                      <th>Status</th>
-                      <th>Origem</th>
-                  </tr>
-              </thead>
-              <tbody>
-                  {dados && dados.length > 0 ? dados.map((cli, index) => (
-                      <tr key={cli.id} className={`border border-gray-300 ${index % 2 === 0 ? "bg-gray-100": "bg-gray-300"}`}>
-                          <td className="pl-3">{cli.nome}</td>
-                          <td className="text-center px-10">{cli.idade}</td>
-                          <td>{cli.observacao}</td>
-                          <td className="text-center">{cli.tipoCliente}</td>
-                          <td className="text-center">{cli.negociosFechados}</td>
-                          <td>{cli.status}</td>
-                          <td>{cli.origem}</td>
-                      </tr>
-                  )) : <tr><td colSpan={7} className="text-center py-3 text-gray-500">Nenhum Clientes Encontrado</td></tr>}
-              </tbody>
-          </table>
-      </section>
-  )
+    <section>
+      <div className="flex gap-3 p-1 rounded-md shadow-md border-1 border-gray-300 mb-5">
+        <Search/>
+        <input 
+          type="text" 
+          name="buscar" 
+          id="buscar" 
+          placeholder="Nome cliente" 
+          className="w-full"
+          onChange={e => buscar(e.target.value)}
+        />
+      </div>
+
+
+      <div className="flex gap-10 mb-3">
+        {filtros.map(fil => (
+          <Filtro
+            id={`filtro-${fil.nome}`}
+            nome={fil.nome}
+            label={fil.label}
+            onChange={fil.onChange}
+            opcoes={fil.opcoes}
+          />
+        ))}
+      </div>
+
+      
+      <div className="max-h-[80vh] overflow-y-auto rounded-md shadow-md">
+        <Tabela dadosTabela={dados} colunas={colunas} />
+      </div>
+    </section>
+  );
 }

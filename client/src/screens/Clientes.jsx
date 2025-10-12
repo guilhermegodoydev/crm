@@ -224,8 +224,6 @@ const contarQtCli = (categoria) => {
       return clientes.filter(cli => cli.categoria.toLowerCase() === categoria.toLowerCase()).length;
 }
 
-const tamanhoCirculo = 105;
-
 const cardsMetricas = [
   {
     titulo: "Clientes",

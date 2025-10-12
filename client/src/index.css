@@ -10,7 +10,7 @@
     }
 
     section {
-        @apply w-full h-full;
+        @apply flex-1;
     }
 
     progress::-webkit-progress-bar {

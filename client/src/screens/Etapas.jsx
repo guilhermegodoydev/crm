@@ -41,8 +41,6 @@ const etapas = [
 export default function Etapas() {
     return (
         <section>
-            <h1>Etapas</h1>
-            <hr />
             <div className="grid grid-cols-5 gap-8">
               {etapas.map(etapa => (
                 <CardEtapa 

@@ -34,13 +34,13 @@ const dadosGraficoBarra = [
 
 export default function Dashboard() {
     return (
-        <section className="h-full overflow-hidden">
+        <section>
             <h1>Dashboard</h1>
             <hr className="border-1 border-gray-100 mb-3"/>
 
             <div className="grid grid-cols-3 grid-rows-2 gap-8 h-[88%]">
-                <CardMetrica titulo="Novos Leads" valor="1,250" taxaCrescimento={15}/>
-                <CardMetrica titulo="Leads Perdidos" valor="200" taxaCrescimento={-5}/>
+                <CardMetrica titulo="Novos Leads" valor="1,250" taxaCrescimento={15} size={125}/>
+                <CardMetrica titulo="Leads Perdidos" valor="200" taxaCrescimento={-5} size={125}/>
 
                 <GraficoBarras 
                     className="col-span-1"

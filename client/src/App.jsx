@@ -7,14 +7,14 @@ function App() {
     const titulo = [...matches].at(-1)?.handle?.title || "CRM";
 
     return (
-        <main className="flex">
+        <div className="flex">
             <MenuLateral/>   
-            <div className="flex flex-col flex-1 p-4">
+            <main className="flex flex-col flex-1 p-4">
                 <h1>{titulo}</h1>
                 <hr className="border-1 border-gray-100 mb-3"/>
                 <Outlet/>
-            </div>
-        </main>
+            </main>
+        </div>
     )
 }
 

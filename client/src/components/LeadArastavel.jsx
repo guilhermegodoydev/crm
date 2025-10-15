@@ -16,7 +16,7 @@ export default function LeadArastavel({ lead, etapaId, onClick }) {
         <li 
             onClick={onClick} 
             style={style} 
-            className="flex mb-5 p-2 gap-2 bg-white rounded-md border-gray-400 shadow relative"
+            className="flex mb-5 p-2 gap-2 bg-white rounded-md border-gray-400 shadow relative cursor-pointer"
         >
             <img src="src/assets/perfil.png" alt={`Foto do ${lead.nome.split(" ")[0]}`} className="h-10 w-10 rounded-full"/>
             <div className="w-full max-w-[61%]">

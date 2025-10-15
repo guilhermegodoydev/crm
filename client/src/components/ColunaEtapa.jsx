@@ -7,7 +7,7 @@ export default function ColunaEtapa({ id, children }) {
     <div 
         ref={setNodeRef}
         id={String(id)}
-        className="bg-gray-100 p-2 rounded min-h-[300px]"
+        className="bg-gray-50 rounded-md min-w-1/6 max-w-1/6"
     >
         {children}
     </div>

@@ -32,6 +32,10 @@
     progress::-webkit-progress-value {
         @apply bg-blue-500 rounded-xl;
     }
+
+    button {
+        @apply cursor-pointer;
+    }
 }
 
 @layer components {

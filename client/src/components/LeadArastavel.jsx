@@ -1,6 +1,7 @@
 import { useDraggable } from "@dnd-kit/core";
+import { GripVertical } from "lucide-react";
 
-export default function LeadArastavel({ lead, etapaId }) {
+export default function LeadArastavel({ lead, etapaId, onClick }) {
     const {attributes, listeners, setNodeRef, transform, transition} = useDraggable({
         id: lead.id,
         data: {
@@ -13,16 +14,25 @@ export default function LeadArastavel({ lead, etapaId }) {
 
     return (
         <li 
-            ref={setNodeRef}
-            {...listeners}
-            {...attributes}
-            style={style}
-            className="border-b-2 border-gray-400 shadow-md cursor-grab active:cursor-grabbing transition-transform"
+            onClick={onClick} 
+            style={style} 
+            className="flex mb-5 p-2 gap-2 bg-white rounded-md border-gray-400 shadow relative"
         >
-            <img src="../assets/perfil.png" alt=""  style={{height: 32, width: 32}}/>
-            <h3>{lead.nome}</h3>
-            <p>Profissão: {lead.profissao}</p>
-            <p>Origem: {lead.origem}</p>
+            <img src="src/assets/perfil.png" alt={`Foto do ${lead.nome.split(" ")[0]}`} className="h-10 w-10 rounded-full"/>
+            <div className="w-full max-w-[61%]">
+                <h3 className="max-w-[100%] truncate" title={lead.nome}>{lead.nome}</h3>
+                <p className="text-sm">Origem: {lead.origem}</p>
+            </div>
+            <div>
+                <button     
+                    ref={setNodeRef} 
+                    {...listeners} 
+                    {...attributes} 
+                    className="cursor-grab active:cursor-grabbing"
+                >
+                    <GripVertical className="size-5"/>
+                </button>
+            </div>
         </li>
     );
 }

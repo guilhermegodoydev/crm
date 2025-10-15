@@ -1,7 +1,7 @@
 import { useMemo, useState, useRef} from "react";
 import Filtro from "../components/Filtro.jsx";
 import { Tabela } from "../components/tabela";
-import { filtrar } from "../utils";
+import { filtrar, buscar } from "../utils";
 import CardMetrica from "../components/CardMetrica.jsx";
 import { Search } from "lucide-react";
 
@@ -243,6 +243,7 @@ const cardsMetricas = [
 ];
 
 export default function Clientes() {
+  const [busca, setBusca] = useState("");
   const [filtrado, setFiltrado] = useState({nome: ""});
   const tempoDigitacao = useRef(null);
 
@@ -250,12 +251,12 @@ export default function Clientes() {
     setFiltrado(prev => ({...prev, [campo]: valor}));
   };
 
-  const buscar = (valor) => {
+  const handleBusca = (valor) => {
     if (tempoDigitacao.current) 
       clearTimeout(tempoDigitacao.current)
 
     tempoDigitacao.current = setTimeout(() => {
-      setFiltrado((prev) => ({...prev, nome: valor}))
+      setBusca(valor);
     }, 500);
   };
 
@@ -292,9 +293,12 @@ export default function Clientes() {
     }
   ];
 
-  const dados = useMemo(() => 
-    filtrar([...clientes], filtrado),
-  [filtrado]);
+  const dados = useMemo(() => {
+    if (!busca) 
+      return filtrar([...clientes], filtrado);
+
+    return buscar([...clientes], "nome", busca);
+  },  [filtrado, busca]);
 
   return (
     <section>
@@ -306,7 +310,7 @@ export default function Clientes() {
           id="buscar" 
           placeholder="Nome cliente" 
           className="w-full"
-          onChange={e => buscar(e.target.value)}
+          onChange={e => handleBusca(e.target.value)}
         />
       </div>
 

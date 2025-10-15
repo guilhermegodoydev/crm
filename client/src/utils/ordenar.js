@@ -1,5 +1,8 @@
 export default function ordenar(dados, campo, tipo) {
-    const dadosOrdenados = [...dados].sort((a,b) => {
+    if (!dados)
+        return "";
+
+    const dadosOrdenados = [...dados]?.sort((a,b) => {
         const valorA = a[campo];
         const valorB = b[campo];
 

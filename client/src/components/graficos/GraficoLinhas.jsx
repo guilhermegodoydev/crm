@@ -5,6 +5,7 @@ export default function GraficoLinhas({
     titulo, 
     data, 
     eixoXKey, 
+    larguraEixoY = "",
     linhas = [{id, dataKey, nomeLinha, fill}] 
 }) {
     return (
@@ -14,7 +15,7 @@ export default function GraficoLinhas({
                 <LineChart data={data}>
                     <CartesianGrid strokeDasharray="3 3"/>
                     <XAxis dataKey={eixoXKey}/>
-                    <YAxis/>
+                    <YAxis width={larguraEixoY}/>
                     {linhas.map((l, index) => (
                         <Line 
                             key={l.id}

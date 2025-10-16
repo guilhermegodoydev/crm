@@ -1,11 +1,13 @@
-import { Bar, BarChart, Legend, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
+import { Bar, BarChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
 
 export default function GraficoBarras({ 
-    className, 
+    className = "", 
     titulo, 
     data, 
     eixoYKey,
+    eixoXkey,
     layout,  
+    larguraEixoY,
     barras = [{dataKey, stackId, fill}] 
 }) {
 
@@ -15,9 +17,24 @@ export default function GraficoBarras({
         <div className={`container-grafico ${className}`}>
             <h2>{titulo}</h2>
             <ResponsiveContainer>
-                <BarChart data={data} layout={layout} margin={{bottom: 22}}>
-                    <XAxis type={vertical ? "number" : "category"} />
-                    <YAxis dataKey={eixoYKey} type={vertical ? "category" : "number"} width={95}/>
+                <BarChart 
+                    data={data} 
+                    layout={layout} 
+                    margin={{ bottom: vertical ? 22 : 60}}
+                >
+                    <XAxis 
+                        dataKey={eixoXkey} 
+                        type={vertical ? "number" : "category"} 
+                        angle={!vertical ? -45 : 0} 
+                        textAnchor="end"
+                    />
+
+                    <YAxis 
+                        dataKey={eixoYKey} 
+                        type={vertical ? "category" : "number"} 
+                        width={larguraEixoY}
+                    />
+
                     {barras.map((b, index) => (
                         <Bar 
                             key={b.id}
@@ -27,7 +44,6 @@ export default function GraficoBarras({
                         />
                     ))}
                     <Tooltip/>
-                    <Legend/>
                 </BarChart>
             </ResponsiveContainer>          
         </div>

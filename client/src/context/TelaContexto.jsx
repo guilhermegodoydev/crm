@@ -6,7 +6,7 @@ export function TelaProvider({ children }) {
     const [desktop, setDesktop] = useState(window.innerWidth >= 1024);
 
     useEffect(() => {
-        const handleResize = () => setDesktop(!desktop);
+        const handleResize = () => setDesktop(window.innerWidth >= 1024);
         setTimeout(handleResize, 0);
         window.addEventListener("resize", handleResize);
         return () => window.removeEventListener("resize", handleResize);

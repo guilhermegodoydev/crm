@@ -1,4 +1,4 @@
-import { ChartNoAxesCombined, Layers, UsersRound, } from 'lucide-react';
+import { ChartNoAxesCombined, Layers, UsersRound, Files} from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const estiloElementos = "cursor-pointer text-white p-2 hover:bg-blue-700 hover:font-bold";
@@ -21,6 +21,11 @@ export default function MenuLateral() {
                     <li className={estiloElementos}>
                         <Link to="/etapas" aria-label="Clique para ir à página de etapas">
                             <Layers/>
+                        </Link>
+                    </li>
+                    <li className={estiloElementos}>
+                        <Link to="/relatorios" aria-label="Clique para ir à página de etapas">
+                            <Files />
                         </Link>
                     </li>
                 </ul>

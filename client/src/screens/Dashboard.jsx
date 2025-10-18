@@ -36,7 +36,6 @@ const dadosGraficoBarra = [
 export default function Dashboard() {
     const { desktop } = useTela();
 
-    console.log(desktop);
     return (
         <section>
             <div className="lg:grid grid-cols-3 grid-rows-2 gap-8 flex flex-col">

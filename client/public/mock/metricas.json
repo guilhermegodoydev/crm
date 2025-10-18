@@ -1,0 +1,138 @@
+{
+  "metricas": {
+    "pizza": [
+      {
+        "id": 1,
+        "origem": "LinkedIn",
+        "leads": 14
+      },
+      {
+        "id": 2,
+        "origem": "Facebook",
+        "leads": 14
+      },
+      {
+        "id": 3,
+        "origem": "Parceiro",
+        "leads": 19
+      },
+      {
+        "id": 4,
+        "origem": "Campanha de E-mail",
+        "leads": 17
+      },
+      {
+        "id": 5,
+        "origem": "Site",
+        "leads": 8
+      },
+      {
+        "id": 6,
+        "origem": "Indicação",
+        "leads": 14
+      },
+      {
+        "id": 7,
+        "origem": "Evento",
+        "leads": 13
+      },
+      {
+        "id": 8,
+        "origem": "YouTube",
+        "leads": 17
+      },
+      {
+        "id": 9,
+        "origem": "Google Ads",
+        "leads": 17
+      },
+      {
+        "id": 10,
+        "origem": "Instagram",
+        "leads": 17
+      }
+    ],
+    "linha": [
+      {
+        "nome": "Jan",
+        "novosLeads": 8
+      },
+      {
+        "nome": "Feb",
+        "novosLeads": 11
+      },
+      {
+        "nome": "Mar",
+        "novosLeads": 18
+      },
+      {
+        "nome": "Apr",
+        "novosLeads": 14
+      },
+      {
+        "nome": "May",
+        "novosLeads": 14
+      },
+      {
+        "nome": "Jun",
+        "novosLeads": 15
+      },
+      {
+        "nome": "Jul",
+        "novosLeads": 12
+      },
+      {
+        "nome": "Aug",
+        "novosLeads": 20
+      },
+      {
+        "nome": "Sep",
+        "novosLeads": 13
+      },
+      {
+        "nome": "Oct",
+        "novosLeads": 6
+      },
+      {
+        "nome": "Nov",
+        "novosLeads": 7
+      },
+      {
+        "nome": "Dec",
+        "novosLeads": 12
+      }
+    ],
+    "barra": [
+      {
+        "id": 1,
+        "nome": "Capturado",
+        "leads": 22
+      },
+      {
+        "id": 2,
+        "nome": "Contato",
+        "leads": 29
+      },
+      {
+        "id": 3,
+        "nome": "Proposta",
+        "leads": 35
+      },
+      {
+        "id": 4,
+        "nome": "Negociação",
+        "leads": 33
+      },
+      {
+        "id": 5,
+        "nome": "Fechamento",
+        "leads": 31
+      },
+      {
+        "id": 6,
+        "nome": "Etapa 6",
+        "leads": 9
+      }
+    ]
+  }
+}

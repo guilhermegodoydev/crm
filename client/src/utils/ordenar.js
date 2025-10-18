@@ -1,4 +1,4 @@
-export default function ordenar(dados, campo, tipo) {
+export function ordenar(dados, campo, tipo) {
     if (!dados)
         return "";
 

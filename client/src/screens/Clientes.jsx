@@ -2,7 +2,6 @@ import { useMemo, useState, useRef} from "react";
 import Filtro from "../components/Filtro.jsx";
 import { Tabela } from "../components/tabela";
 import { filtrar, buscar } from "../utils";
-import CardMetrica from "../components/CardMetrica.jsx";
 import { Search } from "lucide-react";
 
 const clientes = [

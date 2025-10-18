@@ -1,3 +1,3 @@
-export { default as filtrar } from "./filtrar";
-export { default as ordenar } from "./ordenar";
-export { default as buscar } from "./buscar";
+export { filtrar } from "./filtrar";
+export { buscar } from "./buscar";
+export { ordenar } from "./ordenar";

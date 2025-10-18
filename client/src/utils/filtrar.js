@@ -1,4 +1,4 @@
-export default function(dados, filtros) {
+export function filtrar(dados, filtros) {
     let dadosFiltrados = dados.filter(item => {
         return Object.entries(filtros).every(([campo, valor]) => {
             if (!valor) return true;

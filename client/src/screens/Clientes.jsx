@@ -1,5 +1,5 @@
 import { useMemo, useState, useRef} from "react";
-import Filtro from "../components/Filtro.jsx";
+import { Filtro } from "../components/Filtro.jsx";
 import { Tabela } from "../components/tabela";
 import { filtrar, buscar } from "../utils";
 import { Search } from "lucide-react";

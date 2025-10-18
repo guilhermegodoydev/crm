@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const estiloElementos = "cursor-pointer text-white p-2 hover:bg-blue-700 hover:font-bold";
 
-export default function MenuLateral() {
+export function MenuLateral() {
     const [aberto, setAberto] = useState(false);
     const [desktop, setDesktop] = useState(window.innerWidth >= 1024);
 

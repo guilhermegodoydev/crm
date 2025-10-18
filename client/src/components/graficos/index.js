@@ -1,3 +1,3 @@
-export { default as GraficoBarras } from "./GraficoBarras";
-export { default as GraficoLinhas } from "./GraficoLinhas";
-export { default as GraficoPizza } from "./GraficoPizza";
+export { GraficoBarras } from "./GraficoBarras";
+export { GraficoLinhas } from "./GraficoLinhas";
+export { GraficoPizza } from "./GraficoPizza";

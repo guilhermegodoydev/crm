@@ -1,6 +1,6 @@
 import { ArrowDown01, ArrowDownAZ, ArrowUp01, ArrowUpAZ } from "lucide-react";
 
-export default function CabecalhoOrdenavel({titulo, tipo, ordenado, direcao, onClick, ariaLabel }) {
+export function CabecalhoOrdenavel({titulo, tipo, ordenado, direcao, onClick, ariaLabel }) {
     let iconeAsc = null;
     let iconDesc = null;
 

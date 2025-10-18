@@ -1,8 +1,8 @@
-import CabecalhoOrdenavel from "./CabecalhoOrdenavel.jsx";
+import { CabecalhoOrdenavel } from "./CabecalhoOrdenavel.jsx";
 import { ordenar } from "../../utils";
 import { useMemo, useState } from "react";
 
-export default function Tabela({dadosTabela, colunas}) {
+export function Tabela({dadosTabela, colunas}) {
     const [ordenado, setOrdenado] = useState({campo: "nome", ativo: true});
 
     const alterarOrdenacao = (campo) => {

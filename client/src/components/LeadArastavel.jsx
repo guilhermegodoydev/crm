@@ -1,7 +1,7 @@
 import { useDraggable } from "@dnd-kit/core";
 import { GripVertical } from "lucide-react";
 
-export default function LeadArastavel({ lead, etapaId, onClick }) {
+export function LeadArastavel({ lead, etapaId, onClick }) {
     const {attributes, listeners, setNodeRef, transform, transition} = useDraggable({
         id: lead.id,
         data: {

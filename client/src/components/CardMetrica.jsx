@@ -1,4 +1,4 @@
-export default function CardMetrica({ titulo, valor, taxaCrescimento, className}) {
+export function CardMetrica({ titulo, valor, taxaCrescimento, className}) {
 
     const positivo = taxaCrescimento >= 0;
     const crescimento = (positivo ? '+': '') + taxaCrescimento + '% em comparação ao último mês';

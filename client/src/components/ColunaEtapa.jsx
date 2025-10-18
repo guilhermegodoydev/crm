@@ -1,6 +1,6 @@
 import { useDroppable } from "@dnd-kit/core";
 
-export default function ColunaEtapa({ id, children }) {
+export function ColunaEtapa({ id, children }) {
     const { setNodeRef } = useDroppable({ id: String(id) });
 
     return (

@@ -1,6 +1,6 @@
 import { Bar, BarChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
 
-export default function GraficoBarras({ 
+export function GraficoBarras({ 
     className = "", 
     titulo, 
     data, 

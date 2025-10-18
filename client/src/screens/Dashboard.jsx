@@ -1,8 +1,7 @@
 import { GraficoBarras, GraficoLinhas, GraficoPizza} from "../components/graficos";
-import CardMetrica from "../components/CardMetrica";
+import { CardMetrica } from "../components/CardMetrica";
 import { useTela } from "../context/TelaContexto";
-import useAPI from "../hooks/useAPI";
-import { useEffect } from "react";
+import { useAPI } from "../hooks/useAPI";
 
 export default function Dashboard() {
     const { desktop } = useTela();

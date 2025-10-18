@@ -1,5 +1,5 @@
 import { Outlet, useMatches } from "react-router-dom";
-import { MenuLateral } from "./components/layout";
+import { MenuLateral } from "./components/layout/MenuLateral";
 import { TelaProvider } from "./context/TelaContexto";
 
 function App() {

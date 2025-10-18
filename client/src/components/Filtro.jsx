@@ -1,4 +1,4 @@
-export default function Filtro({id, nome, label, onChange, opcoes = []}) {
+export function Filtro({id, nome, label, onChange, opcoes = []}) {
     return (
         <div>
             <label htmlFor={id}>{label}</label>

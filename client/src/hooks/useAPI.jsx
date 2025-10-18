@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { ExRequisicao } from "../utils/api";
 
-export default function useAPI(url, opcoes = {}, parametros = {}) {
+export function useAPI(url, opcoes = {}, parametros = {}) {
     const [ dados, setDados ] = useState();
     const [carregando, setCarregando] = useState(false);
     const [erro, setErro] = useState();

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { X } from "lucide-react";
-import ColunaEtapa from "../components/ColunaEtapa";
-import LeadArastavel from "../components/LeadArastavel";
+import { ColunaEtapa } from "../components/ColunaEtapa";
+import { LeadArastavel } from "../components/LeadArastavel";
 import { 
   DndContext, 
   useSensor, 

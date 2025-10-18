@@ -1,6 +1,6 @@
 import { ResponsiveContainer, Legend, Pie, PieChart, Tooltip, Cell } from "recharts";
 
-export default function GraficoPizza({ 
+export function GraficoPizza({ 
     titulo, 
     className, 
     data, 

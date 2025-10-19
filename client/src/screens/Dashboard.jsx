@@ -1,6 +1,10 @@
-import { GraficoBarras, GraficoLinhas, GraficoPizza} from "../components/graficos";
+import { GraficoBarras } from "../components/graficos/GraficoBarras";
+import { GraficoLinhas } from "../components/graficos/GraficoLinhas";
+import { GraficoPizza} from "../components/graficos/GraficoPizza";
 import { CardMetrica } from "../components/CardMetrica";
+
 import { useTela } from "../context/TelaContexto";
+
 import { useAPI } from "../hooks/useAPI";
 
 export default function Dashboard() {

@@ -23,9 +23,10 @@ export default function Relatorios() {
         <div>
             <section>
                 <h2>Escolha o Relatório</h2>
-                <div className="grid grid-cols-4 grid-rows-auto gap-5">
+                <div role="radiogroup" aria-required="true" className="grid grid-cols-4 grid-rows-auto gap-5">
                     {relatorios.map(r => (
                         <button 
+                            role="radio"
                             onClick={() => setRelatorio(r.id)} 
                             key={`container-botao-${r.id}`} 
                             className={`flex flex-col items-center p-2 rounded-md border-2 border-blue-300 ${relatorio == r.id ? "border-blue-500 bg-blue-50" : "hover:border-blue-500 hover:bg-blue-50"}`}
@@ -37,7 +38,7 @@ export default function Relatorios() {
                 </div>
 
                 <h2 className="mt-5">Escolha o Formato</h2>
-                <div className="grid grid-cols-4 grid-rows-auto gap-5">
+                <div role="radiogroup" aria-required="true" className="grid grid-cols-4 grid-rows-auto gap-5">
                     {formatos.map(f => (
                         <button 
                             onClick={() => setFormato(f.id)} 

@@ -18,7 +18,7 @@ export function MenuLateral() {
     }, []);
 
     return (
-        <div>
+        <>
             {!desktop && <Menu onClick={() => setAberto(!aberto)}/>}
             {(desktop || aberto) &&
                 <aside className={`bg-blue-500 h-screen p-2 lg:relative absolute top-0 w/34`}>
@@ -48,6 +48,6 @@ export function MenuLateral() {
                         </nav>
                 </aside>
             }
-        </div>
+        </>
     )   
 }

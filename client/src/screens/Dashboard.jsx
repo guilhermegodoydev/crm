@@ -18,8 +18,8 @@ export default function Dashboard() {
     return (
         <section>
             <div className="lg:grid grid-cols-3 grid-rows-2 gap-8 flex flex-col">
-                <CardMetrica titulo="Novos Leads" valor="1,250" taxaCrescimento={15} className="h-30 w-30"/>
-                <CardMetrica titulo="Leads Perdidos" valor="200" taxaCrescimento={-5} className="h-30 w-30"/>
+                <CardMetrica titulo="Novos Leads" valor={dados.metricas.novosLeads} taxaCrescimento={15} className="h-30 w-30"/>
+                <CardMetrica titulo="Leads Perdidos" valor={dados.metricas.leadsPerdidos} taxaCrescimento={-5} className="h-30 w-30"/>
 
                 <GraficoBarras 
                     className="col-span-1 lg:h-auto h-55"

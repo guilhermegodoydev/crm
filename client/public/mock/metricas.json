@@ -133,6 +133,8 @@
         "nome": "Etapa 6",
         "leads": 9
       }
-    ]
+    ],
+    "leadsPerdidos": 20,
+    "novosLeads": 132
   }
 }

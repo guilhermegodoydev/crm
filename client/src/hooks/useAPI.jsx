@@ -24,7 +24,7 @@ export function useAPI(url, opcoes = {}, parametros = {}) {
             .finally(() => setCarregando(false));
 
         return () => abortControllerRef.current.abort();
-    }, [url, JSON.stringify(opcoes), JSON.stringify(parametros)]);
+    }, [url]);
 
     return { dados, carregando, erro };
 }

@@ -25,7 +25,7 @@ export function GraficoPizza({
                         ))}
                     </Pie>
                     <Tooltip/>
-                    <Legend/>
+                    <Legend textAnchor="end"/>
                 </PieChart>
             </ResponsiveContainer>
         </div>

@@ -17,9 +17,9 @@ export default function Dashboard() {
 
     return (
         <section>
-            <div className="lg:grid grid-cols-3 grid-rows-2 gap-8 flex flex-col">
-                <CardMetrica titulo="Novos Leads" valor={dados.metricas.novosLeads} taxaCrescimento={15} className="h-30 w-30"/>
-                <CardMetrica titulo="Leads Perdidos" valor={dados.metricas.leadsPerdidos} taxaCrescimento={-5} className="h-30 w-30"/>
+            <div className="lg:grid grid-cols-3 grid-rows-2 gap-8 flex flex-col xl:h-[95%]">
+                <CardMetrica titulo="Novos Leads" valor={dados.metricas.novosLeads} taxaCrescimento={15} className="h-30 w-30 xl:h-45 xl:w-45"/>
+                <CardMetrica titulo="Leads Perdidos" valor={dados.metricas.leadsPerdidos} taxaCrescimento={-5} className="h-30 w-30 xl:h-45 xl:w-45"/>
 
                 <GraficoBarras 
                     className="col-span-1 lg:h-auto h-55"
@@ -45,7 +45,7 @@ export default function Dashboard() {
                 />
 
                 <GraficoPizza 
-                    className="lg:h-auto h-55"
+                    className="lg:h-auto h-75"
                     titulo="Origem dos Leads" 
                     data={dados.metricas.pizza}
                     dataKey="leads" 

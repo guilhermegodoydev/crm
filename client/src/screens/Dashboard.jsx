@@ -15,11 +15,24 @@ export default function Dashboard() {
     if (erro) return <div>Erro {erro}</div>;
     if (!dados || dados.length === 0) return null;
 
+    const estiloCards = "h-30 w-30 2xl:h-45 2xl:w-45";
+
     return (
         <section>
             <div className="lg:grid grid-cols-3 grid-rows-2 gap-8 flex flex-col xl:h-[85vh]">
-                <CardMetrica titulo="Novos Leads" valor={dados.metricas.novosLeads} taxaCrescimento={15} className="h-30 w-30 2xl:h-45 2xl:w-45"/>
-                <CardMetrica titulo="Leads Perdidos" valor={dados.metricas.leadsPerdidos} taxaCrescimento={-5} className="h-30 w-30 2xl:h-45 2xl:w-45"/>
+                <CardMetrica 
+                    titulo="Novos Leads" 
+                    valor={dados.metricas.novosLeads} 
+                    taxaCrescimento={15} 
+                    className={estiloCards}
+                />
+
+                <CardMetrica 
+                    titulo="Leads Perdidos" 
+                    valor={dados.metricas.leadsPerdidos} 
+                    taxaCrescimento={-5} 
+                    className={estiloCards}
+                />
 
                 <GraficoBarras 
                     className="col-span-1 lg:h-auto h-55"

@@ -1,1502 +1,1382 @@
 [
   {
     "id": 1,
-    "nome": "Úrsula Costa",
-    "profissao": "Gerente de Vendas",
-    "telefone": "134332181-9600",
-    "origem": "LinkedIn",
-    "etapa": 2,
-    "ultContato": "2024-08-26",
-    "empresa": "AlphaTech"
+    "nome": "Juliana Fernanda Freitas",
+    "email": "juliana.fernanda.freitas@outlook.com",
+    "telefone": "(11) 91934-6310",
+    "empresa": "NexaTech Solutions",
+    "cargo": "Coordenador de Marketing",
+    "status": "negociação",
+    "origem": "Evento",
+    "etapa": 4,
+    "responsavel": 2,
+    "ultima_interacao": "email",
+    "data_cadastro": "2025-10-20T19:08:09Z",
+    "interesse_produto": "Automação de Marketing",
+    "observacao": "Aguardando retorno",
+    "historico": [
+      {
+        "data": "2025-09-29T19:08:09Z",
+        "tipo_interacao": "ligação",
+        "comentario": "Primeiro contato realizado"
+      },
+      {
+        "data": "2025-10-09T19:08:09Z",
+        "tipo_interacao": "ligação",
+        "comentario": "Material enviado"
+      }
+    ]
   },
   {
     "id": 2,
-    "nome": "Rafael Almeida",
-    "profissao": "Diretor de Operações",
-    "telefone": "138637940-2654",
-    "origem": "Facebook",
+    "nome": "Carlos Eduardo Ribeiro",
+    "email": "carlos.eduardo.ribeiro@protonmail.com",
+    "telefone": "(11) 93916-8969",
+    "empresa": "NextEra Technologies",
+    "cargo": "Analista de TI",
+    "status": "negociação",
+    "origem": "Evento",
     "etapa": 2,
-    "ultContato": "2024-12-10",
-    "empresa": "Não aplicavel"
+    "responsavel": 4,
+    "ultima_interacao": "reunião",
+    "data_cadastro": "2025-09-30T19:08:09Z",
+    "interesse_produto": "CRM Avançado",
+    "observacao": "Interessado em demonstração",
+    "historico": [
+      {
+        "data": "2025-09-26T19:08:09Z",
+        "tipo_interacao": "email",
+        "comentario": "Material enviado"
+      },
+      {
+        "data": "2025-10-23T19:08:09Z",
+        "tipo_interacao": "ligação",
+        "comentario": "Material enviado"
+      }
+    ]
   },
   {
     "id": 3,
-    "nome": "Mariana Costa",
-    "profissao": "Analista de Suporte",
-    "telefone": "135940781-6184",
-    "origem": "Parceiro",
-    "etapa": 3,
-    "ultContato": "2025-08-14",
-    "empresa": "Não aplicavel"
+    "nome": "Igor Matheus Almeida",
+    "email": "igor.matheus.almeida@outlook.com",
+    "telefone": "(11) 96290-7068",
+    "empresa": "BlueWave Corp",
+    "cargo": "Analista de TI",
+    "status": "novo",
+    "origem": "Site",
+    "etapa": 4,
+    "responsavel": 1,
+    "ultima_interacao": "ligação",
+    "data_cadastro": "2025-10-17T19:08:09Z",
+    "interesse_produto": "CRM Básico",
+    "observacao": "Aguardando retorno",
+    "historico": [
+      {
+        "data": "2025-10-14T19:08:09Z",
+        "tipo_interacao": "reunião",
+        "comentario": "ligação de follow-up"
+      }
+    ]
   },
   {
     "id": 4,
-    "nome": "Carla Souza",
-    "profissao": "Recursos Humanos",
-    "telefone": "133413164-7525",
-    "origem": "Campanha de E-mail",
-    "etapa": 2,
-    "ultContato": "2024-09-30",
-    "empresa": "Viva Comércio"
+    "nome": "Juliana Fernanda Freitas",
+    "email": "juliana.fernanda.freitas@outlook.com",
+    "telefone": "(11) 91169-3490",
+    "empresa": "Skyline Digital",
+    "cargo": "Analista de TI",
+    "status": "convertido",
+    "origem": "LinkedIn",
+    "etapa": 1,
+    "responsavel": 6,
+    "ultima_interacao": "ligação",
+    "data_cadastro": "2025-10-17T19:08:09Z",
+    "interesse_produto": "CRM Avançado",
+    "observacao": "Quer customização",
+    "historico": [
+      {
+        "data": "2025-10-06T19:08:09Z",
+        "tipo_interacao": "reunião",
+        "comentario": "ligação de follow-up"
+      },
+      {
+        "data": "2025-10-07T19:08:09Z",
+        "tipo_interacao": "ligação",
+        "comentario": "reunião agendada"
+      },
+      {
+        "data": "2025-09-27T19:08:09Z",
+        "tipo_interacao": "ligação",
+        "comentario": "Material enviado"
+      }
+    ]
   },
   {
     "id": 5,
-    "nome": "Úrsula Pereira",
-    "profissao": "Administrador",
-    "telefone": "132832764-8350",
-    "origem": "Site",
-    "etapa": 1,
-    "ultContato": "2024-11-19",
-    "empresa": "Não aplicavel"
+    "nome": "Larissa Beatriz Ferreira",
+    "email": "larissa.beatriz.ferreira@hotmail.com",
+    "telefone": "(11) 92109-2887",
+    "empresa": "Pulse Innovations",
+    "cargo": "Analista de TI",
+    "status": "novo",
+    "origem": "LinkedIn",
+    "etapa": 3,
+    "responsavel": 2,
+    "ultima_interacao": "ligação",
+    "data_cadastro": "2025-09-24T19:08:09Z",
+    "interesse_produto": "Automação de Marketing",
+    "observacao": "Quer customização",
+    "historico": [
+      {
+        "data": "2025-10-06T19:08:09Z",
+        "tipo_interacao": "ligação",
+        "comentario": "ligação de follow-up"
+      },
+      {
+        "data": "2025-09-26T19:08:09Z",
+        "tipo_interacao": "email",
+        "comentario": "Primeiro contato realizado"
+      },
+      {
+        "data": "2025-10-21T19:08:09Z",
+        "tipo_interacao": "reunião",
+        "comentario": "ligação de follow-up"
+      }
+    ]
   },
   {
     "id": 6,
-    "nome": "Carla Almeida",
-    "profissao": "Head de Operações",
-    "telefone": "135376724-2388",
+    "nome": "Gustavo Alexandre Pereira",
+    "email": "gustavo.alexandre.pereira@gmail.com",
+    "telefone": "(11) 95225-5326",
+    "empresa": "BlueWave Corp",
+    "cargo": "Diretor de Operações",
+    "status": "em contato",
     "origem": "Indicação",
-    "etapa": 5,
-    "ultContato": "2025-03-14",
-    "empresa": "Sigma Systems"
+    "etapa": 4,
+    "responsavel": 3,
+    "ultima_interacao": "ligação",
+    "data_cadastro": "2025-10-12T19:08:09Z",
+    "interesse_produto": "CRM Básico",
+    "observacao": "Cliente em potencial",
+    "historico": [
+      {
+        "data": "2025-10-23T19:08:09Z",
+        "tipo_interacao": "ligação",
+        "comentario": "reunião agendada"
+      },
+      {
+        "data": "2025-09-25T19:08:09Z",
+        "tipo_interacao": "ligação",
+        "comentario": "ligação de follow-up"
+      }
+    ]
   },
   {
     "id": 7,
-    "nome": "Lucas Santos",
-    "profissao": "CEO",
-    "telefone": "138710122-6916",
-    "origem": "Evento",
-    "etapa": 5,
-    "ultContato": "2025-04-24",
-    "empresa": "Nova Digital"
+    "nome": "Sofia Gabriela Mendes",
+    "email": "sofia.gabriela.mendes@yahoo.com",
+    "telefone": "(11) 93410-7419",
+    "empresa": "NextEra Technologies",
+    "cargo": "Especialista em CRM",
+    "status": "perdido",
+    "origem": "Indicação",
+    "etapa": 3,
+    "responsavel": 4,
+    "ultima_interacao": "ligação",
+    "data_cadastro": "2025-10-13T19:08:09Z",
+    "interesse_produto": "Gestão de Vendas",
+    "observacao": "Cliente em potencial",
+    "historico": [
+      {
+        "data": "2025-10-20T19:08:09Z",
+        "tipo_interacao": "email",
+        "comentario": "Material enviado"
+      }
+    ]
   },
   {
     "id": 8,
-    "nome": "Amanda Nogueira",
-    "profissao": "Engenheiro de Software",
-    "telefone": "131845146-2704",
-    "origem": "YouTube",
+    "nome": "Carlos Eduardo Ribeiro",
+    "email": "carlos.eduardo.ribeiro@gmail.com",
+    "telefone": "(11) 96192-8642",
+    "empresa": "BlueWave Corp",
+    "cargo": "Engenheiro de Software",
+    "status": "perdido",
+    "origem": "Evento",
     "etapa": 2,
-    "ultContato": "2025-06-03",
-    "empresa": "Vertex Ltda"
+    "responsavel": 6,
+    "ultima_interacao": "reunião",
+    "data_cadastro": "2025-09-28T19:08:09Z",
+    "interesse_produto": "Gestão de Vendas",
+    "observacao": "Quer customização",
+    "historico": [
+      {
+        "data": "2025-10-12T19:08:09Z",
+        "tipo_interacao": "reunião",
+        "comentario": "Primeiro contato realizado"
+      }
+    ]
   },
   {
     "id": 9,
-    "nome": "Úrsula Ferreira",
-    "profissao": "Assistente Executivo",
-    "telefone": "138932528-8095",
-    "origem": "Google Ads",
-    "etapa": 1,
-    "ultContato": "2024-04-24",
-    "empresa": "BlueWave"
+    "nome": "Pedro Henrique Barbosa",
+    "email": "pedro.henrique.barbosa@hotmail.com",
+    "telefone": "(11) 93984-5979",
+    "empresa": "NexaTech Solutions",
+    "cargo": "Engenheiro de Software",
+    "status": "perdido",
+    "origem": "Site",
+    "etapa": 2,
+    "responsavel": 5,
+    "ultima_interacao": "email",
+    "data_cadastro": "2025-10-23T19:08:09Z",
+    "interesse_produto": "CRM Avançado",
+    "observacao": "Aguardando retorno",
+    "historico": [
+      {
+        "data": "2025-10-21T19:08:09Z",
+        "tipo_interacao": "reunião",
+        "comentario": "Email de apresentação"
+      },
+      {
+        "data": "2025-10-13T19:08:09Z",
+        "tipo_interacao": "email",
+        "comentario": "ligação de follow-up"
+      },
+      {
+        "data": "2025-10-19T19:08:09Z",
+        "tipo_interacao": "ligação",
+        "comentario": "Email de apresentação"
+      }
+    ]
   },
   {
     "id": 10,
-    "nome": "Zeca Ferreira",
-    "profissao": "Analista de Marketing",
-    "telefone": "130391171-8227",
-    "origem": "YouTube",
-    "etapa": 2,
-    "ultContato": "2024-09-28",
-    "empresa": "Lumen Consulting"
+    "nome": "Larissa Beatriz Ferreira",
+    "email": "larissa.beatriz.ferreira@protonmail.com",
+    "telefone": "(11) 95901-8426",
+    "empresa": "AlphaCore Labs",
+    "cargo": "Engenheiro de Software",
+    "status": "negociação",
+    "origem": "LinkedIn",
+    "etapa": 5,
+    "responsavel": 2,
+    "ultima_interacao": "ligação",
+    "data_cadastro": "2025-09-25T19:08:09Z",
+    "interesse_produto": "Automação de Marketing",
+    "observacao": "Cliente em potencial",
+    "historico": [
+      {
+        "data": "2025-09-30T19:08:09Z",
+        "tipo_interacao": "email",
+        "comentario": "ligação de follow-up"
+      },
+      {
+        "data": "2025-10-07T19:08:09Z",
+        "tipo_interacao": "email",
+        "comentario": "Material enviado"
+      }
+    ]
   },
   {
     "id": 11,
-    "nome": "Nicolas Almeida",
-    "profissao": "Customer Success",
-    "telefone": "133465787-1331",
-    "origem": "Campanha de E-mail",
-    "etapa": 1,
-    "ultContato": "2025-08-25",
-    "empresa": "Lumen Consulting"
+    "nome": "Daniel Felipe Costa",
+    "email": "daniel.felipe.costa@gmail.com",
+    "telefone": "(11) 96754-9142",
+    "empresa": "Skyline Digital",
+    "cargo": "Consultor de Vendas",
+    "status": "em contato",
+    "origem": "Indicação",
+    "etapa": 6,
+    "responsavel": 2,
+    "ultima_interacao": "email",
+    "data_cadastro": "2025-10-02T19:08:09Z",
+    "interesse_produto": "CRM Básico",
+    "observacao": "Quer customização",
+    "historico": [
+      {
+        "data": "2025-10-07T19:08:09Z",
+        "tipo_interacao": "reunião",
+        "comentario": "ligação de follow-up"
+      },
+      {
+        "data": "2025-09-23T19:08:09Z",
+        "tipo_interacao": "reunião",
+        "comentario": "Primeiro contato realizado"
+      },
+      {
+        "data": "2025-10-18T19:08:09Z",
+        "tipo_interacao": "reunião",
+        "comentario": "ligação de follow-up"
+      }
+    ]
   },
   {
     "id": 12,
-    "nome": "Hugo Silva",
-    "profissao": "Coordenador de RH",
-    "telefone": "130310518-3473",
-    "origem": "YouTube",
-    "etapa": 2,
-    "ultContato": "2025-08-07",
-    "empresa": "Delta Serviços"
+    "nome": "Alice Maria Santos",
+    "email": "alice.maria.santos@hotmail.com",
+    "telefone": "(11) 93935-2353",
+    "empresa": "NexaTech Solutions",
+    "cargo": "Consultor de Vendas",
+    "status": "negociação",
+    "origem": "Site",
+    "etapa": 6,
+    "responsavel": 3,
+    "ultima_interacao": "ligação",
+    "data_cadastro": "2025-10-18T19:08:09Z",
+    "interesse_produto": "CRM Avançado",
+    "observacao": "Aguardando retorno",
+    "historico": [
+      {
+        "data": "2025-09-23T19:08:09Z",
+        "tipo_interacao": "reunião",
+        "comentario": "Primeiro contato realizado"
+      },
+      {
+        "data": "2025-10-16T19:08:09Z",
+        "tipo_interacao": "email",
+        "comentario": "ligação de follow-up"
+      }
+    ]
   },
   {
     "id": 13,
-    "nome": "Zeca Carvalho",
-    "profissao": "Especialista em SEO",
-    "telefone": "133116566-7010",
-    "origem": "Evento",
-    "etapa": 3,
-    "ultContato": "2024-04-21",
-    "empresa": "Não aplicavel"
+    "nome": "Juliana Fernanda Freitas",
+    "email": "juliana.fernanda.freitas@outlook.com",
+    "telefone": "(11) 92892-2980",
+    "empresa": "AlphaCore Labs",
+    "cargo": "Gerente de Projetos",
+    "status": "em contato",
+    "origem": "Site",
+    "etapa": 5,
+    "responsavel": 3,
+    "ultima_interacao": "email",
+    "data_cadastro": "2025-10-08T19:08:09Z",
+    "interesse_produto": "CRM Avançado",
+    "observacao": "Solicitou contato por WhatsApp",
+    "historico": [
+      {
+        "data": "2025-10-17T19:08:09Z",
+        "tipo_interacao": "reunião",
+        "comentario": "Material enviado"
+      },
+      {
+        "data": "2025-10-01T19:08:09Z",
+        "tipo_interacao": "reunião",
+        "comentario": "ligação de follow-up"
+      },
+      {
+        "data": "2025-10-21T19:08:09Z",
+        "tipo_interacao": "ligação",
+        "comentario": "reunião agendada"
+      }
+    ]
   },
   {
     "id": 14,
-    "nome": "Gabriela Mendes",
-    "profissao": "Coordenador de Projetos",
-    "telefone": "132624731-7810",
-    "origem": "YouTube",
-    "etapa": 1,
-    "ultContato": "2024-04-05",
-    "empresa": "Vertex Ltda"
+    "nome": "Isabela Cristina Nunes",
+    "email": "isabela.cristina.nunes@protonmail.com",
+    "telefone": "(11) 99814-3251",
+    "empresa": "Vertex Solutions",
+    "cargo": "Engenheiro de Software",
+    "status": "convertido",
+    "origem": "Publicidade",
+    "etapa": 6,
+    "responsavel": 2,
+    "ultima_interacao": "ligação",
+    "data_cadastro": "2025-10-04T19:08:09Z",
+    "interesse_produto": "CRM Básico",
+    "observacao": "Quer customização",
+    "historico": [
+      {
+        "data": "2025-10-22T19:08:09Z",
+        "tipo_interacao": "ligação",
+        "comentario": "ligação de follow-up"
+      }
+    ]
   },
   {
     "id": 15,
-    "nome": "Hugo Lima",
-    "profissao": "Especialista em SEO",
-    "telefone": "137736026-0647",
-    "origem": "Indicação",
-    "etapa": 4,
-    "ultContato": "2025-07-23",
-    "empresa": "Omega Group"
+    "nome": "Tatiane Raquel Silva",
+    "email": "tatiane.raquel.silva@gmail.com",
+    "telefone": "(11) 95791-9377",
+    "empresa": "NextEra Technologies",
+    "cargo": "Diretor de Operações",
+    "status": "convertido",
+    "origem": "Evento",
+    "etapa": 5,
+    "responsavel": 4,
+    "ultima_interacao": "email",
+    "data_cadastro": "2025-10-16T19:08:09Z",
+    "interesse_produto": "CRM Básico",
+    "observacao": "Solicitou contato por WhatsApp",
+    "historico": [
+      {
+        "data": "2025-09-28T19:08:09Z",
+        "tipo_interacao": "reunião",
+        "comentario": "Material enviado"
+      }
+    ]
   },
   {
     "id": 16,
-    "nome": "Elaine Almeida",
-    "profissao": "Product Manager",
-    "telefone": "133098050-0978",
-    "origem": "YouTube",
-    "etapa": 2,
-    "ultContato": "2024-02-28",
-    "empresa": "Beta Solutions"
+    "nome": "Pedro Henrique Barbosa",
+    "email": "pedro.henrique.barbosa@hotmail.com",
+    "telefone": "(11) 95814-5164",
+    "empresa": "CloudBridge Inc",
+    "cargo": "Especialista em CRM",
+    "status": "perdido",
+    "origem": "Evento",
+    "etapa": 4,
+    "responsavel": 2,
+    "ultima_interacao": "ligação",
+    "data_cadastro": "2025-10-18T19:08:09Z",
+    "interesse_produto": "Automação de Marketing",
+    "observacao": "Aguardando retorno",
+    "historico": [
+      {
+        "data": "2025-10-21T19:08:09Z",
+        "tipo_interacao": "email",
+        "comentario": "Email de apresentação"
+      }
+    ]
   },
   {
     "id": 17,
-    "nome": "Fernando Pereira",
-    "profissao": "Administrador",
-    "telefone": "131361939-9091",
+    "nome": "Juliana Fernanda Freitas",
+    "email": "juliana.fernanda.freitas@gmail.com",
+    "telefone": "(11) 97323-4772",
+    "empresa": "AlphaCore Labs",
+    "cargo": "Consultor de Vendas",
+    "status": "convertido",
     "origem": "Evento",
-    "etapa": 5,
-    "ultContato": "2025-08-01",
-    "empresa": "BlueWave"
+    "etapa": 1,
+    "responsavel": 4,
+    "ultima_interacao": "ligação",
+    "data_cadastro": "2025-09-24T19:08:09Z",
+    "interesse_produto": "CRM Básico",
+    "observacao": "Aguardando retorno",
+    "historico": [
+      {
+        "data": "2025-09-26T19:08:09Z",
+        "tipo_interacao": "reunião",
+        "comentario": "reunião agendada"
+      },
+      {
+        "data": "2025-10-12T19:08:09Z",
+        "tipo_interacao": "reunião",
+        "comentario": "ligação de follow-up"
+      }
+    ]
   },
   {
     "id": 18,
-    "nome": "Isabela Almeida",
-    "profissao": "Recursos Humanos",
-    "telefone": "135346247-5107",
-    "origem": "Parceiro",
-    "etapa": 5,
-    "ultContato": "2024-04-12",
-    "empresa": "Não aplicavel"
+    "nome": "Camila Beatriz Oliveira",
+    "email": "camila.beatriz.oliveira@protonmail.com",
+    "telefone": "(11) 94802-9730",
+    "empresa": "BlueWave Corp",
+    "cargo": "Consultor de Vendas",
+    "status": "negociação",
+    "origem": "Publicidade",
+    "etapa": 2,
+    "responsavel": 2,
+    "ultima_interacao": "email",
+    "data_cadastro": "2025-10-20T19:08:09Z",
+    "interesse_produto": "Gestão de Vendas",
+    "observacao": "Cliente em potencial",
+    "historico": [
+      {
+        "data": "2025-10-08T19:08:09Z",
+        "tipo_interacao": "ligação",
+        "comentario": "ligação de follow-up"
+      },
+      {
+        "data": "2025-10-07T19:08:09Z",
+        "tipo_interacao": "email",
+        "comentario": "Primeiro contato realizado"
+      }
+    ]
   },
   {
     "id": 19,
-    "nome": "Gabriela Correia",
-    "profissao": "Consultor",
-    "telefone": "132513542-7849",
-    "origem": "YouTube",
-    "etapa": 1,
-    "ultContato": "2025-07-21",
-    "empresa": "Não aplicavel"
+    "nome": "Igor Matheus Almeida",
+    "email": "igor.matheus.almeida@gmail.com",
+    "telefone": "(11) 93524-5033",
+    "empresa": "Quantum Dynamics",
+    "cargo": "Coordenador de Marketing",
+    "status": "novo",
+    "origem": "Site",
+    "etapa": 6,
+    "responsavel": 2,
+    "ultima_interacao": "email",
+    "data_cadastro": "2025-10-16T19:08:09Z",
+    "interesse_produto": "Gestão de Vendas",
+    "observacao": "Solicitou contato por WhatsApp",
+    "historico": [
+      {
+        "data": "2025-10-03T19:08:09Z",
+        "tipo_interacao": "reunião",
+        "comentario": "reunião agendada"
+      },
+      {
+        "data": "2025-10-15T19:08:09Z",
+        "tipo_interacao": "email",
+        "comentario": "Email de apresentação"
+      }
+    ]
   },
   {
     "id": 20,
-    "nome": "Vitor Costa",
-    "profissao": "CEO",
-    "telefone": "134118244-9353",
-    "origem": "Indicação",
-    "etapa": 5,
-    "ultContato": "2025-05-15",
-    "empresa": "Não aplicavel"
+    "nome": "Isabela Cristina Nunes",
+    "email": "isabela.cristina.nunes@outlook.com",
+    "telefone": "(11) 92875-8707",
+    "empresa": "AlphaCore Labs",
+    "cargo": "Coordenador de Marketing",
+    "status": "convertido",
+    "origem": "LinkedIn",
+    "etapa": 6,
+    "responsavel": 1,
+    "ultima_interacao": "email",
+    "data_cadastro": "2025-10-08T19:08:09Z",
+    "interesse_produto": "CRM Avançado",
+    "observacao": "Quer customização",
+    "historico": [
+      {
+        "data": "2025-10-19T19:08:09Z",
+        "tipo_interacao": "email",
+        "comentario": "Primeiro contato realizado"
+      }
+    ]
   },
   {
     "id": 21,
-    "nome": "Bruno Pereira",
-    "profissao": "Assistente Executivo",
-    "telefone": "136400524-2786",
-    "origem": "YouTube",
-    "etapa": 1,
-    "ultContato": "2024-04-24",
-    "empresa": "Não aplicavel"
+    "nome": "Sofia Gabriela Mendes",
+    "email": "sofia.gabriela.mendes@outlook.com",
+    "telefone": "(11) 92497-6193",
+    "empresa": "NextEra Technologies",
+    "cargo": "Gerente de Projetos",
+    "status": "negociação",
+    "origem": "LinkedIn",
+    "etapa": 2,
+    "responsavel": 3,
+    "ultima_interacao": "reunião",
+    "data_cadastro": "2025-10-07T19:08:09Z",
+    "interesse_produto": "CRM Básico",
+    "observacao": "Cliente em potencial",
+    "historico": [
+      {
+        "data": "2025-10-09T19:08:09Z",
+        "tipo_interacao": "email",
+        "comentario": "reunião agendada"
+      },
+      {
+        "data": "2025-10-04T19:08:09Z",
+        "tipo_interacao": "email",
+        "comentario": "Primeiro contato realizado"
+      }
+    ]
   },
   {
     "id": 22,
-    "nome": "Wagner Rocha",
-    "profissao": "Customer Success",
-    "telefone": "130598262-0450",
-    "origem": "Campanha de E-mail",
-    "etapa": 2,
-    "ultContato": "2024-09-12",
-    "empresa": "Zetta Corp"
+    "nome": "Mariana Luiza Dias",
+    "email": "mariana.luiza.dias@protonmail.com",
+    "telefone": "(11) 94268-5965",
+    "empresa": "NexaTech Solutions",
+    "cargo": "Engenheiro de Software",
+    "status": "negociação",
+    "origem": "Indicação",
+    "etapa": 6,
+    "responsavel": 6,
+    "ultima_interacao": "email",
+    "data_cadastro": "2025-10-17T19:08:09Z",
+    "interesse_produto": "Gestão de Vendas",
+    "observacao": "Interessado em demonstração",
+    "historico": [
+      {
+        "data": "2025-10-15T19:08:09Z",
+        "tipo_interacao": "email",
+        "comentario": "Email de apresentação"
+      },
+      {
+        "data": "2025-10-03T19:08:09Z",
+        "tipo_interacao": "reunião",
+        "comentario": "Email de apresentação"
+      },
+      {
+        "data": "2025-10-02T19:08:09Z",
+        "tipo_interacao": "email",
+        "comentario": "Primeiro contato realizado"
+      }
+    ]
   },
   {
     "id": 23,
-    "nome": "Yasmin Mendes",
-    "profissao": "Especialista em SEO",
-    "telefone": "139232260-2563",
-    "origem": "Indicação",
-    "etapa": 2,
-    "ultContato": "2024-04-20",
-    "empresa": "Não aplicavel"
+    "nome": "Ricardo Vinicius Gomes",
+    "email": "ricardo.vinicius.gomes@protonmail.com",
+    "telefone": "(11) 97606-5617",
+    "empresa": "NexaTech Solutions",
+    "cargo": "Analista de TI",
+    "status": "novo",
+    "origem": "Evento",
+    "etapa": 3,
+    "responsavel": 2,
+    "ultima_interacao": "reunião",
+    "data_cadastro": "2025-09-28T19:08:09Z",
+    "interesse_produto": "Automação de Marketing",
+    "observacao": "Solicitou contato por WhatsApp",
+    "historico": [
+      {
+        "data": "2025-10-07T19:08:09Z",
+        "tipo_interacao": "email",
+        "comentario": "Material enviado"
+      }
+    ]
   },
   {
     "id": 24,
-    "nome": "Bruno Carvalho",
-    "profissao": "Analista de Marketing",
-    "telefone": "133754330-3654",
-    "origem": "LinkedIn",
-    "etapa": 3,
-    "ultContato": "2024-12-25",
-    "empresa": "Sigma Systems"
+    "nome": "Eduardo Rafael Martins",
+    "email": "eduardo.rafael.martins@outlook.com",
+    "telefone": "(11) 96409-8812",
+    "empresa": "NextEra Technologies",
+    "cargo": "Especialista em CRM",
+    "status": "em contato",
+    "origem": "Evento",
+    "etapa": 1,
+    "responsavel": 6,
+    "ultima_interacao": "reunião",
+    "data_cadastro": "2025-09-24T19:08:09Z",
+    "interesse_produto": "Gestão de Vendas",
+    "observacao": "Quer customização",
+    "historico": [
+      {
+        "data": "2025-09-28T19:08:09Z",
+        "tipo_interacao": "reunião",
+        "comentario": "Primeiro contato realizado"
+      }
+    ]
   },
   {
     "id": 25,
-    "nome": "Vitor Mendes",
-    "profissao": "UX Designer",
-    "telefone": "130142940-1965",
-    "origem": "Campanha de E-mail",
-    "etapa": 4,
-    "ultContato": "2025-09-12",
-    "empresa": "Beta Solutions"
+    "nome": "Bruno Henrique Lima",
+    "email": "bruno.henrique.lima@protonmail.com",
+    "telefone": "(11) 97593-9032",
+    "empresa": "Quantum Dynamics",
+    "cargo": "Diretor de Operações",
+    "status": "negociação",
+    "origem": "Site",
+    "etapa": 2,
+    "responsavel": 5,
+    "ultima_interacao": "email",
+    "data_cadastro": "2025-09-26T19:08:09Z",
+    "interesse_produto": "Gestão de Vendas",
+    "observacao": "Solicitou contato por WhatsApp",
+    "historico": [
+      {
+        "data": "2025-10-11T19:08:09Z",
+        "tipo_interacao": "email",
+        "comentario": "Email de apresentação"
+      }
+    ]
   },
   {
     "id": 26,
-    "nome": "Mariana Teixeira",
-    "profissao": "Engenheiro de Vendas",
-    "telefone": "134060883-5615",
-    "origem": "Parceiro",
-    "etapa": 3,
-    "ultContato": "2024-05-07",
-    "empresa": "Epsilon Ltda"
+    "nome": "Carlos Eduardo Ribeiro",
+    "email": "carlos.eduardo.ribeiro@yahoo.com",
+    "telefone": "(11) 94522-1490",
+    "empresa": "NexaTech Solutions",
+    "cargo": "Diretor de Operações",
+    "status": "perdido",
+    "origem": "Evento",
+    "etapa": 1,
+    "responsavel": 2,
+    "ultima_interacao": "reunião",
+    "data_cadastro": "2025-10-02T19:08:09Z",
+    "interesse_produto": "CRM Avançado",
+    "observacao": "Solicitou contato por WhatsApp",
+    "historico": [
+      {
+        "data": "2025-10-21T19:08:09Z",
+        "tipo_interacao": "reunião",
+        "comentario": "Material enviado"
+      },
+      {
+        "data": "2025-10-22T19:08:09Z",
+        "tipo_interacao": "email",
+        "comentario": "Material enviado"
+      },
+      {
+        "data": "2025-10-22T19:08:09Z",
+        "tipo_interacao": "email",
+        "comentario": "reunião agendada"
+      }
+    ]
   },
   {
     "id": 27,
-    "nome": "Quezia Ferreira",
-    "profissao": "Recursos Humanos",
-    "telefone": "136564823-6629",
-    "origem": "Parceiro",
+    "nome": "Carlos Eduardo Ribeiro",
+    "email": "carlos.eduardo.ribeiro@gmail.com",
+    "telefone": "(11) 93399-2340",
+    "empresa": "Quantum Dynamics",
+    "cargo": "Engenheiro de Software",
+    "status": "convertido",
+    "origem": "Publicidade",
     "etapa": 3,
-    "ultContato": "2025-02-19",
-    "empresa": "AlphaTech"
+    "responsavel": 2,
+    "ultima_interacao": "email",
+    "data_cadastro": "2025-10-05T19:08:09Z",
+    "interesse_produto": "CRM Básico",
+    "observacao": "Interessado em demonstração",
+    "historico": [
+      {
+        "data": "2025-09-29T19:08:09Z",
+        "tipo_interacao": "reunião",
+        "comentario": "ligação de follow-up"
+      }
+    ]
   },
   {
     "id": 28,
-    "nome": "João Ferreira",
-    "profissao": "Engenheiro de Vendas",
-    "telefone": "136995777-3872",
-    "origem": "LinkedIn",
-    "etapa": 3,
-    "ultContato": "2025-06-11",
-    "empresa": "Lumen Consulting"
+    "nome": "Mariana Luiza Dias",
+    "email": "mariana.luiza.dias@yahoo.com",
+    "telefone": "(11) 92881-5589",
+    "empresa": "Innovatech Systems",
+    "cargo": "Analista de TI",
+    "status": "em contato",
+    "origem": "Indicação",
+    "etapa": 6,
+    "responsavel": 4,
+    "ultima_interacao": "ligação",
+    "data_cadastro": "2025-09-25T19:08:09Z",
+    "interesse_produto": "CRM Básico",
+    "observacao": "Aguardando retorno",
+    "historico": [
+      {
+        "data": "2025-09-28T19:08:09Z",
+        "tipo_interacao": "ligação",
+        "comentario": "ligação de follow-up"
+      }
+    ]
   },
   {
     "id": 29,
-    "nome": "Karina Pereira",
-    "profissao": "Analista Fiscal",
-    "telefone": "133433200-3791",
-    "origem": "Google Ads",
-    "etapa": 4,
-    "ultContato": "2025-10-06",
-    "empresa": "Pioneer Solutions"
+    "nome": "Larissa Beatriz Ferreira",
+    "email": "larissa.beatriz.ferreira@outlook.com",
+    "telefone": "(11) 99119-8088",
+    "empresa": "NexaTech Solutions",
+    "cargo": "Coordenador de Marketing",
+    "status": "convertido",
+    "origem": "Evento",
+    "etapa": 5,
+    "responsavel": 3,
+    "ultima_interacao": "reunião",
+    "data_cadastro": "2025-09-27T19:08:09Z",
+    "interesse_produto": "Automação de Marketing",
+    "observacao": "Aguardando retorno",
+    "historico": [
+      {
+        "data": "2025-10-17T19:08:09Z",
+        "tipo_interacao": "reunião",
+        "comentario": "reunião agendada"
+      },
+      {
+        "data": "2025-10-05T19:08:09Z",
+        "tipo_interacao": "reunião",
+        "comentario": "Material enviado"
+      }
+    ]
   },
   {
     "id": 30,
-    "nome": "Wagner Araújo",
-    "profissao": "Gerente de Contas",
-    "telefone": "136320163-2870",
-    "origem": "YouTube",
-    "etapa": 2,
-    "ultContato": "2024-05-04",
-    "empresa": "Horizon SA"
+    "nome": "Mariana Luiza Dias",
+    "email": "mariana.luiza.dias@protonmail.com",
+    "telefone": "(11) 99751-1471",
+    "empresa": "Skyline Digital",
+    "cargo": "Diretor de Operações",
+    "status": "negociação",
+    "origem": "Publicidade",
+    "etapa": 4,
+    "responsavel": 6,
+    "ultima_interacao": "ligação",
+    "data_cadastro": "2025-10-06T19:08:09Z",
+    "interesse_produto": "Automação de Marketing",
+    "observacao": "Interessado em demonstração",
+    "historico": [
+      {
+        "data": "2025-10-22T19:08:09Z",
+        "tipo_interacao": "reunião",
+        "comentario": "Material enviado"
+      },
+      {
+        "data": "2025-10-09T19:08:09Z",
+        "tipo_interacao": "email",
+        "comentario": "ligação de follow-up"
+      },
+      {
+        "data": "2025-10-12T19:08:09Z",
+        "tipo_interacao": "ligação",
+        "comentario": "ligação de follow-up"
+      }
+    ]
   },
   {
     "id": 31,
-    "nome": "Olivia Nogueira",
-    "profissao": "Analista de Dados",
-    "telefone": "138957986-8727",
-    "origem": "Google Ads",
+    "nome": "Helena Vitória Rocha",
+    "email": "helena.vitoria.rocha@yahoo.com",
+    "telefone": "(11) 99347-2446",
+    "empresa": "CloudBridge Inc",
+    "cargo": "Especialista em CRM",
+    "status": "negociação",
+    "origem": "Evento",
     "etapa": 3,
-    "ultContato": "2024-09-10",
-    "empresa": "Epsilon Ltda"
+    "responsavel": 2,
+    "ultima_interacao": "email",
+    "data_cadastro": "2025-09-24T19:08:09Z",
+    "interesse_produto": "Automação de Marketing",
+    "observacao": "Cliente em potencial",
+    "historico": [
+      {
+        "data": "2025-10-07T19:08:09Z",
+        "tipo_interacao": "email",
+        "comentario": "reunião agendada"
+      },
+      {
+        "data": "2025-10-14T19:08:09Z",
+        "tipo_interacao": "ligação",
+        "comentario": "Primeiro contato realizado"
+      },
+      {
+        "data": "2025-10-02T19:08:09Z",
+        "tipo_interacao": "reunião",
+        "comentario": "reunião agendada"
+      }
+    ]
   },
   {
     "id": 32,
-    "nome": "Yasmin Dias",
-    "profissao": "Analista de Dados",
-    "telefone": "137347143-4558",
-    "origem": "LinkedIn",
+    "nome": "Sofia Gabriela Mendes",
+    "email": "sofia.gabriela.mendes@hotmail.com",
+    "telefone": "(11) 92336-1901",
+    "empresa": "Innovatech Systems",
+    "cargo": "Engenheiro de Software",
+    "status": "negociação",
+    "origem": "Evento",
     "etapa": 2,
-    "ultContato": "2024-06-03",
-    "empresa": "Não aplicavel"
+    "responsavel": 6,
+    "ultima_interacao": "reunião",
+    "data_cadastro": "2025-10-05T19:08:09Z",
+    "interesse_produto": "Automação de Marketing",
+    "observacao": "Aguardando retorno",
+    "historico": [
+      {
+        "data": "2025-10-23T19:08:09Z",
+        "tipo_interacao": "reunião",
+        "comentario": "Primeiro contato realizado"
+      },
+      {
+        "data": "2025-10-18T19:08:09Z",
+        "tipo_interacao": "email",
+        "comentario": "reunião agendada"
+      }
+    ]
   },
   {
     "id": 33,
-    "nome": "Wagner Ramos Rocha",
-    "profissao": "Engenheiro de Vendas",
-    "telefone": "131665876-0366",
-    "origem": "Parceiro",
-    "etapa": 1,
-    "ultContato": "2025-08-12",
-    "empresa": "Não aplicavel"
+    "nome": "Helena Vitória Rocha",
+    "email": "helena.vitoria.rocha@outlook.com",
+    "telefone": "(11) 92259-4004",
+    "empresa": "Vertex Solutions",
+    "cargo": "Coordenador de Marketing",
+    "status": "convertido",
+    "origem": "Publicidade",
+    "etapa": 2,
+    "responsavel": 3,
+    "ultima_interacao": "email",
+    "data_cadastro": "2025-10-02T19:08:09Z",
+    "interesse_produto": "Automação de Marketing",
+    "observacao": "Solicitou contato por WhatsApp",
+    "historico": [
+      {
+        "data": "2025-10-11T19:08:09Z",
+        "tipo_interacao": "email",
+        "comentario": "ligação de follow-up"
+      },
+      {
+        "data": "2025-10-06T19:08:09Z",
+        "tipo_interacao": "email",
+        "comentario": "Material enviado"
+      },
+      {
+        "data": "2025-10-22T19:08:09Z",
+        "tipo_interacao": "ligação",
+        "comentario": "Material enviado"
+      }
+    ]
   },
   {
     "id": 34,
-    "nome": "Amanda Martins",
-    "profissao": "Product Manager",
-    "telefone": "136688937-3467",
-    "origem": "Instagram",
-    "etapa": 4,
-    "ultContato": "2024-12-10",
-    "empresa": "Horizon SA"
+    "nome": "Leonardo Augusto Carvalho",
+    "email": "leonardo.augusto.carvalho@outlook.com",
+    "telefone": "(11) 96239-2067",
+    "empresa": "BlueWave Corp",
+    "cargo": "Especialista em CRM",
+    "status": "em contato",
+    "origem": "Site",
+    "etapa": 2,
+    "responsavel": 4,
+    "ultima_interacao": "ligação",
+    "data_cadastro": "2025-10-03T19:08:09Z",
+    "interesse_produto": "CRM Básico",
+    "observacao": "Aguardando retorno",
+    "historico": [
+      {
+        "data": "2025-10-18T19:08:09Z",
+        "tipo_interacao": "ligação",
+        "comentario": "Email de apresentação"
+      },
+      {
+        "data": "2025-10-04T19:08:09Z",
+        "tipo_interacao": "reunião",
+        "comentario": "reunião agendada"
+      }
+    ]
   },
   {
     "id": 35,
-    "nome": "Mariana Moraes",
-    "profissao": "Desenvolvedor",
-    "telefone": "137298069-9016",
-    "origem": "Facebook",
-    "etapa": 4,
-    "ultContato": "2024-07-05",
-    "empresa": "Não aplicavel"
+    "nome": "Fernando Augusto Pinto",
+    "email": "fernando.augusto.pinto@protonmail.com",
+    "telefone": "(11) 97664-7599",
+    "empresa": "Vertex Solutions",
+    "cargo": "Consultor de Vendas",
+    "status": "negociação",
+    "origem": "Indicação",
+    "etapa": 6,
+    "responsavel": 4,
+    "ultima_interacao": "email",
+    "data_cadastro": "2025-09-28T19:08:09Z",
+    "interesse_produto": "CRM Básico",
+    "observacao": "Aguardando retorno",
+    "historico": [
+      {
+        "data": "2025-10-23T19:08:09Z",
+        "tipo_interacao": "ligação",
+        "comentario": "ligação de follow-up"
+      },
+      {
+        "data": "2025-10-17T19:08:09Z",
+        "tipo_interacao": "email",
+        "comentario": "Material enviado"
+      }
+    ]
   },
   {
     "id": 36,
-    "nome": "Mariana Gomes",
-    "profissao": "Engenheiro de Vendas",
-    "telefone": "137556464-1708",
-    "origem": "Instagram",
-    "etapa": 3,
-    "ultContato": "2024-08-17",
-    "empresa": "Horizon SA"
+    "nome": "Mariana Luiza Dias",
+    "email": "mariana.luiza.dias@outlook.com",
+    "telefone": "(11) 93302-7936",
+    "empresa": "CloudBridge Inc",
+    "cargo": "Gerente de Projetos",
+    "status": "convertido",
+    "origem": "Indicação",
+    "etapa": 1,
+    "responsavel": 3,
+    "ultima_interacao": "ligação",
+    "data_cadastro": "2025-10-20T19:08:09Z",
+    "interesse_produto": "Automação de Marketing",
+    "observacao": "Quer customização",
+    "historico": [
+      {
+        "data": "2025-10-05T19:08:09Z",
+        "tipo_interacao": "email",
+        "comentario": "Email de apresentação"
+      }
+    ]
   },
   {
     "id": 37,
-    "nome": "Úrsula Souza",
-    "profissao": "Analista Fiscal",
-    "telefone": "130330923-2719",
-    "origem": "Site",
-    "etapa": 4,
-    "ultContato": "2024-09-19",
-    "empresa": "Gamma Comércio"
+    "nome": "Fernando Augusto Pinto",
+    "email": "fernando.augusto.pinto@yahoo.com",
+    "telefone": "(11) 97116-6604",
+    "empresa": "Skyline Digital",
+    "cargo": "Engenheiro de Software",
+    "status": "perdido",
+    "origem": "Evento",
+    "etapa": 1,
+    "responsavel": 1,
+    "ultima_interacao": "reunião",
+    "data_cadastro": "2025-10-12T19:08:09Z",
+    "interesse_produto": "Automação de Marketing",
+    "observacao": "Quer customização",
+    "historico": [
+      {
+        "data": "2025-10-01T19:08:09Z",
+        "tipo_interacao": "reunião",
+        "comentario": "ligação de follow-up"
+      }
+    ]
   },
   {
     "id": 38,
-    "nome": "Tiago Pinto",
-    "profissao": "Engenheiro de Software",
-    "telefone": "131241904-9663",
-    "origem": "LinkedIn",
-    "etapa": 5,
-    "ultContato": "2025-10-04",
-    "empresa": "Não aplicavel"
+    "nome": "Igor Matheus Almeida",
+    "email": "igor.matheus.almeida@hotmail.com",
+    "telefone": "(11) 95631-6746",
+    "empresa": "Vertex Solutions",
+    "cargo": "Engenheiro de Software",
+    "status": "perdido",
+    "origem": "Evento",
+    "etapa": 3,
+    "responsavel": 4,
+    "ultima_interacao": "ligação",
+    "data_cadastro": "2025-09-24T19:08:09Z",
+    "interesse_produto": "CRM Avançado",
+    "observacao": "Interessado em demonstração",
+    "historico": [
+      {
+        "data": "2025-09-29T19:08:09Z",
+        "tipo_interacao": "reunião",
+        "comentario": "Material enviado"
+      }
+    ]
   },
   {
     "id": 39,
-    "nome": "Wagner Dias",
-    "profissao": "Product Manager",
-    "telefone": "139190586-5185",
-    "origem": "Instagram",
-    "etapa": 4,
-    "ultContato": "2025-05-16",
-    "empresa": "Não aplicavel"
+    "nome": "Pedro Henrique Barbosa",
+    "email": "pedro.henrique.barbosa@protonmail.com",
+    "telefone": "(11) 96222-3186",
+    "empresa": "Pulse Innovations",
+    "cargo": "Consultor de Vendas",
+    "status": "convertido",
+    "origem": "Publicidade",
+    "etapa": 5,
+    "responsavel": 5,
+    "ultima_interacao": "email",
+    "data_cadastro": "2025-10-13T19:08:09Z",
+    "interesse_produto": "CRM Básico",
+    "observacao": "Quer customização",
+    "historico": [
+      {
+        "data": "2025-10-05T19:08:09Z",
+        "tipo_interacao": "ligação",
+        "comentario": "Email de apresentação"
+      }
+    ]
   },
   {
     "id": 40,
-    "nome": "Lucas Moreira",
-    "profissao": "Coordenador de Projetos",
-    "telefone": "132628498-7769",
-    "origem": "Indicação",
-    "etapa": 3,
-    "ultContato": "2024-09-08",
-    "empresa": "Beta Solutions"
+    "nome": "Juliana Fernanda Freitas",
+    "email": "juliana.fernanda.freitas@hotmail.com",
+    "telefone": "(11) 92737-1207",
+    "empresa": "NextEra Technologies",
+    "cargo": "Diretor de Operações",
+    "status": "novo",
+    "origem": "Site",
+    "etapa": 5,
+    "responsavel": 1,
+    "ultima_interacao": "reunião",
+    "data_cadastro": "2025-10-12T19:08:09Z",
+    "interesse_produto": "Gestão de Vendas",
+    "observacao": "Cliente em potencial",
+    "historico": [
+      {
+        "data": "2025-10-13T19:08:09Z",
+        "tipo_interacao": "email",
+        "comentario": "Email de apresentação"
+      },
+      {
+        "data": "2025-10-20T19:08:09Z",
+        "tipo_interacao": "reunião",
+        "comentario": "ligação de follow-up"
+      }
+    ]
   },
   {
     "id": 41,
-    "nome": "Isabela Ribeiro",
-    "profissao": "Analista de Marketing",
-    "telefone": "137996507-5273",
-    "origem": "Campanha de E-mail",
+    "nome": "Igor Matheus Almeida",
+    "email": "igor.matheus.almeida@outlook.com",
+    "telefone": "(11) 92963-9359",
+    "empresa": "Vertex Solutions",
+    "cargo": "Gerente de Projetos",
+    "status": "convertido",
+    "origem": "Indicação",
     "etapa": 3,
-    "ultContato": "2024-12-14",
-    "empresa": "Não aplicavel"
+    "responsavel": 5,
+    "ultima_interacao": "email",
+    "data_cadastro": "2025-10-04T19:08:09Z",
+    "interesse_produto": "Gestão de Vendas",
+    "observacao": "Interessado em demonstração",
+    "historico": [
+      {
+        "data": "2025-09-25T19:08:09Z",
+        "tipo_interacao": "reunião",
+        "comentario": "Primeiro contato realizado"
+      }
+    ]
   },
   {
     "id": 42,
-    "nome": "Tiago Ramos",
-    "profissao": "Consultor",
-    "telefone": "138083136-7837",
-    "origem": "Google Ads",
-    "etapa": 4,
-    "ultContato": "2024-01-18",
-    "empresa": "Não aplicavel"
+    "nome": "Mariana Luiza Dias",
+    "email": "mariana.luiza.dias@yahoo.com",
+    "telefone": "(11) 98370-3500",
+    "empresa": "Innovatech Systems",
+    "cargo": "Diretor de Operações",
+    "status": "negociação",
+    "origem": "Evento",
+    "etapa": 5,
+    "responsavel": 1,
+    "ultima_interacao": "email",
+    "data_cadastro": "2025-09-26T19:08:09Z",
+    "interesse_produto": "CRM Básico",
+    "observacao": "Solicitou contato por WhatsApp",
+    "historico": [
+      {
+        "data": "2025-10-11T19:08:09Z",
+        "tipo_interacao": "email",
+        "comentario": "Primeiro contato realizado"
+      },
+      {
+        "data": "2025-10-08T19:08:09Z",
+        "tipo_interacao": "ligação",
+        "comentario": "Email de apresentação"
+      },
+      {
+        "data": "2025-10-06T19:08:09Z",
+        "tipo_interacao": "reunião",
+        "comentario": "ligação de follow-up"
+      }
+    ]
   },
   {
     "id": 43,
-    "nome": "Hugo Araújo",
-    "profissao": "Diretor de Operações",
-    "telefone": "133495788-5685",
-    "origem": "Campanha de E-mail",
-    "etapa": 4,
-    "ultContato": "2024-10-04",
-    "empresa": "Não aplicavel"
+    "nome": "Larissa Beatriz Ferreira",
+    "email": "larissa.beatriz.ferreira@hotmail.com",
+    "telefone": "(11) 93833-7800",
+    "empresa": "Innovatech Systems",
+    "cargo": "Coordenador de Marketing",
+    "status": "novo",
+    "origem": "Evento",
+    "etapa": 1,
+    "responsavel": 6,
+    "ultima_interacao": "email",
+    "data_cadastro": "2025-10-10T19:08:09Z",
+    "interesse_produto": "CRM Avançado",
+    "observacao": "Cliente em potencial",
+    "historico": [
+      {
+        "data": "2025-10-16T19:08:09Z",
+        "tipo_interacao": "email",
+        "comentario": "Primeiro contato realizado"
+      },
+      {
+        "data": "2025-10-02T19:08:09Z",
+        "tipo_interacao": "reunião",
+        "comentario": "Material enviado"
+      },
+      {
+        "data": "2025-10-17T19:08:09Z",
+        "tipo_interacao": "reunião",
+        "comentario": "Email de apresentação"
+      }
+    ]
   },
   {
     "id": 44,
-    "nome": "Hugo Costa",
-    "profissao": "Engenheiro de Software",
-    "telefone": "133518233-7498",
-    "origem": "Parceiro",
-    "etapa": 3,
-    "ultContato": "2024-04-12",
-    "empresa": "Epsilon Ltda"
+    "nome": "Igor Matheus Almeida",
+    "email": "igor.matheus.almeida@gmail.com",
+    "telefone": "(11) 96912-1987",
+    "empresa": "Skyline Digital",
+    "cargo": "Coordenador de Marketing",
+    "status": "novo",
+    "origem": "Indicação",
+    "etapa": 4,
+    "responsavel": 6,
+    "ultima_interacao": "email",
+    "data_cadastro": "2025-09-30T19:08:09Z",
+    "interesse_produto": "CRM Básico",
+    "observacao": "Quer customização",
+    "historico": [
+      {
+        "data": "2025-09-28T19:08:09Z",
+        "tipo_interacao": "ligação",
+        "comentario": "Email de apresentação"
+      },
+      {
+        "data": "2025-09-28T19:08:09Z",
+        "tipo_interacao": "ligação",
+        "comentario": "Material enviado"
+      },
+      {
+        "data": "2025-10-18T19:08:09Z",
+        "tipo_interacao": "ligação",
+        "comentario": "Email de apresentação"
+      }
+    ]
   },
   {
     "id": 45,
-    "nome": "Hugo Martins",
-    "profissao": "Desenvolvedor",
-    "telefone": "134082400-8427",
+    "nome": "Ricardo Vinicius Gomes",
+    "email": "ricardo.vinicius.gomes@gmail.com",
+    "telefone": "(11) 93112-2095",
+    "empresa": "CloudBridge Inc",
+    "cargo": "Consultor de Vendas",
+    "status": "negociação",
     "origem": "LinkedIn",
-    "etapa": 1,
-    "ultContato": "2025-08-10",
-    "empresa": "Não aplicavel"
+    "etapa": 3,
+    "responsavel": 4,
+    "ultima_interacao": "email",
+    "data_cadastro": "2025-10-01T19:08:09Z",
+    "interesse_produto": "Gestão de Vendas",
+    "observacao": "Quer customização",
+    "historico": [
+      {
+        "data": "2025-10-21T19:08:09Z",
+        "tipo_interacao": "ligação",
+        "comentario": "reunião agendada"
+      },
+      {
+        "data": "2025-10-18T19:08:09Z",
+        "tipo_interacao": "ligação",
+        "comentario": "ligação de follow-up"
+      }
+    ]
   },
   {
     "id": 46,
-    "nome": "Paulo Ribeiro",
-    "profissao": "UX Designer",
-    "telefone": "132047116-7190",
-    "origem": "Facebook",
-    "etapa": 2,
-    "ultContato": "2025-07-30",
-    "empresa": "Beta Solutions"
+    "nome": "Fernanda Carolina Souza",
+    "email": "fernanda.carolina.souza@protonmail.com",
+    "telefone": "(11) 96450-5717",
+    "empresa": "Quantum Dynamics",
+    "cargo": "Engenheiro de Software",
+    "status": "negociação",
+    "origem": "Indicação",
+    "etapa": 3,
+    "responsavel": 6,
+    "ultima_interacao": "reunião",
+    "data_cadastro": "2025-10-09T19:08:09Z",
+    "interesse_produto": "Automação de Marketing",
+    "observacao": "Cliente em potencial",
+    "historico": [
+      {
+        "data": "2025-10-06T19:08:09Z",
+        "tipo_interacao": "ligação",
+        "comentario": "reunião agendada"
+      }
+    ]
   },
   {
     "id": 47,
-    "nome": "Hugo Mendes Costa",
-    "profissao": "Analista Fiscal",
-    "telefone": "136999386-7749",
+    "nome": "Larissa Beatriz Ferreira",
+    "email": "larissa.beatriz.ferreira@protonmail.com",
+    "telefone": "(11) 97345-9107",
+    "empresa": "Quantum Dynamics",
+    "cargo": "Coordenador de Marketing",
+    "status": "convertido",
     "origem": "Evento",
-    "etapa": 3,
-    "ultContato": "2025-08-05",
-    "empresa": "Lumen Consulting"
+    "etapa": 2,
+    "responsavel": 6,
+    "ultima_interacao": "email",
+    "data_cadastro": "2025-10-10T19:08:09Z",
+    "interesse_produto": "CRM Avançado",
+    "observacao": "Solicitou contato por WhatsApp",
+    "historico": [
+      {
+        "data": "2025-10-05T19:08:09Z",
+        "tipo_interacao": "ligação",
+        "comentario": "ligação de follow-up"
+      },
+      {
+        "data": "2025-10-11T19:08:09Z",
+        "tipo_interacao": "reunião",
+        "comentario": "reunião agendada"
+      }
+    ]
   },
   {
     "id": 48,
-    "nome": "Ximena Costa",
-    "profissao": "Analista Fiscal",
-    "telefone": "133341232-8120",
-    "origem": "Evento",
-    "etapa": 4,
-    "ultContato": "2025-08-31",
-    "empresa": "AlphaTech"
+    "nome": "Fernanda Carolina Souza",
+    "email": "fernanda.carolina.souza@outlook.com",
+    "telefone": "(11) 97883-2622",
+    "empresa": "Skyline Digital",
+    "cargo": "Coordenador de Marketing",
+    "status": "novo",
+    "origem": "Publicidade",
+    "etapa": 3,
+    "responsavel": 3,
+    "ultima_interacao": "ligação",
+    "data_cadastro": "2025-10-17T19:08:09Z",
+    "interesse_produto": "Gestão de Vendas",
+    "observacao": "Solicitou contato por WhatsApp",
+    "historico": [
+      {
+        "data": "2025-10-06T19:08:09Z",
+        "tipo_interacao": "ligação",
+        "comentario": "Primeiro contato realizado"
+      },
+      {
+        "data": "2025-10-01T19:08:09Z",
+        "tipo_interacao": "ligação",
+        "comentario": "Primeiro contato realizado"
+      },
+      {
+        "data": "2025-10-05T19:08:09Z",
+        "tipo_interacao": "reunião",
+        "comentario": "reunião agendada"
+      }
+    ]
   },
   {
     "id": 49,
-    "nome": "Hugo Ferreira",
-    "profissao": "Diretor de Operações",
-    "telefone": "134713493-6183",
-    "origem": "Facebook",
-    "etapa": 3,
-    "ultContato": "2024-05-25",
-    "empresa": "Não aplicavel"
+    "nome": "Daniel Felipe Costa",
+    "email": "daniel.felipe.costa@hotmail.com",
+    "telefone": "(11) 97493-3933",
+    "empresa": "Skyline Digital",
+    "cargo": "Diretor de Operações",
+    "status": "perdido",
+    "origem": "Site",
+    "etapa": 6,
+    "responsavel": 4,
+    "ultima_interacao": "reunião",
+    "data_cadastro": "2025-09-25T19:08:09Z",
+    "interesse_produto": "CRM Avançado",
+    "observacao": "Solicitou contato por WhatsApp",
+    "historico": [
+      {
+        "data": "2025-10-05T19:08:09Z",
+        "tipo_interacao": "email",
+        "comentario": "reunião agendada"
+      }
+    ]
   },
   {
     "id": 50,
-    "nome": "Fernando Castro",
-    "profissao": "Product Manager",
-    "telefone": "139947174-6488",
-    "origem": "Google Ads",
-    "etapa": 4,
-    "ultContato": "2024-03-23",
-    "empresa": "BlueWave"
-  },
-  {
-    "id": 51,
-    "nome": "Nicolas Moraes",
-    "profissao": "UX Designer",
-    "telefone": "139401399-0490",
-    "origem": "Facebook",
-    "etapa": 4,
-    "ultContato": "2025-06-15",
-    "empresa": "BlueWave"
-  },
-  {
-    "id": 52,
-    "nome": "Isabela Lima",
-    "profissao": "Head de Operações",
-    "telefone": "136717565-5125",
-    "origem": "Evento",
-    "etapa": 4,
-    "ultContato": "2024-10-22",
-    "empresa": "Sigma Systems"
-  },
-  {
-    "id": 53,
-    "nome": "Yasmin Souza Mendes",
-    "profissao": "Coordenador de Projetos",
-    "telefone": "131545168-0876",
-    "origem": "Instagram",
-    "etapa": 2,
-    "ultContato": "2025-06-14",
-    "empresa": "Não aplicavel"
-  },
-  {
-    "id": 54,
-    "nome": "Yasmin Carvalho",
-    "profissao": "Assistente Executivo",
-    "telefone": "137034824-7710",
-    "origem": "Parceiro",
-    "etapa": 2,
-    "ultContato": "2024-06-11",
-    "empresa": "Não aplicavel"
-  },
-  {
-    "id": 55,
-    "nome": "Amanda Mendes",
-    "profissao": "Especialista em SEO",
-    "telefone": "131317127-4846",
-    "origem": "Google Ads",
-    "etapa": 4,
-    "ultContato": "2024-09-06",
-    "empresa": "Gamma Comércio"
-  },
-  {
-    "id": 56,
-    "nome": "Mariana Almeida",
-    "profissao": "Administrador",
-    "telefone": "138214658-4044",
-    "origem": "Parceiro",
-    "etapa": 5,
-    "ultContato": "2025-05-16",
-    "empresa": "Omega Group"
-  },
-  {
-    "id": 57,
-    "nome": "Rafael Carvalho",
-    "profissao": "Analista de Suporte",
-    "telefone": "135886753-3963",
-    "origem": "Evento",
+    "nome": "Leonardo Augusto Carvalho",
+    "email": "leonardo.augusto.carvalho@gmail.com",
+    "telefone": "(11) 94715-8400",
+    "empresa": "Skyline Digital",
+    "cargo": "Especialista em CRM",
+    "status": "convertido",
+    "origem": "Publicidade",
     "etapa": 1,
-    "ultContato": "2024-11-21",
-    "empresa": "Pioneer Solutions"
-  },
-  {
-    "id": 58,
-    "nome": "Zeca Araújo",
-    "profissao": "Representante Comercial",
-    "telefone": "132702895-1718",
-    "origem": "Google Ads",
-    "etapa": 1,
-    "ultContato": "2024-05-27",
-    "empresa": "Não aplicavel"
-  },
-  {
-    "id": 59,
-    "nome": "Úrsula Rocha",
-    "profissao": "Coordenador de RH",
-    "telefone": "137459615-8657",
-    "origem": "YouTube",
-    "etapa": 1,
-    "ultContato": "2025-09-24",
-    "empresa": "Não aplicavel"
-  },
-  {
-    "id": 60,
-    "nome": "Úrsula Nogueira",
-    "profissao": "Product Manager",
-    "telefone": "133161172-4005",
-    "origem": "Instagram",
-    "etapa": 3,
-    "ultContato": "2025-01-02",
-    "empresa": "Não aplicavel"
-  },
-  {
-    "id": 61,
-    "nome": "Elaine Santos",
-    "profissao": "Analista de Dados",
-    "telefone": "136922219-6937",
-    "origem": "Parceiro",
-    "etapa": 2,
-    "ultContato": "2024-08-25",
-    "empresa": "Epsilon Ltda"
-  },
-  {
-    "id": 62,
-    "nome": "Olivia Oliveira",
-    "profissao": "Recursos Humanos",
-    "telefone": "130748217-5946",
-    "origem": "Indicação",
-    "etapa": 4,
-    "ultContato": "2024-11-05",
-    "empresa": "Não aplicavel"
-  },
-  {
-    "id": 63,
-    "nome": "Mariana Carvalho",
-    "profissao": "Analista Financeiro",
-    "telefone": "133695944-0640",
-    "origem": "Parceiro",
-    "etapa": 1,
-    "ultContato": "2025-09-12",
-    "empresa": "Vertex Ltda"
-  },
-  {
-    "id": 64,
-    "nome": "João Dias",
-    "profissao": "Analista de Marketing",
-    "telefone": "139533942-1047",
-    "origem": "Instagram",
-    "etapa": 5,
-    "ultContato": "2025-01-08",
-    "empresa": "Beta Solutions"
-  },
-  {
-    "id": 65,
-    "nome": "João Gomes",
-    "profissao": "Engenheiro de Software",
-    "telefone": "136232858-8424",
-    "origem": "Google Ads",
-    "etapa": 3,
-    "ultContato": "2024-12-12",
-    "empresa": "Omega Group"
-  },
-  {
-    "id": 66,
-    "nome": "Carla Rocha",
-    "profissao": "Analista Fiscal",
-    "telefone": "133685160-4817",
-    "origem": "Campanha de E-mail",
-    "etapa": 3,
-    "ultContato": "2025-08-21",
-    "empresa": "Não aplicavel"
-  },
-  {
-    "id": 67,
-    "nome": "Úrsula Martins",
-    "profissao": "Analista Financeiro",
-    "telefone": "133709859-3174",
-    "origem": "Evento",
-    "etapa": 1,
-    "ultContato": "2024-05-23",
-    "empresa": "Não aplicavel"
-  },
-  {
-    "id": 68,
-    "nome": "Bruno Ferreira",
-    "profissao": "Gerente de Contas",
-    "telefone": "131138267-5869",
-    "origem": "Facebook",
-    "etapa": 4,
-    "ultContato": "2024-04-11",
-    "empresa": "Lumen Consulting"
-  },
-  {
-    "id": 69,
-    "nome": "Nicolas Oliveira",
-    "profissao": "Diretor Comercial",
-    "telefone": "135377351-5850",
-    "origem": "Evento",
-    "etapa": 3,
-    "ultContato": "2024-07-13",
-    "empresa": "Vertex Ltda"
-  },
-  {
-    "id": 70,
-    "nome": "Olivia Pereira",
-    "profissao": "Recursos Humanos",
-    "telefone": "133900532-9318",
-    "origem": "Site",
-    "etapa": 5,
-    "ultContato": "2024-08-09",
-    "empresa": "Delta Serviços"
-  },
-  {
-    "id": 71,
-    "nome": "Karina Dias",
-    "profissao": "CEO",
-    "telefone": "139042284-2102",
-    "origem": "Instagram",
-    "etapa": 3,
-    "ultContato": "2024-08-31",
-    "empresa": "AlphaTech"
-  },
-  {
-    "id": 72,
-    "nome": "Fernando Oliveira",
-    "profissao": "Diretor Comercial",
-    "telefone": "132681177-5891",
-    "origem": "Google Ads",
-    "etapa": 5,
-    "ultContato": "2024-08-14",
-    "empresa": "AlphaTech"
-  },
-  {
-    "id": 73,
-    "nome": "Ximena Castro",
-    "profissao": "Recursos Humanos",
-    "telefone": "138470076-6177",
-    "origem": "LinkedIn",
-    "etapa": 1,
-    "ultContato": "2024-11-25",
-    "empresa": "Beta Solutions"
-  },
-  {
-    "id": 74,
-    "nome": "Elaine Oliveira",
-    "profissao": "Administrador",
-    "telefone": "139856984-7896",
-    "origem": "LinkedIn",
-    "etapa": 1,
-    "ultContato": "2025-07-18",
-    "empresa": "Delta Serviços"
-  },
-  {
-    "id": 75,
-    "nome": "Nicolas Ribeiro",
-    "profissao": "Analista de Marketing",
-    "telefone": "136576615-6545",
-    "origem": "Facebook",
-    "etapa": 4,
-    "ultContato": "2024-03-09",
-    "empresa": "Não aplicavel"
-  },
-  {
-    "id": 76,
-    "nome": "Carla Pereira",
-    "profissao": "Especialista em SEO",
-    "telefone": "131528098-8516",
-    "origem": "Campanha de E-mail",
-    "etapa": 4,
-    "ultContato": "2024-02-22",
-    "empresa": "Lumen Consulting"
-  },
-  {
-    "id": 77,
-    "nome": "João Martins",
-    "profissao": "Analista Financeiro",
-    "telefone": "139832731-5851",
-    "origem": "Indicação",
-    "etapa": 5,
-    "ultContato": "2024-08-19",
-    "empresa": "Vertex Ltda"
-  },
-  {
-    "id": 78,
-    "nome": "Rafael Dias",
-    "profissao": "Administrador",
-    "telefone": "139809402-4455",
-    "origem": "Instagram",
-    "etapa": 2,
-    "ultContato": "2024-05-26",
-    "empresa": "Sigma Systems"
-  },
-  {
-    "id": 79,
-    "nome": "Carla Moraes Rocha",
-    "profissao": "Assistente Executivo",
-    "telefone": "130183667-5254",
-    "origem": "Campanha de E-mail",
-    "etapa": 5,
-    "ultContato": "2025-09-02",
-    "empresa": "Não aplicavel"
-  },
-  {
-    "id": 80,
-    "nome": "Bruno Rocha",
-    "profissao": "Desenvolvedor",
-    "telefone": "139014767-9764",
-    "origem": "Site",
-    "etapa": 5,
-    "ultContato": "2024-04-26",
-    "empresa": "Não aplicavel"
-  },
-  {
-    "id": 81,
-    "nome": "Daniel Ferreira",
-    "profissao": "Recursos Humanos",
-    "telefone": "139784036-9003",
-    "origem": "Indicação",
-    "etapa": 2,
-    "ultContato": "2024-05-20",
-    "empresa": "Epsilon Ltda"
-  },
-  {
-    "id": 82,
-    "nome": "Karina Costa",
-    "profissao": "Gerente de Vendas",
-    "telefone": "137622683-8851",
-    "origem": "Evento",
-    "etapa": 1,
-    "ultContato": "2025-03-22",
-    "empresa": "Não aplicavel"
-  },
-  {
-    "id": 83,
-    "nome": "Carla Gomes",
-    "profissao": "Head de Operações",
-    "telefone": "136966416-0529",
-    "origem": "Google Ads",
-    "etapa": 3,
-    "ultContato": "2024-03-31",
-    "empresa": "Não aplicavel"
-  },
-  {
-    "id": 84,
-    "nome": "Daniel Santos",
-    "profissao": "Especialista em SEO",
-    "telefone": "139681645-3521",
-    "origem": "YouTube",
-    "etapa": 1,
-    "ultContato": "2025-06-27",
-    "empresa": "BlueWave"
-  },
-  {
-    "id": 85,
-    "nome": "Yasmin Martins",
-    "profissao": "Analista de Suporte",
-    "telefone": "132312432-9212",
-    "origem": "Google Ads",
-    "etapa": 4,
-    "ultContato": "2025-07-31",
-    "empresa": "Omega Group"
-  },
-  {
-    "id": 86,
-    "nome": "Vitor Teixeira",
-    "profissao": "Assistente Executivo",
-    "telefone": "139552717-7449",
-    "origem": "Instagram",
-    "etapa": 3,
-    "ultContato": "2025-06-03",
-    "empresa": "Não aplicavel"
-  },
-  {
-    "id": 87,
-    "nome": "Olivia Ribeiro",
-    "profissao": "Diretor Comercial",
-    "telefone": "130541199-8679",
-    "origem": "YouTube",
-    "etapa": 1,
-    "ultContato": "2025-04-05",
-    "empresa": "Lumen Consulting"
-  },
-  {
-    "id": 88,
-    "nome": "Úrsula Almeida",
-    "profissao": "UX Designer",
-    "telefone": "139782071-5182",
-    "origem": "Instagram",
-    "etapa": 2,
-    "ultContato": "2025-03-24",
-    "empresa": "Nova Digital"
-  },
-  {
-    "id": 89,
-    "nome": "Quezia Pinto",
-    "profissao": "Desenvolvedor",
-    "telefone": "135546659-0515",
-    "origem": "LinkedIn",
-    "etapa": 5,
-    "ultContato": "2025-01-30",
-    "empresa": "Não aplicavel"
-  },
-  {
-    "id": 90,
-    "nome": "Ximena Nogueira",
-    "profissao": "Administrador",
-    "telefone": "132519254-6291",
-    "origem": "Indicação",
-    "etapa": 5,
-    "ultContato": "2025-01-20",
-    "empresa": "Zetta Corp"
-  },
-  {
-    "id": 91,
-    "nome": "Elaine Nogueira",
-    "profissao": "Diretor de Operações",
-    "telefone": "138168505-4235",
-    "origem": "Google Ads",
-    "etapa": 2,
-    "ultContato": "2024-08-19",
-    "empresa": "Gamma Comércio"
-  },
-  {
-    "id": 92,
-    "nome": "Carla Ferreira",
-    "profissao": "Analista Financeiro",
-    "telefone": "138880592-9622",
-    "origem": "Facebook",
-    "etapa": 5,
-    "ultContato": "2024-06-18",
-    "empresa": "AlphaTech"
-  },
-  {
-    "id": 93,
-    "nome": "Nicolas Martins",
-    "profissao": "Recursos Humanos",
-    "telefone": "133794738-3473",
-    "origem": "Campanha de E-mail",
-    "etapa": 5,
-    "ultContato": "2025-03-27",
-    "empresa": "Epsilon Ltda"
-  },
-  {
-    "id": 94,
-    "nome": "Yasmin Araújo",
-    "profissao": "Analista de Dados",
-    "telefone": "138623924-0758",
-    "origem": "LinkedIn",
-    "etapa": 5,
-    "ultContato": "2024-05-07",
-    "empresa": "Não aplicavel"
-  },
-  {
-    "id": 95,
-    "nome": "Yasmin Lima",
-    "profissao": "Consultor",
-    "telefone": "137826137-5060",
-    "origem": "Evento",
-    "etapa": 5,
-    "ultContato": "2025-01-17",
-    "empresa": "Não aplicavel"
-  },
-  {
-    "id": 96,
-    "nome": "Carla Martins",
-    "profissao": "Analista de Marketing",
-    "telefone": "130515220-4727",
-    "origem": "Google Ads",
-    "etapa": 5,
-    "ultContato": "2024-01-06",
-    "empresa": "AlphaTech"
-  },
-  {
-    "id": 97,
-    "nome": "Isabela Rocha Almeida",
-    "profissao": "Customer Success",
-    "telefone": "139861434-1036",
-    "origem": "Parceiro",
-    "etapa": 4,
-    "ultContato": "2024-03-05",
-    "empresa": "Não aplicavel"
-  },
-  {
-    "id": 98,
-    "nome": "Paulo Pinto",
-    "profissao": "Customer Success",
-    "telefone": "130893246-0953",
-    "origem": "Parceiro",
-    "etapa": 4,
-    "ultContato": "2024-07-10",
-    "empresa": "Beta Solutions"
-  },
-  {
-    "id": 99,
-    "nome": "Quezia Martins",
-    "profissao": "Coordenador de RH",
-    "telefone": "138888806-7065",
-    "origem": "Indicação",
-    "etapa": 1,
-    "ultContato": "2024-12-31",
-    "empresa": "Zetta Corp"
-  },
-  {
-    "id": 100,
-    "nome": "Hugo Moraes",
-    "profissao": "Recursos Humanos",
-    "telefone": "131952058-5277",
-    "origem": "Facebook",
-    "etapa": 2,
-    "ultContato": "2024-03-05",
-    "empresa": "Omega Group"
-  },
-  {
-    "id": 101,
-    "nome": "Bruno Almeida Ferreira",
-    "profissao": "Diretor Comercial",
-    "telefone": "133054868-7403",
-    "origem": "Indicação",
-    "etapa": 3,
-    "ultContato": "2024-02-18",
-    "empresa": "Zetta Corp"
-  },
-  {
-    "id": 102,
-    "nome": "Isabela Costa",
-    "profissao": "Analista de Suporte",
-    "telefone": "136676527-7584",
-    "origem": "LinkedIn",
-    "etapa": 4,
-    "ultContato": "2024-03-21",
-    "empresa": "Não aplicavel"
-  },
-  {
-    "id": 103,
-    "nome": "Fernando Mendes",
-    "profissao": "Product Manager",
-    "telefone": "135115447-9627",
-    "origem": "Campanha de E-mail",
-    "etapa": 4,
-    "ultContato": "2024-02-13",
-    "empresa": "BlueWave"
-  },
-  {
-    "id": 104,
-    "nome": "Lucas Pinto",
-    "profissao": "Especialista em SEO",
-    "telefone": "134016582-0297",
-    "origem": "Instagram",
-    "etapa": 2,
-    "ultContato": "2024-03-09",
-    "empresa": "Não aplicavel"
-  },
-  {
-    "id": 105,
-    "nome": "Úrsula Martins Martins",
-    "profissao": "Representante Comercial",
-    "telefone": "139092755-7192",
-    "origem": "YouTube",
-    "etapa": 3,
-    "ultContato": "2025-02-11",
-    "empresa": "Não aplicavel"
-  },
-  {
-    "id": 106,
-    "nome": "Isabela Santos",
-    "profissao": "Analista Financeiro",
-    "telefone": "130278681-4473",
-    "origem": "Parceiro",
-    "etapa": 3,
-    "ultContato": "2025-05-17",
-    "empresa": "Não aplicavel"
-  },
-  {
-    "id": 107,
-    "nome": "Elaine Pereira",
-    "profissao": "Coordenador de Projetos",
-    "telefone": "132715518-8442",
-    "origem": "Facebook",
-    "etapa": 3,
-    "ultContato": "2025-06-04",
-    "empresa": "Não aplicavel"
-  },
-  {
-    "id": 108,
-    "nome": "Gabriela Castro",
-    "profissao": "CEO",
-    "telefone": "133705895-7829",
-    "origem": "LinkedIn",
-    "etapa": 1,
-    "ultContato": "2024-11-12",
-    "empresa": "Não aplicavel"
-  },
-  {
-    "id": 109,
-    "nome": "Wagner Moraes",
-    "profissao": "Gerente de Contas",
-    "telefone": "138669125-1778",
-    "origem": "Campanha de E-mail",
-    "etapa": 2,
-    "ultContato": "2025-07-18",
-    "empresa": "Gamma Comércio"
-  },
-  {
-    "id": 110,
-    "nome": "Yasmin Rocha",
-    "profissao": "Especialista em SEO",
-    "telefone": "138018242-2535",
-    "origem": "YouTube",
-    "etapa": 3,
-    "ultContato": "2024-03-21",
-    "empresa": "Não aplicavel"
-  },
-  {
-    "id": 111,
-    "nome": "Úrsula Mendes",
-    "profissao": "Consultor",
-    "telefone": "132498182-9922",
-    "origem": "Parceiro",
-    "etapa": 5,
-    "ultContato": "2024-12-11",
-    "empresa": "Lumen Consulting"
-  },
-  {
-    "id": 112,
-    "nome": "Bruno Silva",
-    "profissao": "Coordenador de RH",
-    "telefone": "130943969-0784",
-    "origem": "Indicação",
-    "etapa": 4,
-    "ultContato": "2024-09-07",
-    "empresa": "Viva Comércio"
-  },
-  {
-    "id": 113,
-    "nome": "Mariana Ferreira",
-    "profissao": "Coordenador de Projetos",
-    "telefone": "131027677-3592",
-    "origem": "Campanha de E-mail",
-    "etapa": 3,
-    "ultContato": "2024-12-19",
-    "empresa": "Gamma Comércio"
-  },
-  {
-    "id": 114,
-    "nome": "Yasmin Correia Martins",
-    "profissao": "Customer Success",
-    "telefone": "131537147-3210",
-    "origem": "Indicação",
-    "etapa": 4,
-    "ultContato": "2025-09-22",
-    "empresa": "Não aplicavel"
-  },
-  {
-    "id": 115,
-    "nome": "Fernando Gomes",
-    "profissao": "Head de Operações",
-    "telefone": "135327877-4701",
-    "origem": "Evento",
-    "etapa": 5,
-    "ultContato": "2025-04-13",
-    "empresa": "Delta Serviços"
-  },
-  {
-    "id": 116,
-    "nome": "Sofia Martins",
-    "profissao": "Diretor Comercial",
-    "telefone": "130479748-0162",
-    "origem": "Indicação",
-    "etapa": 3,
-    "ultContato": "2025-02-16",
-    "empresa": "Não aplicavel"
-  },
-  {
-    "id": 117,
-    "nome": "Mariana Souza",
-    "profissao": "Head de Operações",
-    "telefone": "138358416-8784",
-    "origem": "Parceiro",
-    "etapa": 5,
-    "ultContato": "2024-05-01",
-    "empresa": "Não aplicavel"
-  },
-  {
-    "id": 118,
-    "nome": "Daniel Araújo",
-    "profissao": "Analista de Suporte",
-    "telefone": "135852398-6800",
-    "origem": "Instagram",
-    "etapa": 2,
-    "ultContato": "2024-12-07",
-    "empresa": "Nova Digital"
-  },
-  {
-    "id": 119,
-    "nome": "Olivia Rocha",
-    "profissao": "Administrador",
-    "telefone": "138259526-9495",
-    "origem": "YouTube",
-    "etapa": 5,
-    "ultContato": "2025-06-29",
-    "empresa": "Lumen Consulting"
-  },
-  {
-    "id": 120,
-    "nome": "João Carvalho",
-    "profissao": "Gerente de Vendas",
-    "telefone": "135516940-9749",
-    "origem": "Parceiro",
-    "etapa": 2,
-    "ultContato": "2024-02-22",
-    "empresa": "Gamma Comércio"
-  },
-  {
-    "id": 121,
-    "nome": "Quezia Moreira",
-    "profissao": "Engenheiro de Software",
-    "telefone": "139623091-3075",
-    "origem": "Evento",
-    "etapa": 2,
-    "ultContato": "2025-02-26",
-    "empresa": "Sigma Systems"
-  },
-  {
-    "id": 122,
-    "nome": "Quezia Dias",
-    "profissao": "Administrador",
-    "telefone": "137028385-7865",
-    "origem": "Facebook",
-    "etapa": 4,
-    "ultContato": "2025-06-29",
-    "empresa": "Não aplicavel"
-  },
-  {
-    "id": 123,
-    "nome": "Lucas Nogueira",
-    "profissao": "Analista Fiscal",
-    "telefone": "134973348-4344",
-    "origem": "Site",
-    "etapa": 4,
-    "ultContato": "2024-11-20",
-    "empresa": "Nova Digital"
-  },
-  {
-    "id": 124,
-    "nome": "Zeca Moraes",
-    "profissao": "Consultor",
-    "telefone": "134198665-2404",
-    "origem": "LinkedIn",
-    "etapa": 3,
-    "ultContato": "2025-03-28",
-    "empresa": "Pioneer Solutions"
-  },
-  {
-    "id": 125,
-    "nome": "Paulo Almeida",
-    "profissao": "Engenheiro de Vendas",
-    "telefone": "138484219-9330",
-    "origem": "YouTube",
-    "etapa": 2,
-    "ultContato": "2025-10-15",
-    "empresa": "Não aplicavel"
-  },
-  {
-    "id": 126,
-    "nome": "Daniel Barbosa",
-    "profissao": "UX Designer",
-    "telefone": "137120826-7734",
-    "origem": "Campanha de E-mail",
-    "etapa": 3,
-    "ultContato": "2024-03-01",
-    "empresa": "Beta Solutions"
-  },
-  {
-    "id": 127,
-    "nome": "Úrsula Teixeira",
-    "profissao": "Analista de Marketing",
-    "telefone": "138026206-7240",
-    "origem": "Instagram",
-    "etapa": 3,
-    "ultContato": "2025-08-04",
-    "empresa": "BlueWave"
-  },
-  {
-    "id": 128,
-    "nome": "Karina Ferreira",
-    "profissao": "Coordenador de Projetos",
-    "telefone": "138872874-3152",
-    "origem": "Google Ads",
-    "etapa": 3,
-    "ultContato": "2024-07-09",
-    "empresa": "Não aplicavel"
-  },
-  {
-    "id": 129,
-    "nome": "Karina Castro",
-    "profissao": "Product Manager",
-    "telefone": "139329668-5161",
-    "origem": "Facebook",
-    "etapa": 2,
-    "ultContato": "2025-05-03",
-    "empresa": "Não aplicavel"
-  },
-  {
-    "id": 130,
-    "nome": "Hugo Oliveira Silva",
-    "profissao": "Representante Comercial",
-    "telefone": "133745499-0453",
-    "origem": "Instagram",
-    "etapa": 1,
-    "ultContato": "2025-04-21",
-    "empresa": "Não aplicavel"
-  },
-  {
-    "id": 131,
-    "nome": "Mariana Nogueira",
-    "profissao": "Analista de Dados",
-    "telefone": "134145933-2727",
-    "origem": "Parceiro",
-    "etapa": 3,
-    "ultContato": "2025-03-01",
-    "empresa": "BlueWave"
-  },
-  {
-    "id": 132,
-    "nome": "Paulo Dias",
-    "profissao": "Customer Success",
-    "telefone": "133391878-5191",
-    "origem": "Instagram",
-    "etapa": 5,
-    "ultContato": "2025-06-01",
-    "empresa": "Não aplicavel"
-  },
-  {
-    "id": 133,
-    "nome": "Rafael Rocha",
-    "profissao": "Desenvolvedor",
-    "telefone": "135871397-1870",
-    "origem": "Google Ads",
-    "etapa": 2,
-    "ultContato": "2025-06-09",
-    "empresa": "Não aplicavel"
-  },
-  {
-    "id": 134,
-    "nome": "Sofia Souza",
-    "profissao": "Customer Success",
-    "telefone": "137406403-9106",
-    "origem": "Campanha de E-mail",
-    "etapa": 1,
-    "ultContato": "2025-07-08",
-    "empresa": "BlueWave"
-  },
-  {
-    "id": 135,
-    "nome": "Carla Carvalho",
-    "profissao": "Diretor Comercial",
-    "telefone": "134622656-7661",
-    "origem": "YouTube",
-    "etapa": 2,
-    "ultContato": "2024-12-22",
-    "empresa": "Não aplicavel"
-  },
-  {
-    "id": 136,
-    "nome": "Rafael Araújo",
-    "profissao": "Analista de Dados",
-    "telefone": "132300478-6863",
-    "origem": "Site",
-    "etapa": 4,
-    "ultContato": "2024-12-20",
-    "empresa": "Não aplicavel"
-  },
-  {
-    "id": 137,
-    "nome": "Gabriela Moraes",
-    "profissao": "Analista Fiscal",
-    "telefone": "131069033-1190",
-    "origem": "Google Ads",
-    "etapa": 5,
-    "ultContato": "2024-02-19",
-    "empresa": "Não aplicavel"
-  },
-  {
-    "id": 138,
-    "nome": "Bruno Araújo",
-    "profissao": "Coordenador de Projetos",
-    "telefone": "133830284-3959",
-    "origem": "Parceiro",
-    "etapa": 3,
-    "ultContato": "2024-08-30",
-    "empresa": "Não aplicavel"
-  },
-  {
-    "id": 139,
-    "nome": "Elaine Correia Nogueira",
-    "profissao": "Analista de Marketing",
-    "telefone": "136440892-6870",
-    "origem": "Campanha de E-mail",
-    "etapa": 4,
-    "ultContato": "2025-06-21",
-    "empresa": "Não aplicavel"
-  },
-  {
-    "id": 140,
-    "nome": "Nicolas Barbosa",
-    "profissao": "CEO",
-    "telefone": "134628733-4270",
-    "origem": "YouTube",
-    "etapa": 4,
-    "ultContato": "2025-03-02",
-    "empresa": "Gamma Comércio"
-  },
-  {
-    "id": 141,
-    "nome": "Mariana Santos",
-    "profissao": "Consultor",
-    "telefone": "133517518-3046",
-    "origem": "Parceiro",
-    "etapa": 5,
-    "ultContato": "2024-02-10",
-    "empresa": "Delta Serviços"
-  },
-  {
-    "id": 142,
-    "nome": "Zeca Dias",
-    "profissao": "Head de Operações",
-    "telefone": "138373540-3317",
-    "origem": "Site",
-    "etapa": 5,
-    "ultContato": "2024-07-28",
-    "empresa": "Não aplicavel"
-  },
-  {
-    "id": 143,
-    "nome": "Hugo Mendes",
-    "profissao": "UX Designer",
-    "telefone": "134678544-5877",
-    "origem": "LinkedIn",
-    "etapa": 4,
-    "ultContato": "2024-11-23",
-    "empresa": "Zetta Corp"
-  },
-  {
-    "id": 144,
-    "nome": "Karina Barbosa",
-    "profissao": "Diretor Comercial",
-    "telefone": "139320489-9642",
-    "origem": "Site",
-    "etapa": 3,
-    "ultContato": "2024-08-23",
-    "empresa": "Não aplicavel"
-  },
-  {
-    "id": 145,
-    "nome": "Hugo Carvalho",
-    "profissao": "Customer Success",
-    "telefone": "135477725-2287",
-    "origem": "Facebook",
-    "etapa": 5,
-    "ultContato": "2024-03-01",
-    "empresa": "Vertex Ltda"
-  },
-  {
-    "id": 146,
-    "nome": "Carla Nogueira",
-    "profissao": "Diretor Comercial",
-    "telefone": "130623120-3875",
-    "origem": "Instagram",
-    "etapa": 5,
-    "ultContato": "2025-10-15",
-    "empresa": "Lumen Consulting"
-  },
-  {
-    "id": 147,
-    "nome": "Paulo Nogueira",
-    "profissao": "Gerente de Contas",
-    "telefone": "130088600-8484",
-    "origem": "Instagram",
-    "etapa": 5,
-    "ultContato": "2025-03-16",
-    "empresa": "BlueWave"
-  },
-  {
-    "id": 148,
-    "nome": "Fernando Costa",
-    "profissao": "Analista Financeiro",
-    "telefone": "138233984-5461",
-    "origem": "Campanha de E-mail",
-    "etapa": 4,
-    "ultContato": "2025-04-15",
-    "empresa": "Pioneer Solutions"
-  },
-  {
-    "id": 149,
-    "nome": "Hugo Nogueira Ferreira",
-    "profissao": "Coordenador de RH",
-    "telefone": "130166687-0021",
-    "origem": "Google Ads",
-    "etapa": 4,
-    "ultContato": "2024-12-05",
-    "empresa": "Vertex Ltda"
-  },
-  {
-    "id": 150,
-    "nome": "Daniel Correia",
-    "profissao": "Diretor Comercial",
-    "telefone": "133397401-4890",
-    "origem": "Facebook",
-    "etapa": 3,
-    "ultContato": "2024-01-17",
-    "empresa": "Lumen Consulting"
+    "responsavel": 2,
+    "ultima_interacao": "ligação",
+    "data_cadastro": "2025-10-15T19:08:09Z",
+    "interesse_produto": "CRM Básico",
+    "observacao": "Cliente em potencial",
+    "historico": [
+      {
+        "data": "2025-10-22T19:08:09Z",
+        "tipo_interacao": "email",
+        "comentario": "reunião agendada"
+      },
+      {
+        "data": "2025-10-13T19:08:09Z",
+        "tipo_interacao": "email",
+        "comentario": "reunião agendada"
+      },
+      {
+        "data": "2025-10-22T19:08:09Z",
+        "tipo_interacao": "ligação",
+        "comentario": "Email de apresentação"
+      }
+    ]
   }
 ]

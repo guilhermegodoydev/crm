@@ -7,8 +7,8 @@ export function Filtro({id, nome, label, onChange, opcoes = []}) {
                 name={nome}
                 onChange={onChange}
             >
-                {opcoes.map(op => (
-                    <option value={op.valor}>{op.texto}</option>
+                {opcoes.map((op, index) => (
+                    <option key={`opcao-${index}-filtro-${id}`} value={op.valor}>{op.texto}</option>
                 ))}
             </select>
         </div>

@@ -1,19 +1,22 @@
 import { useMemo, useState, useRef} from "react";
-import { Search } from "lucide-react";
 
 import { Filtro } from "../components/Filtro";
 import { Tabela } from "../components/tabela/Tabela";
+import { BarraBusca } from "../components/BarraBusca";
 
 import { filtrar } from "../utils/filtrar"
 import { buscar } from "../utils/buscar";
 
 import { useAPI } from "../hooks/useAPI";
 
+import { useTela } from "../context/TelaContexto";
+
 const colunas = [
   { chave: "nome", label: "Nome", ordenavel: true, tipo: "texto" },
   { chave: "idade", label: "Idade", ordenavel: true, tipo: "numero" },
   { chave: "observacao", label: "Observação", ordenavel: false, tipo: "texto" },
-  { chave: "tipo", label: "Tipo Cliente", ordenavel: false, tipo: "texto" },
+  { chave: "categoria", label: "Categoria", ordenavel: false, tipo: "texto"},
+  { chave: "tipo", label: "Tipo", ordenavel: false, tipo: "texto" },
   { chave: "negociosFechados", label: "Negócios Fechados", ordenavel: true, tipo: "numero" },
   { chave: "status", label: "Status", ordenavel: false, tipo: "texto" }
 ];
@@ -23,19 +26,24 @@ export default function Clientes() {
   const [filtrado, setFiltrado] = useState({nome: ""});
   const tempoDigitacao = useRef(null);
   const { dados: clientes, carregando, erro } = useAPI("/mock/clientes.json");
-
+  const { desktop } = useTela();
+   
   const dados = useMemo(() => {
     if (!clientes || clientes.length === 0) return [];
 
-    if (!busca) 
+    if (busca) {
+      let resultadoBusca = buscar([...clientes], "nome", busca);
+
+      if (resultadoBusca.length > 1) {
+        return filtrar(resultadoBusca, filtrado)
+      }
+
+      return resultadoBusca;
+    }
+    else {
       return filtrar([...clientes], filtrado);
-
-    return buscar([...clientes], "nome", busca);
-  },  [filtrado, busca, clientes]);
-
-  if (carregando) return <p>Carregando clientes...</p>;
-  if (erro) return <p>Erro ao carregar clientes: {erro.message}</p>;
-  if (!clientes || clientes.length === 0) return <p>Nenhum cliente encontrado.</p>;
+    }
+  }, [filtrado, busca, clientes]);
 
   const handleFiltroOnChange = (campo, valor) => {
     setFiltrado(prev => ({...prev, [campo]: valor}));
@@ -47,11 +55,12 @@ export default function Clientes() {
 
     tempoDigitacao.current = setTimeout(() => {
       setBusca(valor);
-    }, 500);
+    }, 800);
   };
 
   const filtros = [
     {
+      id: 1,
       label: "Categoria:",
       nome: "categoriaCliente",
       onChange: (e) => handleFiltroOnChange("categoria", e.target.value),
@@ -62,6 +71,7 @@ export default function Clientes() {
       ]
     },
     {
+      id: 2,
       label: "Status:",
       nome: "stCliente",
       onChange: (e) => handleFiltroOnChange("status", e.target.value),
@@ -72,6 +82,7 @@ export default function Clientes() {
       ]
     },
     {
+      id: 3,
       label: "Tipo:",
       nome: "tipoCliente",
       onChange: (e) => handleFiltroOnChange("tipo", e.target.value),
@@ -80,27 +91,21 @@ export default function Clientes() {
         {texto: "Pessoa Física", valor: "Pessoa Física"},
         {texto: "Empresarial", valor: "Empresarial"}
       ]
-    }
+    },
   ];
 
+  if (carregando) return <p>Carregando clientes...</p>;
+  if (erro) return <p>Erro ao carregar clientes: {erro.message}</p>;
+  if (!clientes || clientes.length === 0) return <p>Nenhum cliente encontrado.</p>;
+  
   return (
     <section>
-      <div className="flex gap-3 p-1 rounded-md shadow-md border-1 border-gray-300 mb-5">
-        <Search/>
-        <input 
-          type="text" 
-          name="buscar" 
-          id="buscar" 
-          placeholder="Nome cliente" 
-          className="w-full"
-          onChange={e => handleBusca(e.target.value)}
-        />
-      </div>
+      <BarraBusca placeholder="Digite o nome do cliente" onChange={(e) => handleBusca(e.target.value)}/>
 
-
-      <div className="flex gap-10 mb-3">
+      <div className="flex lg:gap-10 gap-5 mb-3 lg:flex-no-wrap flex-wrap">
         {filtros.map(fil => (
           <Filtro
+            key={`filtro-${fil.id}`}
             id={`filtro-${fil.nome}`}
             nome={fil.nome}
             label={fil.label}
@@ -110,10 +115,32 @@ export default function Clientes() {
         ))}
       </div>
 
-      
-      <div className="max-h-[72vh] overflow-y-auto rounded-md shadow-md">
-        <Tabela dadosTabela={dados} colunas={colunas} />
-      </div>
+      {desktop ? 
+        <div className="max-h-[72vh] overflow-y-auto rounded-md shadow-md">
+          <Tabela dadosTabela={dados} colunas={colunas} />
+        </div>
+        :
+        <div className="space-y-5">
+          {dados.length === 0 ? <p>Nenhum dado Encontrado</p> : dados.map((cliente) => (
+            <div className="flex gap-5 items-center shadow rounded-md p-2">
+              <img className="size-10" src="src/assets/perfil.png" alt="" />
+              <div>
+                <h3>{cliente["nome"]}</h3>
+                <div className="flex gap-20">
+                  <div>
+                    <p>Status: {cliente["status"]}</p>
+                    <p>Tipo: {cliente["tipo"]}</p>
+                  </div>
+                  <div>
+                    <p>Categoria: {cliente["categoria"]}</p>
+                    <p>Negócios Fechados: {cliente["negociosFechados"]}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      }
     </section>
   );
 }

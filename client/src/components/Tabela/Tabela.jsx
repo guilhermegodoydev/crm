@@ -46,7 +46,7 @@ export function Tabela({dadosTabela, colunas}) {
                         className={`border border-gray-300 ${index % 2 === 0 ? "bg-gray-100" : "bg-gray-300"}`}
                     >
                         {colunas.map((c) => (
-                            <td key={`linha-${item.id}-coluna-${c.chave}`} className="px-4 py-2">{item[c.chave]}</td>
+                            <td key={`coluna-${item.id}-coluna-${c.chave}`} className={`px-4 py-2 ${typeof item[c.chave] === "number" ? "text-center" : ""}`}>{item[c.chave]}</td>
                         ))}
                     </tr>
                 )) : (

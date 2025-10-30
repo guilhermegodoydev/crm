@@ -7,7 +7,7 @@ export function Coluna({ id, children }) {
     <div 
         ref={setNodeRef}
         id={String(id)}
-        className="bg-gray-50 rounded-md min-w-1/6 max-w-1/6"
+        className="bg-gray-50 rounded-md p-2 overflow-y-aut"
     >
         {children}
     </div>

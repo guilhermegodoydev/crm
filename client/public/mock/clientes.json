@@ -2,188 +2,305 @@
   {
     "id": 1,
     "nome": "Vera Santos",
-    "idade": 25,
-    "observacao": "Reduziu consumo após mudança de gestor.",
+    "idade": 32,
+    "email": "vera.santos@alphacorp.com",
+    "telefone": "(11) 98321-4421",
+    "ultimoContato": "2025-01-20",
+    "atividades": [
+      { "data": "2025-01-20", "tipo": "email", "descricao": "Envio de proposta atualizada" },
+      { "data": "2025-01-15", "tipo": "reunião", "descricao": "Reunião de alinhamento comercial" }
+    ],
+    "observacao": "Alta confiança, interesse em expansão.",
     "tipo": "Empresarial",
     "categoria": "vip",
-    "negociosFechados": 16,
+    "negociosFechados": 12,
     "status": "ativo"
   },
   {
     "id": 2,
     "nome": "Felipe Oliveira",
-    "idade": 34,
-    "observacao": "Ativo nas redes sociais e responde bem a campanhas de e-mail.",
+    "idade": 29,
+    "email": "felipe.oliveira@gmail.com",
+    "telefone": "(21) 99918-2256",
+    "ultimoContato": "2025-01-17",
+    "atividades": [
+      { "data": "2025-01-17", "tipo": "ligação", "descricao": "Apresentação inicial" },
+      { "data": "2025-01-10", "tipo": "email", "descricao": "Abertura do relacionamento" }
+    ],
+    "observacao": "Interessado em planos flexíveis.",
     "tipo": "Pessoa Física",
-    "categoria": "vip",
-    "negociosFechados": 25,
+    "categoria": "regular",
+    "negociosFechados": 2,
     "status": "ativo"
   },
   {
     "id": 3,
     "nome": "Otávio Ramos",
-    "idade": 38,
-    "observacao": "Interessada em soluções sustentáveis e ecológicas.",
-    "tipo": "Pessoa Física",
-    "categoria": "regular",
-    "negociosFechados": 21,
-    "status": "inativo"
+    "idade": 41,
+    "email": "otavio.ramos@biotec.com",
+    "telefone": "(31) 98811-8841",
+    "ultimoContato": "2025-01-19",
+    "atividades": [
+      { "data": "2025-01-19", "tipo": "ligação", "descricao": "Revisão de contrato" },
+      { "data": "2025-01-02", "tipo": "email", "descricao": "Proposta enviada" }
+    ],
+    "observacao": "Busca soluções sustentáveis.",
+    "tipo": "Empresarial",
+    "categoria": "vip",
+    "negociosFechados": 8,
+    "status": "ativo"
   },
   {
     "id": 4,
     "nome": "Davi Albuquerque",
-    "idade": 35,
-    "observacao": "Interessada em soluções sustentáveis e ecológicas.",
+    "idade": 36,
+    "email": "davi.albuquerque@nextsolutions.com",
+    "telefone": "(19) 98442-5512",
+    "ultimoContato": "2025-01-11",
+    "atividades": [
+      { "data": "2025-01-11", "tipo": "reunião", "descricao": "Discussão sobre integrações" }
+    ],
+    "observacao": "Avalia integração com ERP.",
     "tipo": "Empresarial",
     "categoria": "vip",
-    "negociosFechados": 24,
+    "negociosFechados": 11,
     "status": "ativo"
   },
   {
     "id": 5,
     "nome": "Patrícia Duarte",
-    "idade": 64,
-    "observacao": "Reduziu consumo após mudança de gestor.",
+    "idade": 44,
+    "email": "patricia.duarte@clouddata.com",
+    "telefone": "(11) 98722-1021",
+    "ultimoContato": "2025-01-06",
+    "atividades": [
+      { "data": "2025-01-06", "tipo": "email", "descricao": "Envio de relatório de resultados" }
+    ],
+    "observacao": "Cliente fiel, processos lentos.",
     "tipo": "Empresarial",
     "categoria": "regular",
-    "negociosFechados": 5,
+    "negociosFechados": 9,
     "status": "ativo"
   },
   {
     "id": 6,
     "nome": "Vinícius Gomes",
-    "idade": 22,
-    "observacao": "Ativo nas redes sociais e responde bem a campanhas de e-mail.",
+    "idade": 27,
+    "email": "vinicius.gomes@gmail.com",
+    "telefone": "(51) 99561-0044",
+    "ultimoContato": "2025-01-22",
+    "atividades": [
+      { "data": "2025-01-22", "tipo": "chat", "descricao": "Suporte sobre pagamento" }
+    ],
+    "observacao": "Upgrade previsto no próximo trimestre.",
     "tipo": "Pessoa Física",
     "categoria": "vip",
-    "negociosFechados": 20,
-    "status": "ativo"
-  },
-  {
-    "id": 7,
-    "nome": "Zeca Freitas",
-    "idade": 57,
-    "observacao": "Interessada em soluções sustentáveis e ecológicas.",
-    "tipo": "Pessoa Física",
-    "categoria": "vip",
-    "negociosFechados": 23,
-    "status": "ativo"
-  },
-  {
-    "id": 8,
-    "nome": "Daniel Rocha",
-    "idade": 40,
-    "observacao": "Demonstra interesse por combos e kits promocionais.",
-    "tipo": "Pessoa Física",
-    "categoria": "regular",
     "negociosFechados": 4,
     "status": "ativo"
   },
   {
-    "id": 9,
+    "id": 7,
+    "nome": "Daniel Rocha",
+    "idade": 39,
+    "email": "daniel.rocha@industriaaero.com",
+    "telefone": "(41) 99233-9981",
+    "ultimoContato": "2025-01-18",
+    "atividades": [
+      { "data": "2025-01-18", "tipo": "ligação", "descricao": "Confirmação de orçamento" }
+    ],
+    "observacao": "Busca redução de custos.",
+    "tipo": "Empresarial",
+    "categoria": "regular",
+    "negociosFechados": 3,
+    "status": "ativo"
+  },
+  {
+    "id": 8,
     "nome": "Elaine Souza",
-    "idade": 31,
-    "observacao": "Compra com frequência produtos em promoção.",
+    "idade": 30,
+    "email": "elaine.souza@gmail.com",
+    "telefone": "(21) 99110-4455",
+    "ultimoContato": "2025-01-16",
+    "atividades": [
+      { "data": "2025-01-16", "tipo": "email", "descricao": "Campanha de retenção" }
+    ],
+    "observacao": "Prefere contato por e-mail.",
+    "tipo": "Pessoa Física",
+    "categoria": "regular",
+    "negociosFechados": 5,
+    "status": "ativo"
+  },
+  {
+    "id": 9,
+    "nome": "Gisele Prado",
+    "idade": 52,
+    "email": "gisele.prado@mercatus.com",
+    "telefone": "(62) 99321-0067",
+    "ultimoContato": "2025-01-15",
+    "atividades": [
+      { "data": "2025-01-15", "tipo": "reunião", "descricao": "Planejamento estratégico" }
+    ],
+    "observacao": "Alta recorrência.",
     "tipo": "Empresarial",
     "categoria": "vip",
-    "negociosFechados": 6,
+    "negociosFechados": 14,
     "status": "ativo"
   },
   {
     "id": 10,
-    "nome": "Gisele Prado",
-    "idade": 56,
-    "observacao": "Aumentou a frequência de compras nos últimos meses.",
-    "tipo": "Empresarial",
-    "categoria": "regular",
-    "negociosFechados": 19,
-    "status": "ativo"
-  },
-  {
-    "id": 11,
-    "nome": "Kátia Lima",
-    "idade": 22,
-    "observacao": "Primeira compra recente, ainda em fase de onboarding.",
+    "nome": "Bruno Lima",
+    "idade": 33,
+    "email": "bruno.lima@gmail.com",
+    "telefone": "(31) 99877-1209",
+    "ultimoContato": "2025-01-09",
+    "atividades": [
+      { "data": "2025-01-09", "tipo": "chat", "descricao": "Solicitação de upgrade" }
+    ],
+    "observacao": "Alta probabilidade de renovação.",
     "tipo": "Pessoa Física",
     "categoria": "vip",
     "negociosFechados": 8,
     "status": "ativo"
   },
   {
-    "id": 12,
-    "nome": "Thiago Moreira",
-    "idade": 64,
-    "observacao": "Tem alto ticket médio e prefere lançamentos.",
-    "tipo": "Empresarial",
-    "categoria": "regular",
-    "negociosFechados": 16,
-    "status": "inativo"
-  },
-  {
-    "id": 13,
-    "nome": "João Batista",
-    "idade": 46,
-    "observacao": "Reduziu consumo após mudança de gestor.",
-    "tipo": "Pessoa Física",
-    "categoria": "regular",
-    "negociosFechados": 29,
-    "status": "inativo"
-  },
-  {
-    "id": 14,
-    "nome": "Isabela Torres",
-    "idade": 45,
-    "observacao": "Tem alto volume de compras corporativas.",
-    "tipo": "Empresarial",
-    "categoria": "regular",
-    "negociosFechados": 27,
-    "status": "inativo"
-  },
-  {
-    "id": 15,
-    "nome": "Mariana Teixeira",
-    "idade": 54,
-    "observacao": "Atende a várias unidades da empresa.",
+    "id": 11,
+    "nome": "Natália Ferreira",
+    "idade": 27,
+    "email": "natalia.ferreira@consultplus.com",
+    "telefone": "(85) 99871-2221",
+    "ultimoContato": "2025-01-21",
+    "atividades": [
+      { "data": "2025-01-21", "tipo": "email", "descricao": "Proposta enviada" }
+    ],
+    "observacao": "Nova cliente, perfil corporativo.",
     "tipo": "Empresarial",
     "categoria": "vip",
-    "negociosFechados": 18,
+    "negociosFechados": 2,
     "status": "ativo"
   },
   {
-    "id": 16,
-    "nome": "Bruno Lima",
-    "idade": 21,
-    "observacao": "Procura sempre opções com parcelamento.",
+    "id": 12,
+    "nome": "Lucas Amaral",
+    "idade": 42,
+    "email": "lucas.amaral@gmail.com",
+    "telefone": "(31) 99182-7773",
+    "ultimoContato": "2025-01-14",
+    "atividades": [
+      { "data": "2025-01-14", "tipo": "ligação", "descricao": "Dúvidas sobre contrato" }
+    ],
+    "observacao": "Interesse em atendimento premium.",
     "tipo": "Pessoa Física",
     "categoria": "vip",
+    "negociosFechados": 6,
+    "status": "ativo"
+  },
+  {
+    "id": 13,
+    "nome": "Karina Lopes",
+    "idade": 38,
+    "email": "karina.lopes@medcare.com",
+    "telefone": "(11) 97288-1100",
+    "ultimoContato": "2025-01-13",
+    "atividades": [
+      { "data": "2025-01-13", "tipo": "email", "descricao": "Envio de condições comerciais" }
+    ],
+    "observacao": "Potencial grande contrato.",
+    "tipo": "Empresarial",
+    "categoria": "vip",
+    "negociosFechados": 9,
+    "status": "ativo"
+  },
+  {
+    "id": 14,
+    "nome": "Henrique Silva",
+    "idade": 46,
+    "email": "henrique.silva@gmail.com",
+    "telefone": "(47) 99810-2201",
+    "ultimoContato": "2025-01-08",
+    "atividades": [
+      { "data": "2025-01-08", "tipo": "ligação", "descricao": "Feedback pós-instalação" }
+    ],
+    "observacao": "Precisa de suporte contínuo.",
+    "tipo": "Pessoa Física",
+    "categoria": "regular",
     "negociosFechados": 3,
     "status": "ativo"
   },
   {
+    "id": 15,
+    "nome": "Gabriela Martins",
+    "idade": 35,
+    "email": "gabriela.martins@startlabs.com",
+    "telefone": "(48) 98801-4432",
+    "ultimoContato": "2025-01-10",
+    "atividades": [
+      { "data": "2025-01-10", "tipo": "reunião", "descricao": "Demonstração do sistema" }
+    ],
+    "observacao": "Alto potencial de expansão.",
+    "tipo": "Empresarial",
+    "categoria": "vip",
+    "negociosFechados": 5,
+    "status": "ativo"
+  },
+  {
+    "id": 16,
+    "nome": "Paulo Henrique",
+    "idade": 31,
+    "email": "paulo.henrique@gmail.com",
+    "telefone": "(71) 99887-2003",
+    "ultimoContato": "2025-01-05",
+    "atividades": [
+      { "data": "2025-01-05", "tipo": "chat", "descricao": "Suporte técnico" }
+    ],
+    "observacao": "Usuário técnico, exige detalhes.",
+    "tipo": "Pessoa Física",
+    "categoria": "regular",
+    "negociosFechados": 2,
+    "status": "ativo"
+  },
+  {
     "id": 17,
-    "nome": "Thiago Moreira",
-    "idade": 62,
-    "observacao": "Valoriza atendimento personalizado e suporte rápido.",
+    "nome": "Camila Moura",
+    "idade": 27,
+    "email": "camila.moura@fashionhub.com",
+    "telefone": "(61) 98321-5542",
+    "ultimoContato": "2025-01-12",
+    "atividades": [
+      { "data": "2025-01-12", "tipo": "email", "descricao": "Ativação de onboarding" }
+    ],
+    "observacao": "Nova cliente digital.",
     "tipo": "Empresarial",
     "categoria": "regular",
-    "negociosFechados": 22,
-    "status": "inativo"
+    "negociosFechados": 1,
+    "status": "ativo"
   },
   {
     "id": 18,
-    "nome": "Nicolas Ribeiro",
-    "idade": 49,
-    "observacao": "Fechou pacotes de serviços anuais nos últimos anos.",
+    "nome": "Jonas Monteiro",
+    "idade": 40,
+    "email": "jonas.monteiro@hotmail.com",
+    "telefone": "(47) 99566-4421",
+    "ultimoContato": "2025-01-04",
+    "atividades": [
+      { "data": "2025-01-04", "tipo": "reunião", "descricao": "Discussão técnica" }
+    ],
+    "observacao": "Quer automação completa.",
     "tipo": "Pessoa Física",
     "categoria": "vip",
-    "negociosFechados": 4,
-    "status": "inativo"
+    "negociosFechados": 7,
+    "status": "ativo"
   },
   {
     "id": 19,
-    "nome": "Sara Nunes",
-    "idade": 22,
-    "observacao": "Costuma comprar por indicação de influenciadores.",
+    "nome": "Isabela Torres",
+    "idade": 30,
+    "email": "isabela.torres@fidelisgroup.com",
+    "telefone": "(41) 97781-1990",
+    "ultimoContato": "2025-01-13",
+    "atividades": [
+      { "data": "2025-01-13", "tipo": "email", "descricao": "Envio de NPS" }
+    ],
+    "observacao": "Boa resposta a campanhas.",
     "tipo": "Empresarial",
     "categoria": "regular",
     "negociosFechados": 4,
@@ -191,1312 +308,18 @@
   },
   {
     "id": 20,
-    "nome": "Leandro Cunha",
-    "idade": 39,
-    "observacao": "Fechou pacotes de serviços anuais nos últimos anos.",
-    "tipo": "Empresarial",
-    "categoria": "vip",
-    "negociosFechados": 9,
-    "status": "inativo"
-  },
-  {
-    "id": 21,
-    "nome": "Otávio Ramos",
-    "idade": 27,
-    "observacao": "Tem alto ticket médio e prefere lançamentos.",
-    "tipo": "Pessoa Física",
-    "categoria": "regular",
-    "negociosFechados": 8,
-    "status": "ativo"
-  },
-  {
-    "id": 22,
-    "nome": "Vera Santos",
-    "idade": 35,
-    "observacao": "Tem alto ticket médio e prefere lançamentos.",
-    "tipo": "Empresarial",
-    "categoria": "regular",
-    "negociosFechados": 20,
-    "status": "ativo"
-  },
-  {
-    "id": 23,
-    "nome": "Yuri Melo",
-    "idade": 42,
-    "observacao": "Cliente antigo, valoriza estabilidade e confiança.",
-    "tipo": "Empresarial",
-    "categoria": "regular",
-    "negociosFechados": 27,
-    "status": "inativo"
-  },
-  {
-    "id": 24,
-    "nome": "Amanda Costa",
-    "idade": 28,
-    "observacao": "Fez upgrade de plano duas vezes no último ano.",
-    "tipo": "Empresarial",
-    "categoria": "vip",
-    "negociosFechados": 14,
-    "status": "inativo"
-  },
-  {
-    "id": 25,
-    "nome": "Bruno Lima",
-    "idade": 58,
-    "observacao": "Cliente antigo, valoriza estabilidade e confiança.",
-    "tipo": "Empresarial",
-    "categoria": "vip",
-    "negociosFechados": 27,
-    "status": "ativo"
-  },
-  {
-    "id": 26,
-    "nome": "Zilda Rocha",
-    "idade": 25,
-    "observacao": "Interesse em parcerias de longo prazo.",
-    "tipo": "Pessoa Física",
-    "categoria": "regular",
-    "negociosFechados": 18,
-    "status": "inativo"
-  },
-  {
-    "id": 27,
-    "nome": "Paulo Henrique",
-    "idade": 53,
-    "observacao": "Compra com frequência produtos em promoção.",
-    "tipo": "Pessoa Física",
-    "categoria": "regular",
-    "negociosFechados": 9,
-    "status": "ativo"
-  },
-  {
-    "id": 28,
-    "nome": "Leandro Cunha",
-    "idade": 21,
-    "observacao": "Demonstra interesse por combos e kits promocionais.",
-    "tipo": "Empresarial",
-    "categoria": "vip",
-    "negociosFechados": 16,
-    "status": "ativo"
-  },
-  {
-    "id": 29,
-    "nome": "Willian Farias",
-    "idade": 27,
-    "observacao": "Fechou pacotes de serviços anuais nos últimos anos.",
-    "tipo": "Empresarial",
-    "categoria": "regular",
-    "negociosFechados": 22,
-    "status": "inativo"
-  },
-  {
-    "id": 30,
-    "nome": "Ricardo Almeida",
-    "idade": 57,
-    "observacao": "Demonstra interesse por combos e kits promocionais.",
-    "tipo": "Empresarial",
-    "categoria": "vip",
-    "negociosFechados": 12,
-    "status": "ativo"
-  },
-  {
-    "id": 31,
-    "nome": "Melissa Brito",
-    "idade": 30,
-    "observacao": "Atende a várias unidades da empresa.",
-    "tipo": "Pessoa Física",
-    "categoria": "regular",
-    "negociosFechados": 25,
-    "status": "inativo"
-  },
-  {
-    "id": 32,
-    "nome": "Lucas Amaral",
-    "idade": 57,
-    "observacao": "Reduziu consumo após mudança de gestor.",
-    "tipo": "Empresarial",
-    "categoria": "regular",
-    "negociosFechados": 20,
-    "status": "ativo"
-  },
-  {
-    "id": 33,
-    "nome": "Daniel Rocha",
-    "idade": 38,
-    "observacao": "Prefere compras presenciais, mesmo com canal digital disponível.",
-    "tipo": "Empresarial",
-    "categoria": "regular",
-    "negociosFechados": 9,
-    "status": "ativo"
-  },
-  {
-    "id": 34,
-    "nome": "Hugo Tavares",
-    "idade": 58,
-    "observacao": "Interessada em soluções sustentáveis e ecológicas.",
-    "tipo": "Pessoa Física",
-    "categoria": "regular",
-    "negociosFechados": 20,
-    "status": "inativo"
-  },
-  {
-    "id": 35,
-    "nome": "Ricardo Almeida",
-    "idade": 52,
-    "observacao": "Cliente antigo, valoriza estabilidade e confiança.",
-    "tipo": "Pessoa Física",
-    "categoria": "vip",
-    "negociosFechados": 21,
-    "status": "inativo"
-  },
-  {
-    "id": 36,
-    "nome": "João Batista",
-    "idade": 35,
-    "observacao": "Tem alto ticket médio e prefere lançamentos.",
-    "tipo": "Empresarial",
-    "categoria": "regular",
-    "negociosFechados": 8,
-    "status": "inativo"
-  },
-  {
-    "id": 37,
-    "nome": "Thiago Moreira",
-    "idade": 63,
-    "observacao": "Cliente antigo, valoriza estabilidade e confiança.",
-    "tipo": "Pessoa Física",
-    "categoria": "regular",
-    "negociosFechados": 10,
-    "status": "inativo"
-  },
-  {
-    "id": 38,
-    "nome": "Leandro Cunha",
-    "idade": 53,
-    "observacao": "Primeira compra recente, ainda em fase de onboarding.",
-    "tipo": "Pessoa Física",
-    "categoria": "regular",
-    "negociosFechados": 13,
-    "status": "ativo"
-  },
-  {
-    "id": 39,
-    "nome": "Mariana Teixeira",
-    "idade": 46,
-    "observacao": "Interessada em soluções sustentáveis e ecológicas.",
-    "tipo": "Empresarial",
-    "categoria": "regular",
-    "negociosFechados": 27,
-    "status": "inativo"
-  },
-  {
-    "id": 40,
-    "nome": "Patrícia Duarte",
-    "idade": 45,
-    "observacao": "Ativo nas redes sociais e responde bem a campanhas de e-mail.",
-    "tipo": "Pessoa Física",
-    "categoria": "vip",
-    "negociosFechados": 26,
-    "status": "inativo"
-  },
-  {
-    "id": 41,
-    "nome": "Nicolas Ribeiro",
-    "idade": 35,
-    "observacao": "Prefere compras presenciais, mesmo com canal digital disponível.",
-    "tipo": "Pessoa Física",
-    "categoria": "vip",
-    "negociosFechados": 6,
-    "status": "ativo"
-  },
-  {
-    "id": 42,
-    "nome": "Jonas Monteiro",
-    "idade": 36,
-    "observacao": "Demonstra interesse por combos e kits promocionais.",
-    "tipo": "Empresarial",
-    "categoria": "regular",
-    "negociosFechados": 6,
-    "status": "inativo"
-  },
-  {
-    "id": 43,
-    "nome": "Mariana Teixeira",
-    "idade": 28,
-    "observacao": "Aumentou a frequência de compras nos últimos meses.",
-    "tipo": "Pessoa Física",
-    "categoria": "regular",
-    "negociosFechados": 26,
-    "status": "ativo"
-  },
-  {
-    "id": 44,
-    "nome": "Gabriela Martins",
-    "idade": 26,
-    "observacao": "Demonstra interesse por combos e kits promocionais.",
-    "tipo": "Empresarial",
-    "categoria": "vip",
-    "negociosFechados": 17,
-    "status": "ativo"
-  },
-  {
-    "id": 45,
-    "nome": "Lucas Amaral",
-    "idade": 35,
-    "observacao": "Demonstra interesse por combos e kits promocionais.",
-    "tipo": "Pessoa Física",
-    "categoria": "regular",
-    "negociosFechados": 17,
-    "status": "inativo"
-  },
-  {
-    "id": 46,
-    "nome": "Karina Lopes",
-    "idade": 36,
-    "observacao": "Costuma comprar por indicação de influenciadores.",
-    "tipo": "Pessoa Física",
-    "categoria": "regular",
-    "negociosFechados": 12,
-    "status": "inativo"
-  },
-  {
-    "id": 47,
-    "nome": "João Batista",
-    "idade": 49,
-    "observacao": "Ativo nas redes sociais e responde bem a campanhas de e-mail.",
-    "tipo": "Pessoa Física",
-    "categoria": "regular",
-    "negociosFechados": 21,
-    "status": "inativo"
-  },
-  {
-    "id": 48,
-    "nome": "Felipe Oliveira",
-    "idade": 52,
-    "observacao": "Primeira compra recente, ainda em fase de onboarding.",
-    "tipo": "Pessoa Física",
-    "categoria": "regular",
-    "negociosFechados": 22,
-    "status": "ativo"
-  },
-  {
-    "id": 49,
-    "nome": "Nicolas Ribeiro",
-    "idade": 58,
-    "observacao": "Prefere compras presenciais, mesmo com canal digital disponível.",
-    "tipo": "Pessoa Física",
-    "categoria": "regular",
-    "negociosFechados": 14,
-    "status": "ativo"
-  },
-  {
-    "id": 50,
-    "nome": "Felipe Oliveira",
-    "idade": 43,
-    "observacao": "Fechou pacotes de serviços anuais nos últimos anos.",
-    "tipo": "Pessoa Física",
-    "categoria": "vip",
-    "negociosFechados": 21,
-    "status": "ativo"
-  },
-  {
-    "id": 51,
-    "nome": "Natália Ferreira",
-    "idade": 28,
-    "observacao": "Tem alto volume de compras corporativas.",
-    "tipo": "Empresarial",
-    "categoria": "vip",
-    "negociosFechados": 18,
-    "status": "ativo"
-  },
-  {
-    "id": 52,
-    "nome": "Olívia Fernandes",
-    "idade": 47,
-    "observacao": "Reduziu consumo após mudança de gestor.",
-    "tipo": "Pessoa Física",
-    "categoria": "vip",
-    "negociosFechados": 19,
-    "status": "inativo"
-  },
-  {
-    "id": 53,
-    "nome": "Leandro Cunha",
-    "idade": 30,
-    "observacao": "Fez upgrade de plano duas vezes no último ano.",
-    "tipo": "Empresarial",
-    "categoria": "vip",
-    "negociosFechados": 3,
-    "status": "ativo"
-  },
-  {
-    "id": 54,
-    "nome": "Wesley Pires",
-    "idade": 61,
-    "observacao": "Demonstra interesse por combos e kits promocionais.",
-    "tipo": "Pessoa Física",
-    "categoria": "vip",
-    "negociosFechados": 24,
-    "status": "inativo"
-  },
-  {
-    "id": 55,
-    "nome": "Eduarda Castro",
-    "idade": 21,
-    "observacao": "Procura sempre opções com parcelamento.",
-    "tipo": "Empresarial",
-    "categoria": "regular",
-    "negociosFechados": 17,
-    "status": "inativo"
-  },
-  {
-    "id": 56,
-    "nome": "Carla Mendes",
-    "idade": 42,
-    "observacao": "Fez upgrade de plano duas vezes no último ano.",
-    "tipo": "Pessoa Física",
-    "categoria": "vip",
-    "negociosFechados": 13,
-    "status": "ativo"
-  },
-  {
-    "id": 57,
-    "nome": "Gisele Prado",
-    "idade": 60,
-    "observacao": "Reduziu consumo após mudança de gestor.",
-    "tipo": "Empresarial",
-    "categoria": "vip",
-    "negociosFechados": 10,
-    "status": "ativo"
-  },
-  {
-    "id": 58,
-    "nome": "Zeca Freitas",
-    "idade": 21,
-    "observacao": "Costuma comprar sazonalmente, principalmente no final do ano.",
-    "tipo": "Empresarial",
-    "categoria": "vip",
-    "negociosFechados": 25,
-    "status": "inativo"
-  },
-  {
-    "id": 59,
-    "nome": "Yuri Melo",
-    "idade": 47,
-    "observacao": "Costuma comprar sazonalmente, principalmente no final do ano.",
-    "tipo": "Empresarial",
-    "categoria": "regular",
-    "negociosFechados": 5,
-    "status": "inativo"
-  },
-  {
-    "id": 60,
-    "nome": "Paulo Henrique",
-    "idade": 27,
-    "observacao": "Fez upgrade de plano duas vezes no último ano.",
-    "tipo": "Pessoa Física",
-    "categoria": "vip",
-    "negociosFechados": 10,
-    "status": "inativo"
-  },
-  {
-    "id": 61,
-    "nome": "Karina Lopes",
-    "idade": 46,
-    "observacao": "Participa de programas de fidelidade.",
-    "tipo": "Pessoa Física",
-    "categoria": "regular",
-    "negociosFechados": 17,
-    "status": "ativo"
-  },
-  {
-    "id": 62,
-    "nome": "Henrique Silva",
-    "idade": 47,
-    "observacao": "Interesse em parcerias de longo prazo.",
-    "tipo": "Empresarial",
-    "categoria": "vip",
-    "negociosFechados": 7,
-    "status": "ativo"
-  },
-  {
-    "id": 63,
-    "nome": "Daniel Rocha",
-    "idade": 43,
-    "observacao": "Demonstra interesse por combos e kits promocionais.",
-    "tipo": "Empresarial",
-    "categoria": "vip",
-    "negociosFechados": 17,
-    "status": "inativo"
-  },
-  {
-    "id": 64,
-    "nome": "Henrique Silva",
-    "idade": 21,
-    "observacao": "Fez upgrade de plano duas vezes no último ano.",
-    "tipo": "Empresarial",
-    "categoria": "vip",
-    "negociosFechados": 30,
-    "status": "ativo"
-  },
-  {
-    "id": 65,
-    "nome": "Quésia Barros",
-    "idade": 34,
-    "observacao": "Procura sempre opções com parcelamento.",
-    "tipo": "Empresarial",
-    "categoria": "vip",
-    "negociosFechados": 22,
-    "status": "inativo"
-  },
-  {
-    "id": 66,
-    "nome": "Jonas Monteiro",
-    "idade": 62,
-    "observacao": "Prefere compras presenciais, mesmo com canal digital disponível.",
-    "tipo": "Pessoa Física",
-    "categoria": "regular",
-    "negociosFechados": 23,
-    "status": "inativo"
-  },
-  {
-    "id": 67,
-    "nome": "João Batista",
-    "idade": 62,
-    "observacao": "Prefere compras presenciais, mesmo com canal digital disponível.",
-    "tipo": "Pessoa Física",
-    "categoria": "vip",
-    "negociosFechados": 16,
-    "status": "inativo"
-  },
-  {
-    "id": 68,
-    "nome": "Hugo Tavares",
-    "idade": 21,
-    "observacao": "Primeira compra recente, ainda em fase de onboarding.",
-    "tipo": "Empresarial",
-    "categoria": "regular",
-    "negociosFechados": 26,
-    "status": "ativo"
-  },
-  {
-    "id": 69,
-    "nome": "Carla Mendes",
-    "idade": 42,
-    "observacao": "Costuma comprar por indicação de influenciadores.",
-    "tipo": "Pessoa Física",
-    "categoria": "regular",
-    "negociosFechados": 22,
-    "status": "ativo"
-  },
-  {
-    "id": 70,
-    "nome": "Leandro Cunha",
-    "idade": 31,
-    "observacao": "Primeira compra recente, ainda em fase de onboarding.",
-    "tipo": "Empresarial",
-    "categoria": "vip",
-    "negociosFechados": 28,
-    "status": "ativo"
-  },
-  {
-    "id": 71,
-    "nome": "Rafael Borges",
-    "idade": 60,
-    "observacao": "Procura sempre opções com parcelamento.",
-    "tipo": "Pessoa Física",
-    "categoria": "vip",
-    "negociosFechados": 20,
-    "status": "ativo"
-  },
-  {
-    "id": 72,
-    "nome": "Karina Lopes",
-    "idade": 32,
-    "observacao": "Costuma comprar sazonalmente, principalmente no final do ano.",
-    "tipo": "Empresarial",
-    "categoria": "regular",
-    "negociosFechados": 3,
-    "status": "inativo"
-  },
-  {
-    "id": 73,
-    "nome": "Leandro Cunha",
-    "idade": 64,
-    "observacao": "Cliente antigo, valoriza estabilidade e confiança.",
-    "tipo": "Empresarial",
-    "categoria": "regular",
-    "negociosFechados": 9,
-    "status": "ativo"
-  },
-  {
-    "id": 74,
-    "nome": "Gisele Prado",
-    "idade": 55,
-    "observacao": "Interesse em parcerias de longo prazo.",
-    "tipo": "Pessoa Física",
-    "categoria": "regular",
-    "negociosFechados": 28,
-    "status": "inativo"
-  },
-  {
-    "id": 75,
-    "nome": "Davi Albuquerque",
-    "idade": 48,
-    "observacao": "Fechou pacotes de serviços anuais nos últimos anos.",
-    "tipo": "Pessoa Física",
-    "categoria": "regular",
-    "negociosFechados": 30,
-    "status": "ativo"
-  },
-  {
-    "id": 76,
-    "nome": "Xavier Duarte",
-    "idade": 41,
-    "observacao": "Prefere compras presenciais, mesmo com canal digital disponível.",
-    "tipo": "Empresarial",
-    "categoria": "regular",
-    "negociosFechados": 23,
-    "status": "inativo"
-  },
-  {
-    "id": 77,
-    "nome": "Mariana Teixeira",
-    "idade": 48,
-    "observacao": "Primeira compra recente, ainda em fase de onboarding.",
-    "tipo": "Pessoa Física",
-    "categoria": "vip",
-    "negociosFechados": 21,
-    "status": "inativo"
-  },
-  {
-    "id": 78,
-    "nome": "João Batista",
-    "idade": 46,
-    "observacao": "Interessada em soluções sustentáveis e ecológicas.",
-    "tipo": "Empresarial",
-    "categoria": "regular",
-    "negociosFechados": 8,
-    "status": "inativo"
-  },
-  {
-    "id": 79,
-    "nome": "Natália Ferreira",
-    "idade": 61,
-    "observacao": "Aumentou a frequência de compras nos últimos meses.",
-    "tipo": "Empresarial",
-    "categoria": "vip",
-    "negociosFechados": 7,
-    "status": "inativo"
-  },
-  {
-    "id": 80,
-    "nome": "Camila Moura",
-    "idade": 31,
-    "observacao": "Valoriza atendimento personalizado e suporte rápido.",
-    "tipo": "Pessoa Física",
-    "categoria": "vip",
-    "negociosFechados": 30,
-    "status": "ativo"
-  },
-  {
-    "id": 81,
-    "nome": "Beto Cardoso",
-    "idade": 57,
-    "observacao": "Fez upgrade de plano duas vezes no último ano.",
-    "tipo": "Empresarial",
-    "categoria": "regular",
-    "negociosFechados": 29,
-    "status": "ativo"
-  },
-  {
-    "id": 82,
-    "nome": "Otávio Ramos",
-    "idade": 44,
-    "observacao": "Costuma comprar por indicação de influenciadores.",
-    "tipo": "Pessoa Física",
-    "categoria": "vip",
-    "negociosFechados": 17,
-    "status": "inativo"
-  },
-  {
-    "id": 83,
-    "nome": "Quésia Barros",
-    "idade": 44,
-    "observacao": "Fez upgrade de plano duas vezes no último ano.",
-    "tipo": "Pessoa Física",
-    "categoria": "vip",
-    "negociosFechados": 20,
-    "status": "ativo"
-  },
-  {
-    "id": 84,
-    "nome": "Elaine Souza",
-    "idade": 24,
-    "observacao": "Costuma comprar sazonalmente, principalmente no final do ano.",
-    "tipo": "Empresarial",
-    "categoria": "regular",
-    "negociosFechados": 27,
-    "status": "ativo"
-  },
-  {
-    "id": 85,
-    "nome": "Beto Cardoso",
-    "idade": 65,
-    "observacao": "Fechou pacotes de serviços anuais nos últimos anos.",
-    "tipo": "Empresarial",
-    "categoria": "vip",
-    "negociosFechados": 22,
-    "status": "ativo"
-  },
-  {
-    "id": 86,
-    "nome": "Patrícia Duarte",
-    "idade": 27,
-    "observacao": "Cliente antigo, valoriza estabilidade e confiança.",
-    "tipo": "Empresarial",
-    "categoria": "vip",
-    "negociosFechados": 7,
-    "status": "inativo"
-  },
-  {
-    "id": 87,
-    "nome": "Melissa Brito",
-    "idade": 40,
-    "observacao": "Interessada em soluções sustentáveis e ecológicas.",
-    "tipo": "Empresarial",
-    "categoria": "regular",
-    "negociosFechados": 4,
-    "status": "inativo"
-  },
-  {
-    "id": 88,
-    "nome": "Willian Farias",
-    "idade": 21,
-    "observacao": "Aumentou a frequência de compras nos últimos meses.",
-    "tipo": "Empresarial",
-    "categoria": "regular",
-    "negociosFechados": 23,
-    "status": "ativo"
-  },
-  {
-    "id": 89,
-    "nome": "Davi Albuquerque",
-    "idade": 50,
-    "observacao": "Procura sempre opções com parcelamento.",
-    "tipo": "Pessoa Física",
-    "categoria": "vip",
-    "negociosFechados": 24,
-    "status": "ativo"
-  },
-  {
-    "id": 90,
-    "nome": "Beto Cardoso",
-    "idade": 22,
-    "observacao": "Fez upgrade de plano duas vezes no último ano.",
-    "tipo": "Empresarial",
-    "categoria": "vip",
-    "negociosFechados": 12,
-    "status": "ativo"
-  },
-  {
-    "id": 91,
-    "nome": "Lucas Amaral",
-    "idade": 31,
-    "observacao": "Reduziu consumo após mudança de gestor.",
-    "tipo": "Empresarial",
-    "categoria": "vip",
-    "negociosFechados": 12,
-    "status": "inativo"
-  },
-  {
-    "id": 92,
-    "nome": "Zeca Freitas",
-    "idade": 24,
-    "observacao": "Valoriza atendimento personalizado e suporte rápido.",
-    "tipo": "Empresarial",
-    "categoria": "regular",
-    "negociosFechados": 20,
-    "status": "ativo"
-  },
-  {
-    "id": 93,
-    "nome": "Gabriela Martins",
-    "idade": 46,
-    "observacao": "Interessada em soluções sustentáveis e ecológicas.",
-    "tipo": "Empresarial",
-    "categoria": "vip",
-    "negociosFechados": 28,
-    "status": "inativo"
-  },
-  {
-    "id": 94,
-    "nome": "Mariana Teixeira",
-    "idade": 35,
-    "observacao": "Reduziu consumo após mudança de gestor.",
-    "tipo": "Pessoa Física",
-    "categoria": "vip",
-    "negociosFechados": 20,
-    "status": "inativo"
-  },
-  {
-    "id": 95,
-    "nome": "Ursula Carvalho",
-    "idade": 33,
-    "observacao": "Participa de programas de fidelidade.",
-    "tipo": "Pessoa Física",
-    "categoria": "vip",
-    "negociosFechados": 16,
-    "status": "inativo"
-  },
-  {
-    "id": 96,
-    "nome": "Otávio Ramos",
-    "idade": 56,
-    "observacao": "Demonstra interesse por combos e kits promocionais.",
-    "tipo": "Pessoa Física",
-    "categoria": "vip",
-    "negociosFechados": 28,
-    "status": "inativo"
-  },
-  {
-    "id": 97,
-    "nome": "Felipe Oliveira",
-    "idade": 61,
-    "observacao": "Costuma comprar por indicação de influenciadores.",
-    "tipo": "Pessoa Física",
-    "categoria": "regular",
-    "negociosFechados": 18,
-    "status": "inativo"
-  },
-  {
-    "id": 98,
-    "nome": "Olívia Fernandes",
-    "idade": 53,
-    "observacao": "Demonstra interesse por combos e kits promocionais.",
-    "tipo": "Empresarial",
-    "categoria": "regular",
-    "negociosFechados": 29,
-    "status": "inativo"
-  },
-  {
-    "id": 99,
-    "nome": "Jonas Monteiro",
-    "idade": 29,
-    "observacao": "Costuma comprar sazonalmente, principalmente no final do ano.",
-    "tipo": "Empresarial",
-    "categoria": "vip",
-    "negociosFechados": 21,
-    "status": "ativo"
-  },
-  {
-    "id": 100,
-    "nome": "Elaine Souza",
-    "idade": 27,
-    "observacao": "Demonstra interesse por combos e kits promocionais.",
-    "tipo": "Pessoa Física",
-    "categoria": "vip",
-    "negociosFechados": 21,
-    "status": "inativo"
-  },
-  {
-    "id": 101,
-    "nome": "Gisele Prado",
-    "idade": 63,
-    "observacao": "Procura sempre opções com parcelamento.",
-    "tipo": "Empresarial",
-    "categoria": "vip",
-    "negociosFechados": 11,
-    "status": "inativo"
-  },
-  {
-    "id": 102,
-    "nome": "Patrícia Duarte",
-    "idade": 47,
-    "observacao": "Costuma comprar por indicação de influenciadores.",
-    "tipo": "Empresarial",
-    "categoria": "regular",
-    "negociosFechados": 8,
-    "status": "ativo"
-  },
-  {
-    "id": 103,
     "nome": "Simone Alves",
-    "idade": 32,
-    "observacao": "Demonstra interesse por combos e kits promocionais.",
-    "tipo": "Pessoa Física",
-    "categoria": "vip",
-    "negociosFechados": 7,
-    "status": "ativo"
-  },
-  {
-    "id": 104,
-    "nome": "Henrique Silva",
-    "idade": 33,
-    "observacao": "Fechou pacotes de serviços anuais nos últimos anos.",
-    "tipo": "Empresarial",
-    "categoria": "vip",
-    "negociosFechados": 7,
-    "status": "ativo"
-  },
-  {
-    "id": 105,
-    "nome": "Wesley Pires",
-    "idade": 27,
-    "observacao": "Costuma comprar por indicação de influenciadores.",
-    "tipo": "Empresarial",
-    "categoria": "regular",
-    "negociosFechados": 8,
-    "status": "ativo"
-  },
-  {
-    "id": 106,
-    "nome": "Eduarda Castro",
     "idade": 45,
-    "observacao": "Aumentou a frequência de compras nos últimos meses.",
-    "tipo": "Empresarial",
-    "categoria": "vip",
-    "negociosFechados": 22,
-    "status": "inativo"
-  },
-  {
-    "id": 107,
-    "nome": "Elaine Souza",
-    "idade": 36,
-    "observacao": "Procura sempre opções com parcelamento.",
+    "email": "simone.alves@gmail.com",
+    "telefone": "(34) 99190-7712",
+    "ultimoContato": "2025-01-02",
+    "atividades": [
+      { "data": "2025-01-02", "tipo": "ligação", "descricao": "Renovação de contrato" }
+    ],
+    "observacao": "Cliente antiga, alto LTV.",
     "tipo": "Pessoa Física",
-    "categoria": "vip",
-    "negociosFechados": 23,
-    "status": "ativo"
-  },
-  {
-    "id": 108,
-    "nome": "Henrique Silva",
-    "idade": 57,
-    "observacao": "Interesse em parcerias de longo prazo.",
-    "tipo": "Pessoa Física",
-    "categoria": "regular",
-    "negociosFechados": 26,
-    "status": "inativo"
-  },
-  {
-    "id": 109,
-    "nome": "Ingrid Barros",
-    "idade": 38,
-    "observacao": "Demonstra interesse por combos e kits promocionais.",
-    "tipo": "Empresarial",
-    "categoria": "regular",
-    "negociosFechados": 12,
-    "status": "ativo"
-  },
-  {
-    "id": 110,
-    "nome": "Eduarda Castro",
-    "idade": 52,
-    "observacao": "Prefere compras presenciais, mesmo com canal digital disponível.",
-    "tipo": "Empresarial",
-    "categoria": "regular",
-    "negociosFechados": 29,
-    "status": "ativo"
-  },
-  {
-    "id": 111,
-    "nome": "Ingrid Barros",
-    "idade": 33,
-    "observacao": "Aumentou a frequência de compras nos últimos meses.",
-    "tipo": "Empresarial",
-    "categoria": "regular",
-    "negociosFechados": 5,
-    "status": "inativo"
-  },
-  {
-    "id": 112,
-    "nome": "Túlio Ribeiro",
-    "idade": 41,
-    "observacao": "Procura sempre opções com parcelamento.",
-    "tipo": "Empresarial",
-    "categoria": "vip",
-    "negociosFechados": 21,
-    "status": "inativo"
-  },
-  {
-    "id": 113,
-    "nome": "Melissa Brito",
-    "idade": 53,
-    "observacao": "Interesse em parcerias de longo prazo.",
-    "tipo": "Pessoa Física",
-    "categoria": "vip",
-    "negociosFechados": 6,
-    "status": "ativo"
-  },
-  {
-    "id": 114,
-    "nome": "Bruno Lima",
-    "idade": 60,
-    "observacao": "Costuma comprar sazonalmente, principalmente no final do ano.",
-    "tipo": "Empresarial",
-    "categoria": "regular",
-    "negociosFechados": 24,
-    "status": "inativo"
-  },
-  {
-    "id": 115,
-    "nome": "Mariana Teixeira",
-    "idade": 39,
-    "observacao": "Costuma comprar sazonalmente, principalmente no final do ano.",
-    "tipo": "Empresarial",
-    "categoria": "regular",
-    "negociosFechados": 15,
-    "status": "ativo"
-  },
-  {
-    "id": 116,
-    "nome": "Patrícia Duarte",
-    "idade": 28,
-    "observacao": "Tem alto ticket médio e prefere lançamentos.",
-    "tipo": "Pessoa Física",
-    "categoria": "regular",
-    "negociosFechados": 8,
-    "status": "ativo"
-  },
-  {
-    "id": 117,
-    "nome": "Túlio Ribeiro",
-    "idade": 36,
-    "observacao": "Tem alto volume de compras corporativas.",
-    "tipo": "Empresarial",
-    "categoria": "vip",
-    "negociosFechados": 17,
-    "status": "ativo"
-  },
-  {
-    "id": 118,
-    "nome": "Olívia Fernandes",
-    "idade": 55,
-    "observacao": "Compra com frequência produtos em promoção.",
-    "tipo": "Pessoa Física",
-    "categoria": "vip",
-    "negociosFechados": 28,
-    "status": "inativo"
-  },
-  {
-    "id": 119,
-    "nome": "Beto Cardoso",
-    "idade": 42,
-    "observacao": "Participa de programas de fidelidade.",
-    "tipo": "Empresarial",
-    "categoria": "regular",
-    "negociosFechados": 12,
-    "status": "inativo"
-  },
-  {
-    "id": 120,
-    "nome": "Gisele Prado",
-    "idade": 45,
-    "observacao": "Participa de programas de fidelidade.",
-    "tipo": "Pessoa Física",
-    "categoria": "vip",
-    "negociosFechados": 29,
-    "status": "inativo"
-  },
-  {
-    "id": 121,
-    "nome": "Yasmin Araújo",
-    "idade": 61,
-    "observacao": "Demonstra interesse por combos e kits promocionais.",
-    "tipo": "Empresarial",
-    "categoria": "vip",
-    "negociosFechados": 12,
-    "status": "ativo"
-  },
-  {
-    "id": 122,
-    "nome": "Mariana Teixeira",
-    "idade": 38,
-    "observacao": "Fechou pacotes de serviços anuais nos últimos anos.",
-    "tipo": "Empresarial",
-    "categoria": "regular",
-    "negociosFechados": 20,
-    "status": "inativo"
-  },
-  {
-    "id": 123,
-    "nome": "Davi Albuquerque",
-    "idade": 32,
-    "observacao": "Fez upgrade de plano duas vezes no último ano.",
-    "tipo": "Empresarial",
-    "categoria": "vip",
-    "negociosFechados": 13,
-    "status": "inativo"
-  },
-  {
-    "id": 124,
-    "nome": "Davi Albuquerque",
-    "idade": 34,
-    "observacao": "Demonstra interesse por combos e kits promocionais.",
-    "tipo": "Pessoa Física",
-    "categoria": "vip",
-    "negociosFechados": 19,
-    "status": "ativo"
-  },
-  {
-    "id": 125,
-    "nome": "Otávio Ramos",
-    "idade": 21,
-    "observacao": "Ativo nas redes sociais e responde bem a campanhas de e-mail.",
-    "tipo": "Empresarial",
-    "categoria": "regular",
-    "negociosFechados": 14,
-    "status": "inativo"
-  },
-  {
-    "id": 126,
-    "nome": "Otávio Ramos",
-    "idade": 49,
-    "observacao": "Procura sempre opções com parcelamento.",
-    "tipo": "Empresarial",
-    "categoria": "regular",
-    "negociosFechados": 11,
-    "status": "ativo"
-  },
-  {
-    "id": 127,
-    "nome": "Quésia Barros",
-    "idade": 49,
-    "observacao": "Interesse em parcerias de longo prazo.",
-    "tipo": "Pessoa Física",
-    "categoria": "vip",
-    "negociosFechados": 26,
-    "status": "inativo"
-  },
-  {
-    "id": 128,
-    "nome": "Camila Moura",
-    "idade": 49,
-    "observacao": "Reduziu consumo após mudança de gestor.",
-    "tipo": "Empresarial",
-    "categoria": "vip",
-    "negociosFechados": 30,
-    "status": "inativo"
-  },
-  {
-    "id": 129,
-    "nome": "Leandro Cunha",
-    "idade": 59,
-    "observacao": "Fez upgrade de plano duas vezes no último ano.",
-    "tipo": "Pessoa Física",
-    "categoria": "regular",
-    "negociosFechados": 27,
-    "status": "ativo"
-  },
-  {
-    "id": 130,
-    "nome": "Isabela Torres",
-    "idade": 27,
-    "observacao": "Aumentou a frequência de compras nos últimos meses.",
-    "tipo": "Empresarial",
-    "categoria": "regular",
-    "negociosFechados": 22,
-    "status": "inativo"
-  },
-  {
-    "id": 131,
-    "nome": "Leandro Cunha",
-    "idade": 43,
-    "observacao": "Cliente antigo, valoriza estabilidade e confiança.",
-    "tipo": "Empresarial",
-    "categoria": "vip",
-    "negociosFechados": 23,
-    "status": "ativo"
-  },
-  {
-    "id": 132,
-    "nome": "Beto Cardoso",
-    "idade": 38,
-    "observacao": "Atende a várias unidades da empresa.",
-    "tipo": "Empresarial",
-    "categoria": "regular",
-    "negociosFechados": 13,
-    "status": "ativo"
-  },
-  {
-    "id": 133,
-    "nome": "Lucas Amaral",
-    "idade": 46,
-    "observacao": "Reduziu consumo após mudança de gestor.",
-    "tipo": "Empresarial",
-    "categoria": "vip",
-    "negociosFechados": 7,
-    "status": "ativo"
-  },
-  {
-    "id": 134,
-    "nome": "Melissa Brito",
-    "idade": 48,
-    "observacao": "Compra com frequência produtos em promoção.",
-    "tipo": "Pessoa Física",
-    "categoria": "vip",
-    "negociosFechados": 23,
-    "status": "ativo"
-  },
-  {
-    "id": 135,
-    "nome": "Nicolas Ribeiro",
-    "idade": 29,
-    "observacao": "Valoriza atendimento personalizado e suporte rápido.",
-    "tipo": "Empresarial",
-    "categoria": "vip",
-    "negociosFechados": 29,
-    "status": "ativo"
-  },
-  {
-    "id": 136,
-    "nome": "Yuri Melo",
-    "idade": 23,
-    "observacao": "Fechou pacotes de serviços anuais nos últimos anos.",
-    "tipo": "Pessoa Física",
-    "categoria": "regular",
-    "negociosFechados": 6,
-    "status": "ativo"
-  },
-  {
-    "id": 137,
-    "nome": "Túlio Ribeiro",
-    "idade": 22,
-    "observacao": "Compra com frequência produtos em promoção.",
-    "tipo": "Pessoa Física",
-    "categoria": "regular",
-    "negociosFechados": 23,
-    "status": "ativo"
-  },
-  {
-    "id": 138,
-    "nome": "Wesley Pires",
-    "idade": 50,
-    "observacao": "Costuma comprar sazonalmente, principalmente no final do ano.",
-    "tipo": "Pessoa Física",
-    "categoria": "vip",
-    "negociosFechados": 10,
-    "status": "inativo"
-  },
-  {
-    "id": 139,
-    "nome": "Túlio Ribeiro",
-    "idade": 39,
-    "observacao": "Prefere compras presenciais, mesmo com canal digital disponível.",
-    "tipo": "Pessoa Física",
-    "categoria": "regular",
-    "negociosFechados": 25,
-    "status": "ativo"
-  },
-  {
-    "id": 140,
-    "nome": "Carla Mendes",
-    "idade": 47,
-    "observacao": "Ativo nas redes sociais e responde bem a campanhas de e-mail.",
-    "tipo": "Pessoa Física",
-    "categoria": "regular",
-    "negociosFechados": 23,
-    "status": "inativo"
-  },
-  {
-    "id": 141,
-    "nome": "Fábio Neves",
-    "idade": 20,
-    "observacao": "Interessada em soluções sustentáveis e ecológicas.",
-    "tipo": "Empresarial",
     "categoria": "vip",
     "negociosFechados": 15,
     "status": "ativo"
-  },
-  {
-    "id": 142,
-    "nome": "Yuri Melo",
-    "idade": 22,
-    "observacao": "Interesse em parcerias de longo prazo.",
-    "tipo": "Empresarial",
-    "categoria": "vip",
-    "negociosFechados": 30,
-    "status": "ativo"
-  },
-  {
-    "id": 143,
-    "nome": "Elaine Souza",
-    "idade": 57,
-    "observacao": "Interesse em parcerias de longo prazo.",
-    "tipo": "Empresarial",
-    "categoria": "regular",
-    "negociosFechados": 11,
-    "status": "inativo"
-  },
-  {
-    "id": 144,
-    "nome": "Zeca Freitas",
-    "idade": 51,
-    "observacao": "Reduziu consumo após mudança de gestor.",
-    "tipo": "Empresarial",
-    "categoria": "regular",
-    "negociosFechados": 24,
-    "status": "inativo"
-  },
-  {
-    "id": 145,
-    "nome": "Quésia Barros",
-    "idade": 48,
-    "observacao": "Primeira compra recente, ainda em fase de onboarding.",
-    "tipo": "Empresarial",
-    "categoria": "vip",
-    "negociosFechados": 17,
-    "status": "inativo"
-  },
-  {
-    "id": 146,
-    "nome": "Sara Nunes",
-    "idade": 34,
-    "observacao": "Costuma comprar sazonalmente, principalmente no final do ano.",
-    "tipo": "Empresarial",
-    "categoria": "vip",
-    "negociosFechados": 7,
-    "status": "ativo"
-  },
-  {
-    "id": 147,
-    "nome": "Yuri Melo",
-    "idade": 62,
-    "observacao": "Interesse em parcerias de longo prazo.",
-    "tipo": "Empresarial",
-    "categoria": "vip",
-    "negociosFechados": 6,
-    "status": "ativo"
-  },
-  {
-    "id": 148,
-    "nome": "Kátia Lima",
-    "idade": 65,
-    "observacao": "Procura sempre opções com parcelamento.",
-    "tipo": "Pessoa Física",
-    "categoria": "regular",
-    "negociosFechados": 13,
-    "status": "ativo"
-  },
-  {
-    "id": 149,
-    "nome": "Bruno Lima",
-    "idade": 29,
-    "observacao": "Fechou pacotes de serviços anuais nos últimos anos.",
-    "tipo": "Empresarial",
-    "categoria": "regular",
-    "negociosFechados": 14,
-    "status": "inativo"
-  },
-  {
-    "id": 150,
-    "nome": "Natália Ferreira",
-    "idade": 33,
-    "observacao": "Ativo nas redes sociais e responde bem a campanhas de e-mail.",
-    "tipo": "Empresarial",
-    "categoria": "regular",
-    "negociosFechados": 30,
-    "status": "inativo"
   }
 ]

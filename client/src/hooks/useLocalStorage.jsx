@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
-export function useLocalStorage({chave, valorInicial}) {
-    const [valor, setDados] = useState(() => {
+export function useLocalStorage(chave, valorInicial) {
+    const [valor, setValor] = useState(() => {
         try {
             const dadosLocal = localStorage.getItem(chave);
             return dadosLocal ? JSON.parse(dadosLocal) : valorInicial;
@@ -11,8 +11,9 @@ export function useLocalStorage({chave, valorInicial}) {
     });
 
     useEffect(() => {
-        localStorage.setItem(chave, JSON.stringify(dados));
+        console.log(valor);
+        localStorage.setItem(chave, JSON.stringify(valor));
     }, [chave, valor]);
 
-    return [valor, setDados];
+    return [valor, setValor];
 }

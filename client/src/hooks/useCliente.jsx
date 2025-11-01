@@ -25,7 +25,7 @@ export function useCliente() {
     };
 
     const buscar = (clienteId) => {
-        return clientes.find(c => c.id == c.id);
+        return clientes.find(c => c.id == clienteId);
     };
 
     return { clientes, carregando, erro, criar, atualizar, remover, buscar };

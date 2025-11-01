@@ -1,4 +1,5 @@
-import { useEffect } from "react";
+import { useCallback, useEffect } from "react";
+
 import { useFetch } from "./useFetch";
 import { useLocalStorage } from "./useLocalStorage";
 
@@ -11,17 +12,21 @@ export function useCliente() {
             setClientes(mock);
     }, [mock, carregando, erro]);
 
-    const criar  = (cliente) => {
+    const criar = (cliente) => {
         setClientes(prev => [...prev, { id: crypto.randomUUID(), ...cliente}]);
     };
 
     const atualizar = (cliente) => {
-        setClientes(prev => prev.map(c => c.id === cliente.id ? {...c, ...cliente} : c));
+        setClientes(prev => prev.map(c => c.id == cliente.id ? {...c, ...cliente} : c));
     };
 
     const remover = (clienteId) => {
-        setClientes(prev => prev.filter(c => c.id !== clienteId));
+        setClientes(prev => prev.filter(c => c.id != clienteId));
     };
 
-    return { clientes, carregando, erro, criar, atualizar, remover };
+    const buscar = (clienteId) => {
+        return clientes.find(c => c.id == c.id);
+    };
+
+    return { clientes, carregando, erro, criar, atualizar, remover, buscar };
 }

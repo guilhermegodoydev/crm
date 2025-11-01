@@ -1,15 +1,16 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client"
 import './index.css'
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import App from "./App.jsx"
 
 import Dashboard from "./screens/Dashboard.jsx";
-import Clientes from "./screens/Clientes.jsx";
+import ClientesIndex from "./screens/clientes/ClientesIndex.jsx";
 import Etapas from "./screens/Etapas.jsx";
 import Relatorios from "./screens/Relatorios.jsx";
-
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { ClientesBase } from "./screens/clientes/ClientesBase.jsx";
+import { ClienteDetalhes } from "./screens/clientes/ClienteDetalhes.jsx";
 
 const router = createBrowserRouter([
   {
@@ -23,8 +24,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/clientes",
-        element: <Clientes/>,
-        handle: { title: "Clientes" }
+        element: <ClientesBase/>,
+        children: [
+          { index: true, element: <ClientesIndex/>, handle: { title: "Clientes"}},
+          { path: ":id", element: <ClienteDetalhes/>, handle: { title: ""}}
+        ]
       },
       {
         path: "/etapas",

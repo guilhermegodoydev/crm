@@ -25,7 +25,7 @@ export function useEtapa() {
     };
 
     const buscar = (etapaId) => {
-        return etapas.find(e => e.id === etapaId);
+        return etapas.find(e => e.id == etapaId);
     };
 
     return { etapas, carregando, erro, criar, atualizar, remover, buscar };

@@ -11,7 +11,7 @@
       { "data": "2025-01-15", "tipo": "reunião", "descricao": "Reunião de alinhamento comercial" }
     ],
     "observacao": "Alta confiança, interesse em expansão.",
-    "tipo": "Empresarial",
+    "tipo": "PJ",
     "categoria": "vip",
     "negociosFechados": 12,
     "status": "ativo",
@@ -33,7 +33,7 @@
       { "data": "2025-01-10", "tipo": "email", "descricao": "Abertura do relacionamento" }
     ],
     "observacao": "Interessado em planos flexíveis.",
-    "tipo": "Pessoa Física",
+    "tipo": "PF",
     "categoria": "regular",
     "negociosFechados": 2,
     "status": "ativo",
@@ -54,7 +54,7 @@
       { "data": "2025-01-02", "tipo": "email", "descricao": "Proposta enviada" }
     ],
     "observacao": "Busca soluções sustentáveis.",
-    "tipo": "Empresarial",
+    "tipo": "PJ",
     "categoria": "vip",
     "negociosFechados": 8,
     "status": "ativo",
@@ -76,7 +76,7 @@
       { "data": "2024-12-30", "tipo": "email", "descricao": "Envio de documentação técnica" }
     ],
     "observacao": "Foco em escalabilidade e integração com sistemas internos.",
-    "tipo": "Empresarial",
+    "tipo": "PJ",
     "categoria": "regular",
     "negociosFechados": 3,
     "status": "ativo",
@@ -98,7 +98,7 @@
       { "data": "2025-01-09", "tipo": "ligação", "descricao": "Apresentação de serviços" }
     ],
     "observacao": "Cliente potencial para novos pacotes.",
-    "tipo": "Pessoa Física",
+    "tipo": "PF",
     "categoria": "regular",
     "negociosFechados": 1,
     "status": "ativo",
@@ -118,7 +118,7 @@
       { "data": "2025-01-05", "tipo": "email", "descricao": "Envio de proposta preliminar" }
     ],
     "observacao": "Busca soluções corporativas robustas.",
-    "tipo": "Empresarial",
+    "tipo": "PJ",
     "categoria": "vip",
     "negociosFechados": 15,
     "status": "ativo",
@@ -139,7 +139,7 @@
       { "data": "2025-01-07", "tipo": "email", "descricao": "Envio de tutorial inicial" }
     ],
     "observacao": "Interessada em soluções ágeis.",
-    "tipo": "Empresarial",
+    "tipo": "PJ",
     "categoria": "regular",
     "negociosFechados": 4,
     "status": "ativo",

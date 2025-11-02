@@ -5,7 +5,7 @@ import { useLocalStorage } from "../helpers/useLocalStorage";
 
 export function useEtapa() {
     const { dados: mock, carregando, erro } = useFetch("/mock/etapas.json");
-    const [ etapas, setEtapas ] = useLocalStorage();
+    const [ etapas, setEtapas ] = useLocalStorage("etapas" , []);
 
     useEffect(() => {
         if (!carregando && erro && etapas.length === 0 && mock) 

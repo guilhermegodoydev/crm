@@ -5,11 +5,11 @@ import { CardMetrica } from "../components/CardMetrica";
 
 import { useTela } from "../context/TelaContexto";
 
-import { useAPI } from "../hooks/useAPI";
+import { useFetch } from "../hooks/useFetch";
 
 export default function Dashboard() {
     const { desktop } = useTela();
-    const { dados, carregando, erro} = useAPI("/mock/metricas.json");
+    const { dados, carregando, erro} = useFetch("/mock/metricas.json");
 
     if (carregando) return <div>Carregando...</div>;
     if (erro) return <div>Erro {erro}</div>;
@@ -43,7 +43,7 @@ export default function Dashboard() {
                     eixoXkey={desktop ? "leads" : "nome"}
                     larguraEixoY={desktop ? 100 : 45}
                     barras={[
-                        {id: "barra-leads", dataKey: "leads", stackId: "a", fill: "#0044ffff"}
+                        {id: "barra-leads", dataKey: "leads", stackId: "a", fill: "#1b4e9b"}
                     ]}
                 />
 
@@ -53,7 +53,7 @@ export default function Dashboard() {
                     data={dados.metricas.linha} eixoXKey="nome" 
                     larguraEixoY={36}
                     linhas={[
-                        {id: "linha-leads", dataKey: "novosLeads", nomeLinha: "Novos Leads"}
+                        {id: "linha-leads", dataKey: "novosLeads", nomeLinha: "Novos Leads", fill: "#1b4e9b"}
                     ]}
                 />
 

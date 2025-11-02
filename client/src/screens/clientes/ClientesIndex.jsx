@@ -11,7 +11,7 @@ import { buscar } from "../../utils/buscar";
 
 import { useTela } from "../../context/TelaContexto";
 
-import { useCliente } from "../../hooks/useCliente";
+import { useCliente } from "../../hooks/dominio/useCliente";
 
 const colunas = [
   { chave: "nome", label: "Nome", ordenavel: true, tipo: "texto", className: "font-semibold" },

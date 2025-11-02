@@ -5,7 +5,7 @@ import { CardMetrica } from "../components/CardMetrica";
 
 import { useTela } from "../context/TelaContexto";
 
-import { useFetch } from "../hooks/useFetch";
+import { useFetch } from "../hooks/helpers/useFetch";
 
 export default function Dashboard() {
     const { desktop } = useTela();

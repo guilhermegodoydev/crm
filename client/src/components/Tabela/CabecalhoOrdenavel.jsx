@@ -18,7 +18,7 @@ export function CabecalhoOrdenavel({titulo, tipo, ordenado, direcao, onClick, ar
     const icone = ordenado ? iconeAsc : iconDesc;
 
     return (
-        <th className="px-4 py-2">
+        <th className="p-2">
             <button 
                 className="flex justify-center gap-2 cursor-pointer w-fit m-auto" 
                 onClick={onClick}

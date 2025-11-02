@@ -16,8 +16,8 @@ export function useEtapa() {
         setEtapas(prev => [...prev, { id: crypto.randomUUID(), ...etapa}]);
     };
 
-    const atualizar = (etapa) => {
-        setEtapas(prev => prev.map(e => e.id == etapa.id ? {...e, ...etapa} : c));
+    const atualizar = (id, leadParcial) => {
+        setEtapas(prev => prev.map(e => e.id == id ? {...e, ...leadParcial} : c));
     };
 
     const remover = (etapaId) => {

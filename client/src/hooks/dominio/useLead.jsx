@@ -15,8 +15,8 @@ export function useLead() {
         setLeads(prev => [...prev, { id: crypto.randomUUID(), ...lead}]);
     };
 
-    const atualizar = (lead) => {
-        setLeads(prev => prev.map(l => l.id == lead.id ? {...l, ...lead} : l));
+    const atualizar = (id, leadParcial) => {
+        setLeads(prev => prev.map(l => l.id == id ? {...l, ...leadParcial} : l));
     };
 
     const remover = (leadId) => {

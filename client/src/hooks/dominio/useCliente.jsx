@@ -16,8 +16,8 @@ export function useCliente() {
         setClientes(prev => [...prev, { id: crypto.randomUUID(), ...cliente}]);
     };
 
-    const atualizar = (cliente) => {
-        setClientes(prev => prev.map(c => c.id == cliente.id ? {...c, ...cliente} : c));
+    const atualizar = (id, clienteParcial) => {
+        setClientes(prev => prev.map(c => c.id == id ? {...c, ...clienteParcial} : c));
     };
 
     const remover = (clienteId) => {

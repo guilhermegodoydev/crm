@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-import { useFetch } from "../useFetch";
+import { useFetch } from "../helpers/useFetch";
 import { useLocalStorage } from "../helpers/useLocalStorage";
 
 export function useEtapa() {
@@ -8,10 +8,10 @@ export function useEtapa() {
     const [ etapas, setEtapas ] = useLocalStorage("etapas" , []);
 
     useEffect(() => {
-        if (!carregando && erro && etapas.length === 0 && mock) 
+        if (!carregando && !erro && etapas.length === 0 && mock) 
             setEtapas(mock);
     }, [mock, carregando, erro]);
-
+    
     const criar = (etapa) => {
         setEtapas(prev => [...prev, { id: crypto.randomUUID(), ...etapa}]);
     };

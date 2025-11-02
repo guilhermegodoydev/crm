@@ -20,7 +20,7 @@ export function Tabela({dadosTabela, colunas}) {
 
     return (
         <table className="w-full">
-            <thead className="text-white bg-blue-500 sticky top-0">
+            <thead className="text-white bg-[#1b4e9b] sticky top-0">
                 <tr>
                     {colunas.map(c => (
                         c.ordenavel ? (
@@ -32,9 +32,12 @@ export function Tabela({dadosTabela, colunas}) {
                                 direcao = {ordenado.campo === c.chave ? (ordenado.ativo ? "asc" : "desc"): null}
                                 onClick={() => alterarOrdenacao(c.chave)}
                                 ariaLabel={`Clique para ordenar por ${c.label}`}
-                            /> 
+                                className="px-3"
+                            >
+                            </CabecalhoOrdenavel> 
+                            
                         ) : (
-                            <th key={c.chave}>{c.label}</th>
+                            <th key={c.chave} className="p-2">{c.label}</th>
                         )
                     ))}
                 </tr>
@@ -46,7 +49,15 @@ export function Tabela({dadosTabela, colunas}) {
                         className={`border border-gray-300 ${index % 2 === 0 ? "bg-gray-100" : "bg-gray-300"}`}
                     >
                         {colunas.map((c) => (
-                            <td key={`coluna-${item.id}-coluna-${c.chave}`} className={`px-4 py-2 ${typeof item[c.chave] === "number" ? "text-center" : ""}`}>{item[c.chave]}</td>
+                            <td 
+                                key={`coluna-${item.id}-coluna-${c.chave}`} 
+                                className={`px-2 py-1 ${typeof item[c.chave] === "number" ? "text-center" : ""} ${c.className}`}
+                                >
+                                    {typeof c.children === 'function'
+                                        ? c.children(item)
+                                        : (c.children ? c.children : item[c.chave])
+                                    }
+                            </td>
                         ))}
                     </tr>
                 )) : (

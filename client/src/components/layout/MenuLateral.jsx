@@ -21,7 +21,7 @@ export function MenuLateral() {
         <>
             {!desktop && <Menu onClick={() => setAberto(!aberto)}/>}
             {(desktop || aberto) &&
-                <aside className={`bg-blue-500 h-screen p-2 lg:relative absolute top-0 w/34`}>
+                <aside className={`bg-[#1b4e9b] h-screen p-2 lg:sticky absolute top-0 w/34`}>
                         <nav>
                             <ul>
                                 <li className={estiloElementos}>

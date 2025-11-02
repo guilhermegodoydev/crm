@@ -1,0 +1,31 @@
+import { useEffect } from "react";
+import { useFetch } from "../helpers/useFetch";
+import { useLocalStorage } from "../helpers/useLocalStorage";
+
+export function useLead() {
+    const { dados: mock, carregando, erro } = useFetch("/mock/leads.json");
+    const [ leads, setLeads ] = useLocalStorage("leads", []);
+
+    useEffect(() => {
+        if (!carregando && !erro && leads.length === 0 && mock)
+            setLeads(mock);
+    }, [mock, carregando, erro]);
+
+    const criar = (lead) => {
+        setLeads(prev => [...prev, { id: crypto.randomUUID(), ...lead}]);
+    };
+
+    const atualizar = (lead) => {
+        setLeads(prev => prev.map(l => l.id == lead.id ? {...l, ...lead} : l));
+    };
+
+    const remover = (leadId) => {
+        setLeads(prev => prev.filter(l => l.id != leadId));
+    };
+
+    const buscar = (leadId) => {
+        return leads.filter(l => l.id == leadId);
+    };
+
+    return { leads, carregando, erro, criar, atualizar, remover, buscar};
+};

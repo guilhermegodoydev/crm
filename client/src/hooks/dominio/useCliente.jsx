@@ -1,7 +1,7 @@
 import { useCallback, useEffect } from "react";
 
-import { useFetch } from "./useFetch";
-import { useLocalStorage } from "./useLocalStorage";
+import { useFetch } from "../helpers/useFetch";
+import { useLocalStorage } from "../helpers/useLocalStorage";
 
 export function useCliente() {
     const { dados: mock, carregando, erro } = useFetch("/mock/clientes.json");

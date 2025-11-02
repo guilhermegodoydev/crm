@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 
-import { useFetch } from "./useFetch";
-import { useLocalStorage } from "./useLocalStorage";
+import { useFetch } from "../useFetch";
+import { useLocalStorage } from "../helpers/useLocalStorage";
 
 export function useEtapa() {
     const { dados: mock, carregando, erro } = useFetch("/mock/etapas.json");

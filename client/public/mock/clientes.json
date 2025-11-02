@@ -85,5 +85,66 @@
       { "data": "2024-12-12", "texto": "Interesse em automação de processos financeiros." },
       { "data": "2024-11-28", "texto": "Prefere onboarding detalhado e suporte técnico inicial." }
     ]
+  },
+  {
+    "id": 5,
+    "nome": "Larissa Mendes",
+    "idade": 27,
+    "email": "larissa.mendes@gmail.com",
+    "telefone": "(11) 99123-4567",
+    "ultimoContato": "2025-01-16",
+    "atividades": [
+      { "data": "2025-01-16", "tipo": "email", "descricao": "Confirmação de interesse" },
+      { "data": "2025-01-09", "tipo": "ligação", "descricao": "Apresentação de serviços" }
+    ],
+    "observacao": "Cliente potencial para novos pacotes.",
+    "tipo": "Pessoa Física",
+    "categoria": "regular",
+    "negociosFechados": 1,
+    "status": "ativo",
+    "notas": [
+      { "data": "2025-01-09", "texto": "Solicitou informações detalhadas sobre pacotes premium." }
+    ]
+  },
+  {
+    "id": 6,
+    "nome": "Ricardo Lima",
+    "idade": 45,
+    "email": "ricardo.lima@techcorp.com",
+    "telefone": "(21) 98765-4321",
+    "ultimoContato": "2025-01-14",
+    "atividades": [
+      { "data": "2025-01-14", "tipo": "reunião", "descricao": "Negociação de contrato anual" },
+      { "data": "2025-01-05", "tipo": "email", "descricao": "Envio de proposta preliminar" }
+    ],
+    "observacao": "Busca soluções corporativas robustas.",
+    "tipo": "Empresarial",
+    "categoria": "vip",
+    "negociosFechados": 15,
+    "status": "ativo",
+    "notas": [
+      { "data": "2025-01-05", "texto": "Demanda relatórios trimestrais de desempenho." },
+      { "data": "2024-12-15", "texto": "Interesse em soluções personalizadas para equipes remotas." }
+    ]
+  },
+  {
+    "id": 7,
+    "nome": "Juliana Costa",
+    "idade": 34,
+    "email": "juliana.costa@startup.com",
+    "telefone": "(31) 99999-1111",
+    "ultimoContato": "2025-01-13",
+    "atividades": [
+      { "data": "2025-01-13", "tipo": "ligação", "descricao": "Esclarecimento sobre funcionalidades" },
+      { "data": "2025-01-07", "tipo": "email", "descricao": "Envio de tutorial inicial" }
+    ],
+    "observacao": "Interessada em soluções ágeis.",
+    "tipo": "Empresarial",
+    "categoria": "regular",
+    "negociosFechados": 4,
+    "status": "ativo",
+    "notas": [
+      { "data": "2025-01-07", "texto": "Prefere integração rápida e onboarding simplificado." }
+    ]
   }
 ]

@@ -16,9 +16,9 @@
     "negociosFechados": 12,
     "status": "ativo",
     "notas": [
-      { "data": "2025-01-10", "texto": "Solicitou condições comerciais diferenciadas para expansão em março." },
-      { "data": "2024-12-22", "texto": "Considera migrar processos internos para solução integrada." },
-      { "data": "2024-11-02", "texto": "Prefere comunicação via e-mail e reuniões quinzenais." }
+      { "id": 1, "data": "2025-01-10", "texto": "Solicitou condições comerciais diferenciadas para expansão em março." },
+      { "id": 2, "data": "2024-12-22", "texto": "Considera migrar processos internos para solução integrada." },
+      { "id": 3, "data": "2024-11-02", "texto": "Prefere comunicação via e-mail e reuniões quinzenais." }
     ]
   },
   {
@@ -38,8 +38,8 @@
     "negociosFechados": 2,
     "status": "ativo",
     "notas": [
-      { "data": "2025-01-05", "texto": "Busca opções com boa relação custo-benefício." },
-      { "data": "2024-12-10", "texto": "Preferência por parcelamento e upgrades gradativos." }
+      { "id": 1, "data": "2025-01-05", "texto": "Busca opções com boa relação custo-benefício." },
+      { "id": 2, "data": "2024-12-10", "texto": "Preferência por parcelamento e upgrades gradativos." }
     ]
   },
   {
@@ -59,9 +59,9 @@
     "negociosFechados": 8,
     "status": "ativo",
     "notas": [
-      { "data": "2025-01-10", "texto": "Solicitou relatório sobre impacto e eficiência energética." },
-      { "data": "2024-12-18", "texto": "Avalia integrar novas filiais no próximo trimestre." },
-      { "data": "2024-11-05", "texto": "Aprecia relatórios objetivos e métricas claras." }
+      { "id": 1, "data": "2025-01-10", "texto": "Solicitou relatório sobre impacto e eficiência energética." },
+      { "id": 2, "data": "2024-12-18", "texto": "Avalia integrar novas filiais no próximo trimestre." },
+      { "id": 3, "data": "2024-11-05", "texto": "Aprecia relatórios objetivos e métricas claras." }
     ]
   },
   {
@@ -81,9 +81,9 @@
     "negociosFechados": 3,
     "status": "ativo",
     "notas": [
-      { "data": "2025-01-02", "texto": "Solicitou estudo para integração com ERP interno até Q2." },
-      { "data": "2024-12-12", "texto": "Interesse em automação de processos financeiros." },
-      { "data": "2024-11-28", "texto": "Prefere onboarding detalhado e suporte técnico inicial." }
+      { "id": 1, "data": "2025-01-02", "texto": "Solicitou estudo para integração com ERP interno até Q2." },
+      { "id": 2, "data": "2024-12-12", "texto": "Interesse em automação de processos financeiros." },
+      { "id": 3, "data": "2024-11-28", "texto": "Prefere onboarding detalhado e suporte técnico inicial." }
     ]
   },
   {
@@ -103,7 +103,7 @@
     "negociosFechados": 1,
     "status": "ativo",
     "notas": [
-      { "data": "2025-01-09", "texto": "Solicitou informações detalhadas sobre pacotes premium." }
+      { "id": 1, "data": "2025-01-09", "texto": "Solicitou informações detalhadas sobre pacotes premium." }
     ]
   },
   {
@@ -123,8 +123,8 @@
     "negociosFechados": 15,
     "status": "ativo",
     "notas": [
-      { "data": "2025-01-05", "texto": "Demanda relatórios trimestrais de desempenho." },
-      { "data": "2024-12-15", "texto": "Interesse em soluções personalizadas para equipes remotas." }
+      { "id": 1, "data": "2025-01-05", "texto": "Demanda relatórios trimestrais de desempenho." },
+      { "id": 2, "data": "2024-12-15", "texto": "Interesse em soluções personalizadas para equipes remotas." }
     ]
   },
   {
@@ -144,7 +144,7 @@
     "negociosFechados": 4,
     "status": "ativo",
     "notas": [
-      { "data": "2025-01-07", "texto": "Prefere integração rápida e onboarding simplificado." }
+      { "id": 1, "data": "2025-01-07", "texto": "Prefere integração rápida e onboarding simplificado." }
     ]
   }
 ]

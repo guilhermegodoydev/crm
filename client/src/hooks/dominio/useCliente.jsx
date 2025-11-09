@@ -28,5 +28,32 @@ export function useCliente() {
         return clientes.find(c => c.id == clienteId);
     };
 
-    return { clientes, carregando, erro, criar, atualizar, remover, buscar };
+    const salvarNota = (clienteId, texto) => {
+        const novaNota = { id: Date.now(), texto}
+        setClientes(prev => 
+            prev.map(c => 
+                c.id == clienteId 
+                    ? { ...c, notas: [...(c.notas || []), novaNota]} 
+                : c
+            )
+        );
+    };
+
+    const removerNota = (clienteId, notaId) => {
+        console.log(clienteId, notaId);
+        setClientes(prev => 
+            prev.map(cli => 
+                cli.id == clienteId 
+                ? {
+                    ...cli, 
+                    notas: Array.isArray(cli.notas) 
+                    ? cli.notas.filter(n => n.id != notaId)
+                    : [],
+                  } 
+                : cli
+            )
+        );
+    };
+
+    return { clientes, carregando, erro, criar, atualizar, remover, buscar, salvarNota, removerNota };
 }

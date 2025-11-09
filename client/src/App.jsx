@@ -5,15 +5,19 @@ import { TelaProvider } from "./context/TelaContexto";
 function App() {
     const matches = useMatches();
 
-    const titulo = [...matches].at(-1)?.handle?.title || "CRM";
+    const titulo = [...matches].at(-1)?.handle?.title || "";
 
     return (
         <TelaProvider>
             <div className="flex">
                 <MenuLateral/>   
                 <main className="flex flex-col flex-1 p-4">
-                    <h1>{titulo}</h1>
-                    <hr className="border-1 border-gray-100 mb-3"/>
+                    {titulo && 
+                        <>
+                            <h1>{titulo}</h1>
+                            <hr className="border-1 border-gray-100 mb-3"/>
+                        </>
+                    }
                     <Outlet/>
                 </main>
             </div>

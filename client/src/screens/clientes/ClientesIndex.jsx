@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Pen } from "lucide-react";
 
 import { Filtro } from "../../components/Filtro";
-import { Tabela } from "../../components/tabela/Tabela";
+import { Tabela } from "../../components/tabela/TabelaBase";
 import { BarraBusca } from "../../components/BarraBusca";
 
 import { filtrar } from "../../utils/filtrar"

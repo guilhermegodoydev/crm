@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { Plus, Trash2 } from "lucide-react";
 
 import { Card } from "../../components/Card";
-import { Tabela } from "../../components/tabela/Tabela";
+import { Tabela } from "../../components/tabela/TabelaBase";
 
 import { useCliente } from "../../hooks/dominio/useCliente";
 import { Modal } from "../../components/Modal";

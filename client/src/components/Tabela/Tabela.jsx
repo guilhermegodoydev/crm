@@ -50,7 +50,7 @@ export function Tabela({dadosTabela, colunas}) {
                     >
                         {colunas.map((c) => (
                             <td 
-                                key={`coluna-${item.id}-coluna-${c.chave}`} 
+                                key={`coluna-${item.id}-${c.chave}`} 
                                 className={`px-2 py-1 ${typeof item[c.chave] === "number" ? "text-center" : ""} ${c.className}`}
                                 >
                                     {typeof c.children === 'function'

@@ -133,7 +133,7 @@ export default function ClientesIndex() {
           {dados.length === 0 ? <p>Nenhum dado Encontrado</p> : dados.map((cliente) => (
             <div key={cliente.id} className="items-center shadow-md rounded-md p-2 bg-white border-1 border-gray-200">
               <div className="flex justify-between mb-3">
-                <h3>{cliente["nome"]}</h3>
+                <h2>{cliente["nome"]}</h2>
                 <Link to={String(cliente.id)} aria-label={`Editar cliente ${cliente.nome}`}>
                   <Pen className="inline" aria-hidden="true" />
                 </Link>

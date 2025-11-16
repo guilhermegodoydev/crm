@@ -25,7 +25,7 @@ export function Tabela({dadosTabela, colunas}) {
                     {colunas.map(c => (
                         c.ordenavel ? (
                             <CabecalhoOrdenavel
-                                key={c.chave}
+                                key={`cabecalho-item-${c.chave}`}
                                 titulo={c.label}
                                 ordenado = {ordenado.campo === c.chave ? ordenado.ativo : false}
                                 tipo={c.tipo}
@@ -37,7 +37,7 @@ export function Tabela({dadosTabela, colunas}) {
                             </CabecalhoOrdenavel> 
                             
                         ) : (
-                            <th key={c.chave} className="p-2">{c.label}</th>
+                            <th key={`cabecalho-item-${c.chave}`} className="p-2">{c.label}</th>
                         )
                     ))}
                 </tr>

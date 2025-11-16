@@ -20,7 +20,7 @@ const dadosCli = [
     { label: "Telefone", chave: "telefone", tipo: "tel"},
     { label: "Tipo", chave: "tipo"},
     { label: "Categoria", chave: "categoria"},
-    { label: "Resumo do Relacionamento", chave: "resumoRelacionamento"}
+    { label: "Resumo do Relacionamento", chave: "resumoRelacionamento", tipo: "text"}
 ];
 
 export function ClienteDetalhes() {
@@ -141,7 +141,15 @@ export function ClienteDetalhes() {
                                 :
                                 <div className="col-span-2">
                                     <h3>Resumo do Relacionamento</h3>
-                                    <p className="text-gray-500">{dadosCliente[dado.chave]}</p>
+                                    <textarea 
+                                        name={dado.chave}
+                                        ref={(el) => (cliInputsRef.current[dado.chave] = el)}
+                                        onChange={(e) => editarDados(e.target.name, e.target.value)}
+                                        value={dadosCliente[dado.chave]} 
+                                        disabled={!editandoDados}
+                                        type={dado.tipo}
+                                        className="text-gray-500 w-full max-content resize-none"
+                                    />
                                 </div>
                         )}
 

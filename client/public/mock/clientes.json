@@ -19,7 +19,8 @@
       { "id": 1, "data": "2025-01-10", "texto": "Solicitou condições comerciais diferenciadas para expansão em março." },
       { "id": 2, "data": "2024-12-22", "texto": "Considera migrar processos internos para solução integrada." },
       { "id": 3, "data": "2024-11-02", "texto": "Prefere comunicação via e-mail e reuniões quinzenais." }
-    ]
+    ],
+    "resumoRelacionamento": "Relacionamento sólido e de longo prazo. Já fechou diversos negócios e mantém interesse ativo em expansão. Prefere comunicação estruturada e demonstra abertura para soluções mais completas. Contato frequente, histórico consistente e postura profissional. Oportunidade madura para upsell e contratos maiores."
   },
   {
     "id": 2,
@@ -40,7 +41,8 @@
     "notas": [
       { "id": 1, "data": "2025-01-05", "texto": "Busca opções com boa relação custo-benefício." },
       { "id": 2, "data": "2024-12-10", "texto": "Preferência por parcelamento e upgrades gradativos." }
-    ]
+    ],
+    "resumoRelacionamento": "Relacionamento em estágio inicial, mas engajado. Mostra preocupação com custo-benefício e flexibilidade. Responde bem a comunicações claras e diretas. Boa chance de conversão em médio prazo com ofertas acessíveis e upgrades progressivos."
   },
   {
     "id": 3,
@@ -62,7 +64,8 @@
       { "id": 1, "data": "2025-01-10", "texto": "Solicitou relatório sobre impacto e eficiência energética." },
       { "id": 2, "data": "2024-12-18", "texto": "Avalia integrar novas filiais no próximo trimestre." },
       { "id": 3, "data": "2024-11-05", "texto": "Aprecia relatórios objetivos e métricas claras." }
-    ]
+    ],
+    "resumoRelacionamento": "Cliente corporativo exigente e orientado por métricas. Valoriza sustentabilidade, relatórios precisos e acompanhamento técnico. Demonstra plano de crescimento e integração. Alto potencial de expansão se o atendimento continuar consultivo e baseado em dados."
   },
   {
     "id": 4,
@@ -84,7 +87,8 @@
       { "id": 1, "data": "2025-01-02", "texto": "Solicitou estudo para integração com ERP interno até Q2." },
       { "id": 2, "data": "2024-12-12", "texto": "Interesse em automação de processos financeiros." },
       { "id": 3, "data": "2024-11-28", "texto": "Prefere onboarding detalhado e suporte técnico inicial." }
-    ]
+    ],
+    "resumoRelacionamento": "Focado em integrações, escalabilidade e estrutura técnica. Busca evolução gradual e alinhamento com sistemas internos. É um cliente racional que responde bem a demonstrações práticas. Tem potencial de aumentar o ticket conforme necessidades técnicas avançam."
   },
   {
     "id": 5,
@@ -104,7 +108,8 @@
     "status": "ativo",
     "notas": [
       { "id": 1, "data": "2025-01-09", "texto": "Solicitou informações detalhadas sobre pacotes premium." }
-    ]
+    ],
+    "resumoRelacionamento": "Cliente recente com interesse em pacotes mais completos. Ainda está avaliando, mas receptiva a propostas detalhadas. Bom perfil para nutrição com conteúdo claro e comparativo de planos. Oportunidade em construção."
   },
   {
     "id": 6,
@@ -125,7 +130,8 @@
     "notas": [
       { "id": 1, "data": "2025-01-05", "texto": "Demanda relatórios trimestrais de desempenho." },
       { "id": 2, "data": "2024-12-15", "texto": "Interesse em soluções personalizadas para equipes remotas." }
-    ]
+    ],
+    "resumoRelacionamento": "Cliente corporativo de alto valor. Negocia contratos longos, busca robustez e personalização. Prioriza desempenho e quer visibilidade contínua via relatórios. Forte potencial de expansão e manutenção de relacionamento premium."
   },
   {
     "id": 7,
@@ -145,6 +151,7 @@
     "status": "ativo",
     "notas": [
       { "id": 1, "data": "2025-01-07", "texto": "Prefere integração rápida e onboarding simplificado." }
-    ]
+    ],
+    "resumoRelacionamento": "Perfil dinâmico e orientado à rapidez. Busca soluções práticas, onboarding simples e respostas objetivas. Relacionamento estável e promissor para produtos que reduzem fricção e aceleram implementação."
   }
 ]

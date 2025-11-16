@@ -19,8 +19,14 @@ const dadosCli = [
     { label: "Nome", chave: "nome", tipo: "text"},
     { label: "Email", chave: "email", tipo: "email"},
     { label: "Telefone", chave: "telefone", tipo: "tel"},
-    { label: "Tipo", chave: "tipo"},
-    { label: "Categoria", chave: "categoria"},
+    { label: "Tipo", chave: "tipo", opcoes: [
+        { valor: "PJ", label: "Pessoa Jurídica" },
+        { valor: "PF", label: "Pessoa Física" }
+    ]},
+    { label: "Categoria", chave: "categoria", opcoes: [
+        { valor: "vip", label: "Vip" },
+        { valor: "regular", label: "Regular"}
+    ]},
     { label: "Resumo do Relacionamento", chave: "resumoRelacionamento", tipo: "text"}
 ];
 
@@ -37,7 +43,6 @@ export function ClienteDetalhes() {
     const [ editandoDados, setEditandoDados ] = useState(false);
     const idNotaDeletar = useRef(null);
     const [ dadosCliente, setDadosCliente ] = useState(cliente);
-    const cliInputsRef = useRef([]);
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -80,9 +85,7 @@ export function ClienteDetalhes() {
 
     const salvarDados = (e) => {
         e.preventDefault();
-
-        const dados = Object.fromEntries(Object.entries(cliInputsRef.current).map(([chave, el]) => [chave, el.value.trim()]));
-        atualizar(id, dados);
+        atualizar(id, dadosCliente);
         setEditandoDados(false);
     };
 
@@ -129,39 +132,64 @@ export function ClienteDetalhes() {
                         {dadosCli.map(dado => 
                             dado.chave != "resumoRelacionamento" ? 
                                 <div key={dado.chave}>
-                                    <p className="text-gray-500">{dado.label}</p>
-                                    <input 
-                                        className="font-semibold"
-                                        name={dado.chave}
-                                        ref={(el) => (cliInputsRef.current[dado.chave] = el)}
-                                        onChange={(e) => editarDados(e.target.name, e.target.value)}
-                                        value={dadosCliente[dado.chave]}
-                                        disabled={!editandoDados}
-                                        type={dado.tipo}
-                                        required
-                                    />
+                                    {dado.opcoes ?
+                                        <>
+                                            <label className="block text-gray-500" htmlFor={`cliente-${dado.label.toLowerCase()}`}>
+                                                {dado.label}
+                                            </label>
+                                            <select 
+                                                id={`cliente-${dado.chave}`} 
+                                                name={dado.chave} 
+                                                value={dadosCliente[dado.chave]}
+                                                disabled={!editandoDados}
+                                                onChange={(e) => editarDados(e.target.name, e.target.value)}
+                                                className="font-semibold"
+                                            >
+                                                {dado.opcoes.map(o => (
+                                                    <option key={o.valor} value={o.valor}>
+                                                        {o.label}
+                                                    </option>
+                                                ))}
+                                            </select>
+                                        </>
+                                        :
+                                        <>
+                                            <p className="text-gray-500">{dado.label}</p>
+                                            <input 
+                                                className="font-semibold"
+                                                name={dado.chave}
+                                                value={dadosCliente[dado.chave]}
+                                                disabled={!editandoDados}
+                                                onChange={(e) => editarDados(e.target.name, e.target.value)}
+                                                type={dado.tipo}
+                                                required
+                                            />
+                                        </>
+                                    }
                                 </div>
                                 :
-                                <div className="col-span-2">
+                                <div key={dado.chave} className="col-span-2">
                                     <h3>Resumo do Relacionamento</h3>
                                     <textarea 
                                         name={dado.chave}
-                                        ref={(el) => (cliInputsRef.current[dado.chave] = el)}
-                                        onChange={(e) => editarDados(e.target.name, e.target.value)}
                                         value={dadosCliente[dado.chave]} 
                                         disabled={!editandoDados}
-                                        type={dado.tipo}
+                                        onChange={(e) => editarDados(e.target.name, e.target.value)}
                                         className="text-gray-500 w-full max-content resize-none"
                                     />
                                 </div>
                         )}
 
                         {editandoDados && 
-                            <div className="space-x-2">
+                            <div className="space-x-2 col-span-2">
                                 <button type="submit" className="bg-green-300 p-1 rounded-sm w-[100px] focus:bg-green-400">
                                     Salvar
                                 </button>
-                                <button onClick={cancelarEdicaoDados} className="bg-red-300 p-1 rounded-sm w-[100px] focus:bg-red-400">
+                                <button 
+                                    type="button" 
+                                    onClick={cancelarEdicaoDados} 
+                                    className="bg-red-300 p-1 rounded-sm w-[100px] focus:bg-red-400"
+                                >
                                     Cancelar
                                 </button>
                             </div>

@@ -7,8 +7,8 @@
     "telefone": "(11) 98321-4421",
     "ultimoContato": "2025-01-20",
     "atividades": [
-      { "data": "2025-01-20", "tipo": "email", "descricao": "Envio de proposta atualizada" },
-      { "data": "2025-01-15", "tipo": "reunião", "descricao": "Reunião de alinhamento comercial" }
+      { "id": 1, "data": "2025-01-20", "tipo": "email", "descricao": "Envio de proposta atualizada" },
+      { "id": 2, "data": "2025-01-15", "tipo": "reunião", "descricao": "Reunião de alinhamento comercial" }
     ],
     "observacao": "Alta confiança, interesse em expansão.",
     "tipo": "PJ",
@@ -30,8 +30,8 @@
     "telefone": "(21) 99918-2256",
     "ultimoContato": "2025-01-17",
     "atividades": [
-      { "data": "2025-01-17", "tipo": "ligação", "descricao": "Apresentação inicial" },
-      { "data": "2025-01-10", "tipo": "email", "descricao": "Abertura do relacionamento" }
+      { "id": 1, "data": "2025-01-17", "tipo": "ligação", "descricao": "Apresentação inicial" },
+      { "id": 2, "data": "2025-01-10", "tipo": "email", "descricao": "Abertura do relacionamento" }
     ],
     "observacao": "Interessado em planos flexíveis.",
     "tipo": "PF",
@@ -52,8 +52,8 @@
     "telefone": "(31) 98811-8841",
     "ultimoContato": "2025-01-19",
     "atividades": [
-      { "data": "2025-01-19", "tipo": "ligação", "descricao": "Revisão de contrato" },
-      { "data": "2025-01-02", "tipo": "email", "descricao": "Proposta enviada" }
+      { "id": 1, "data": "2025-01-19", "tipo": "ligação", "descricao": "Revisão de contrato" },
+      { "id": 2, "data": "2025-01-02", "tipo": "email", "descricao": "Proposta enviada" }
     ],
     "observacao": "Busca soluções sustentáveis.",
     "tipo": "PJ",
@@ -75,8 +75,8 @@
     "telefone": "(19) 98442-5512",
     "ultimoContato": "2025-01-11",
     "atividades": [
-      { "data": "2025-01-11", "tipo": "reunião", "descricao": "Discussão sobre integrações" },
-      { "data": "2024-12-30", "tipo": "email", "descricao": "Envio de documentação técnica" }
+      { "id": 1, "data": "2025-01-11", "tipo": "reunião", "descricao": "Discussão sobre integrações" },
+      { "id": 2, "data": "2024-12-30", "tipo": "email", "descricao": "Envio de documentação técnica" }
     ],
     "observacao": "Foco em escalabilidade e integração com sistemas internos.",
     "tipo": "PJ",
@@ -98,8 +98,8 @@
     "telefone": "(11) 99123-4567",
     "ultimoContato": "2025-01-16",
     "atividades": [
-      { "data": "2025-01-16", "tipo": "email", "descricao": "Confirmação de interesse" },
-      { "data": "2025-01-09", "tipo": "ligação", "descricao": "Apresentação de serviços" }
+      { "id": 1, "data": "2025-01-16", "tipo": "email", "descricao": "Confirmação de interesse" },
+      { "id": 2, "data": "2025-01-09", "tipo": "ligação", "descricao": "Apresentação de serviços" }
     ],
     "observacao": "Cliente potencial para novos pacotes.",
     "tipo": "PF",
@@ -119,8 +119,8 @@
     "telefone": "(21) 98765-4321",
     "ultimoContato": "2025-01-14",
     "atividades": [
-      { "data": "2025-01-14", "tipo": "reunião", "descricao": "Negociação de contrato anual" },
-      { "data": "2025-01-05", "tipo": "email", "descricao": "Envio de proposta preliminar" }
+      { "id": 1, "data": "2025-01-14", "tipo": "reunião", "descricao": "Negociação de contrato anual" },
+      { "id": 2, "data": "2025-01-05", "tipo": "email", "descricao": "Envio de proposta preliminar" }
     ],
     "observacao": "Busca soluções corporativas robustas.",
     "tipo": "PJ",
@@ -141,8 +141,8 @@
     "telefone": "(31) 99999-1111",
     "ultimoContato": "2025-01-13",
     "atividades": [
-      { "data": "2025-01-13", "tipo": "ligação", "descricao": "Esclarecimento sobre funcionalidades" },
-      { "data": "2025-01-07", "tipo": "email", "descricao": "Envio de tutorial inicial" }
+      { "id": 1, "data": "2025-01-13", "tipo": "ligação", "descricao": "Esclarecimento sobre funcionalidades" },
+      { "id": 2, "data": "2025-01-07", "tipo": "email", "descricao": "Envio de tutorial inicial" }
     ],
     "observacao": "Interessada em soluções ágeis.",
     "tipo": "PJ",

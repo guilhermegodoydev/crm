@@ -7,6 +7,7 @@ import { Tabela } from "../../components/tabela/TabelaBase";
 
 import { useCliente } from "../../hooks/dominio/useCliente";
 import { Modal } from "../../components/Modal";
+import { useAlerta } from "../../context/AlertaContexto";
 
 const colunas = [
     { chave: "data", label: "Data", ordenavel: true, tipo: "numero" },
@@ -27,6 +28,7 @@ export function ClienteDetalhes() {
     const { id } = useParams();
     const { carregando, erro, buscar, atualizar, remover, salvarNota, removerNota } = useCliente();
     const cliente = buscar(id);
+    const { exibirAlerta } = useAlerta();
 
     const [ modalAberto, setModalAberto ] = useState();
     const [ notas, setNotas ] = useState([]);
@@ -66,6 +68,7 @@ export function ClienteDetalhes() {
         setAcaoModal(() => () => {
             remover(id);
             navigate("/clientes");
+            exibirAlerta(`Cliente ${dadosCliente.nome} excluído com sucesso`,"sucesso");
         });
 
         setModalAberto(true);

@@ -23,7 +23,7 @@ const colunas = [
   { chave: "status", label: "Status", ordenavel: false, tipo: "texto" },
   { chave: "acoes", label: "Ações", ordenavel: false, tipo: "texto", className: "text-center", 
     children: (item) => (
-      <Link to={`${item.id}`} className="inline-flex p-1 rounded border-blue-700 hover:bg-white" title={`Editar ${item.nome}`}>
+      <Link to={`${item.id}`} className="inline-flex hover:bg-white" title={`Editar ${item.nome}`}>
         <Pen className="text-gray-600 scale-85"/>
       </Link>
     )

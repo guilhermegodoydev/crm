@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef, Children } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { Plus, Trash2 } from "lucide-react";
 
@@ -8,12 +8,6 @@ import { Tabela } from "../../components/tabela/TabelaBase";
 import { useCliente } from "../../hooks/dominio/useCliente";
 import { Modal } from "../../components/Modal";
 import { useAlerta } from "../../context/AlertaContexto";
-
-const colunas = [
-    { chave: "data", label: "Data", ordenavel: true, tipo: "numero" },
-    { chave: "tipo", label: "Tipo", ordenavel: false, tipo: "texto" },
-    { chave: "descricao", label: "Descrição", ordenavel: false, tipo: "texto" },
-];
 
 const dadosCli = [
     { label: "Nome", chave: "nome", tipo: "text"},
@@ -32,32 +26,48 @@ const dadosCli = [
 
 export function ClienteDetalhes() {
     const { id } = useParams();
-    const { carregando, erro, buscar, atualizar, remover, salvarNota, removerNota } = useCliente();
+    const { carregando, erro, buscar, atualizar, remover, salvarNota, removerNota, removerAtividade } = useCliente();
     const cliente = buscar(id);
     const { exibirAlerta } = useAlerta();
 
-    const [ modalAberto, setModalAberto ] = useState();
+    const [ modal, setModal ] = useState({});
     const [ notas, setNotas ] = useState([]);
     const [ editando, setEditando ] = useState(false);
-    const [ acaoModal, setAcaoModal ] = useState(() => () => {});
     const [ editandoDados, setEditandoDados ] = useState(false);
     const idNotaDeletar = useRef(null);
     const [ dadosCliente, setDadosCliente ] = useState(cliente);
     const navigate = useNavigate();
 
     useEffect(() => {
-        if (cliente) setNotas(cliente.notas);
+        if (cliente) {
+            setNotas(cliente.notas);
+        }   
     }, [cliente]);
 
     if (carregando) return <p>Carregando...</p> ;
     if (!cliente) return <p>Cliente não encontrado</p>;
     if (erro) return <p>Erro ao buscar o cliente</p>;
 
+    const colunas = [
+        { chave: "data", label: "Data", ordenavel: true, tipo: "numero" },
+        { chave: "tipo", label: "Tipo", ordenavel: false, tipo: "texto" },
+        { chave: "descricao", label: "Descrição", ordenavel: false, tipo: "texto" },
+        { chave: "acoes", label: "Ações", ordenavel: false, className: "text-center",
+            children: (atividade) => (
+                <Trash2 
+                    onClick={() => confirmarExcluirAtividade(atividade.id)}
+                    title={`Editar ${atividade.nome}`}
+                    className="inline-flex rounded" 
+                />
+            )
+        }
+    ];
+
     const removerNotaLocal = () => {
         if (idNotaDeletar.current !== null) {
             removerNota(id, idNotaDeletar.current);
             setNotas(prev => prev.filter(n => n.id != idNotaDeletar.current));
-            setModalAberto(false);
+            setModal({acao: null, aberto: false, mensagem: ""});
             idNotaDeletar.current = null;
         }
     };
@@ -65,18 +75,19 @@ export function ClienteDetalhes() {
     const confirmarExcluirNota = (notaId) => {
         idNotaDeletar.current = notaId;
 
-        setAcaoModal(() => () => removerNotaLocal());
-        setModalAberto(true);
+        setModal({
+            acao: () => removerNotaLocal(), 
+            aberto: true, 
+            mensagem: "Tem certeza que deseja excluir essa nota? Essa ação não pode ser revertida."
+        });
     };
 
     const confirmarExcluirUsuario = () => {
-        setAcaoModal(() => () => {
+        setModal({acao : () => {
             remover(id);
             navigate("/clientes");
             exibirAlerta(`Cliente ${dadosCliente.nome} excluído com sucesso`,"sucesso");
-        });
-
-        setModalAberto(true);
+        }, aberto: true, mensagem: `Tem certeza que deseja excluir ${dadosCliente.nome}`});
     };
 
     const editarDados = (chave, valor) => {
@@ -94,16 +105,36 @@ export function ClienteDetalhes() {
         setDadosCliente(cliente);
     };
 
+    const confirmarExcluirAtividade = (idAtividade) => {
+        setModal({
+            acao: () => excluirAtividade(idAtividade),
+            aberto: true,
+            mensagem: "Tem certeza que deseja excluir esse registro?"
+        });
+    }
+    const excluirAtividade = (idAtividade) => {
+        setDadosCliente(prev => ({
+            ...prev,
+            atividades: prev.atividades.filter(a => a.id != idAtividade)
+        }));
+        removerAtividade(id, idAtividade);
+        setModal({acao: null, aberto: false, mensagem: ""});
+    };
+
+    const criarAtividade = () => {
+        setAtividas(prev => ({...prev, data: new Date(), tipo: "", descricao: ""}));
+    };
+
     return (
         <>
             <Modal 
-                aberto={modalAberto} 
+                aberto={modal.aberto} 
                 onFechar={() => setModalAberto(false)} 
-                mensagem=""
+                mensagem={modal.mensagem}
             >
                 <div className="flex gap-3">
-                    <button className="bg-green-300 p-2 rounded-sm w-1/2" onClick={acaoModal}>Confirmar</button>
-                    <button className="bg-red-300 p-2 rounded-sm w-1/2" onClick={() => setModalAberto(false)}>Cancelar</button>
+                    <button className="bg-green-300 p-2 rounded-sm w-1/2" onClick={modal.acao}>Confirmar</button>
+                    <button className="bg-red-300 p-2 rounded-sm w-1/2" onClick={() => setModal({acao: null, aberto: false})}>Cancelar</button>
                 </div>
             </Modal>
 
@@ -119,7 +150,7 @@ export function ClienteDetalhes() {
                 </div>
                 <div className="flex gap-10">
                     <button className="bg-blue-400 rounded-sm text-white p-2" onClick={() => setEditandoDados(true)}>Editar</button>
-                    <button className="bg-gray-200 rounded-sm p-2">Adicionar Atividade</button>
+                    <button className="bg-gray-200 rounded-sm p-2" onClick={criarAtividade}>Adicionar Atividade</button>
                     <button className="bg-red-400 rounded-sm p-2 text-white" onClick={confirmarExcluirUsuario}>Excluir</button>
                 </div>
             </div>

@@ -40,7 +40,6 @@ export function useCliente() {
     };
 
     const removerNota = (clienteId, notaId) => {
-        console.log(clienteId, notaId);
         setClientes(prev => 
             prev.map(cli => 
                 cli.id == clienteId 
@@ -49,11 +48,26 @@ export function useCliente() {
                     notas: Array.isArray(cli.notas) 
                     ? cli.notas.filter(n => n.id != notaId)
                     : [],
-                  } 
+                } 
                 : cli
             )
         );
     };
 
-    return { clientes, carregando, erro, criar, atualizar, remover, buscar, salvarNota, removerNota };
+    const removerAtividade = (clienteId, atividadeId) => {
+        setClientes(prev =>
+            prev.map(cli => 
+                cli.id == clienteId
+                ? {
+                    ...cli,
+                    atividades: Array.isArray(cli.atividades) 
+                    ? cli.atividades.filter(ati => ati.id != atividadeId) 
+                    : [],
+                }
+                : cli
+            )
+        );
+    };
+
+    return { clientes, carregando, erro, criar, atualizar, remover, buscar, salvarNota, removerNota, removerAtividade };
 }

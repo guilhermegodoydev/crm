@@ -61,7 +61,7 @@ export function Tabela({dadosTabela, colunas}) {
                         ))}
                     </tr>
                 )) : (
-                    <tr className="bg-gray-700">
+                    <tr className="bg-gray-300">
                         <td colSpan={colunas.length} className="text-center px-2 py-1 rounded-b-md">
                             Nenhum dado Encontrado
                         </td>

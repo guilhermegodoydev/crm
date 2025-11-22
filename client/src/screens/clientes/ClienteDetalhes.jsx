@@ -1,5 +1,5 @@
 import { useEffect, useState, useRef } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { data, useNavigate, useParams } from "react-router-dom";
 import { Plus, Trash2 } from "lucide-react";
 
 import { Card } from "../../components/Card";
@@ -24,6 +24,12 @@ const dadosCli = [
     { label: "Resumo do Relacionamento", chave: "resumoRelacionamento", tipo: "text"}
 ];
 
+const tipoAtividades = [
+    { key: "ligacao", label: "Ligação"},
+    { key: "email", label: "Email"},
+    { key: "reuniao", label: "Reunião"}
+];
+
 export function ClienteDetalhes() {
     const { id } = useParams();
     const { carregando, erro, buscar, atualizar, remover, salvarNota, removerNota, salvarAtividade, removerAtividade } = useCliente();
@@ -31,18 +37,11 @@ export function ClienteDetalhes() {
     const { exibirAlerta } = useAlerta();
 
     const [ modal, setModal ] = useState({});
-    const [ notas, setNotas ] = useState([]);
     const [ editando, setEditando ] = useState(false);
+    const [ editandoNotas, setEditandoNotas ] = useState({editando: false, idNota: 0});
     const [ editandoDados, setEditandoDados ] = useState(false);
-    const idNotaDeletar = useRef(null);
     const [ dadosCliente, setDadosCliente ] = useState(cliente);
     const navigate = useNavigate();
-
-    useEffect(() => {
-        if (cliente) {
-            setNotas(cliente.notas);
-        }   
-    }, [cliente]);
 
     if (carregando) return <p>Carregando...</p> ;
     if (!cliente) return <p>Cliente não encontrado</p>;
@@ -63,20 +62,18 @@ export function ClienteDetalhes() {
         }
     ];
 
-    const removerNotaLocal = () => {
-        if (idNotaDeletar.current !== null) {
-            removerNota(id, idNotaDeletar.current);
-            setNotas(prev => prev.filter(n => n.id != idNotaDeletar.current));
-            setModal({acao: null, aberto: false, mensagem: ""});
-            idNotaDeletar.current = null;
-        }
+    const removerNotaLocal = (notaId) => {
+        setModal({acao: null, aberto: false, mensagem: ""});
+        setDadosCliente(prev => ({
+            ...prev,
+            notas: prev.notas.filter(n => n.id != notaId)
+        }));
+        removerNota(id, notaId);
     };
 
     const confirmarExcluirNota = (notaId) => {
-        idNotaDeletar.current = notaId;
-
         setModal({
-            acao: () => removerNotaLocal(), 
+            acao: () => removerNotaLocal(notaId), 
             aberto: true, 
             mensagem: "Tem certeza que deseja excluir essa nota? Essa ação não pode ser revertida."
         });
@@ -102,7 +99,10 @@ export function ClienteDetalhes() {
 
     const cancelarEdicaoDados = () => {
         setEditandoDados(false);
-        setDadosCliente(cliente);
+        setDadosCliente(prev => ({
+            ...cliente,
+            notas: prev.notas
+        }));
     };
 
     const confirmarExcluirAtividade = (idAtividade) => {
@@ -147,7 +147,7 @@ export function ClienteDetalhes() {
             titulo: "Criar nova atividade",
             children: 
             <form onSubmit={(e) => confirmarCriarAtividade(e)} className="space-y-3">
-                <div>
+                <div className="mt-3">
                     <label htmlFor="data">Data:</label>
                     <input type="date" max={maxData} name="data" id="data" className="border rounded-md px-1 ml-5" required/>
                 </div>
@@ -155,9 +155,9 @@ export function ClienteDetalhes() {
                 <div>
                     <label htmlFor="tipo">Tipo:</label>
                     <select name="tipo" id="tipo" className="border rounded-md px-1 min-w-[38%] ml-5" required>
-                        <option value="email">Email</option>
-                        <option value="reuniao">Reunião</option>
-                        <option value="ligacao">Ligação</option>
+                        {tipoAtividades.map( opt => (
+                            <option key={`opcao-${opt.key}`} value={opt.key}>{opt.label}</option>
+                        ))}
                     </select>
                 </div>
 
@@ -178,6 +178,53 @@ export function ClienteDetalhes() {
                 </div>
             </form>
         });
+    };
+
+    const criarNota = () => {
+        if (editandoNotas.editando)
+            return
+
+        const novaNota = {
+            id: crypto.randomUUID(),
+            data: new Date().toISOString(),
+            texto: ""
+        };
+        setEditandoNotas({
+            editando: true,
+            idNota: novaNota.id
+        });
+        setDadosCliente(prev => ({
+            ...prev,
+            notas: [novaNota, ...(prev.notas || [])]
+        }));
+    };
+
+    const editarNota = (notaId, textoNota) => {
+        setDadosCliente(prev => ({
+            ...prev,
+            notas: prev.notas.map(n => 
+                n.id == notaId
+                ?
+                {...n , texto: textoNota}
+                :
+                n
+            )
+        }));
+    };
+
+    const cancelarEdicaoNotas = () => {
+        setDadosCliente(prev => ({
+            ...prev,
+            notas: prev.notas.length > 0 ? [prev.notas.shift()] : []
+        }));
+        setEditandoNotas({editando: false, id: 0});
+    };
+
+    const salvarNovaNota = (e) => {
+        e.preventDefault();
+        const nota = dadosCliente.notas[0];
+        setEditandoNotas({editando: false, id: 0});
+        salvarNota(id, nota.texto);
     };
 
     return (
@@ -219,7 +266,7 @@ export function ClienteDetalhes() {
                 <Card className="w-[70%]">
                     <h2 className="col-span-2">Informações</h2>
 
-                    <form onSubmit={salvarDados} className="grid grid-cols-2 grid-rows-auto gap-5 ">
+                    <form onSubmit={(e) => salvarDados(e)} className="grid grid-cols-2 grid-rows-auto gap-5 ">
                         {dadosCli.map(dado => 
                             dado.chave != "resumoRelacionamento" ? 
                                 <div key={dado.chave}>
@@ -230,11 +277,10 @@ export function ClienteDetalhes() {
                                             </label>
                                             <select 
                                                 id={`cliente-${dado.chave}`} 
-                                                name={dado.chave} 
+                                                name={`cliente-${dado.chave}`} 
                                                 value={dadosCliente[dado.chave]}
-                                                disabled={!editandoDados}
                                                 onChange={(e) => editarDados(e.target.name, e.target.value)}
-                                                className={`font-semibold px-1 ${editandoDados ? "border rounded-md" : ""}`}
+                                                className={`font-semibold ${editandoDados ? "border rounded-md px-1" : "appearance-none"}`}
                                             >
                                                 {dado.opcoes.map(o => (
                                                     <option key={o.valor} value={o.valor}>
@@ -245,14 +291,16 @@ export function ClienteDetalhes() {
                                         </>
                                         :
                                         <>
-                                            <p className="text-gray-500">{dado.label}</p>
+                                            <label className="block text-gray-500" htmlFor={dado.chave}>{dado.label}</label>
                                             <input 
-                                                className={`font-semibold px-1 ${editandoDados ? "border rounded-md" : ""}`}
+                                                className={`font-semibold ${editandoDados ? "border rounded-md px-1" : ""}`}
+                                                id={dado.chave}
                                                 name={dado.chave}
                                                 value={dadosCliente[dado.chave]}
                                                 disabled={!editandoDados}
                                                 onChange={(e) => editarDados(e.target.name, e.target.value)}
                                                 type={dado.tipo}
+                                                autoComplete={dado.tipo == "email" ? "email" : null}
                                                 required
                                             />
                                         </>
@@ -291,28 +339,45 @@ export function ClienteDetalhes() {
                 <Card className="relative w-[30%] max-h-105 overflow-y-auto">
                     <div className="flex items-center justify-between">
                         <h2>Notas e Lembrentes</h2>
-                        <Plus/>
+                        <Plus onClick={criarNota} className="cursor-pointer"/>
                     </div>
-                    <ul className="space-y-5 mt-4">
-                        {notas.map(n => (
-                            <li key={n.id} className="flex items-center gap-5 bg-gray-100 px-2 py-1 text-gray-700">
-                                <input 
-                                    type="text" 
-                                    placeholder={"Digite o lembrete"}
-                                    value={n.texto}
-                                    className=" rounded-sm w-full"
-                                />
-                                <Trash2 className="inline" onClick={() => confirmarExcluirNota(n.id)}/>
-                            </li>
-                        ))}
-                    </ul>
-                    {editando &&
-                        <button     
-                            className="bg-green-300 p-1 rounded-sm absolute right-6 bottom-5 w-[100px] focus:bg-green-400"
-                        >
-                            Salvar
-                        </button>
-                    }
+                    <form onSubmit={(e) => salvarNovaNota(e)}>
+                        <ul className="space-y-5 mt-4">
+                            {dadosCliente.notas.length > 0 ? dadosCliente.notas.map(n => (
+                                <li key={n.id} className="flex items-center gap-5 bg-gray-100 px-2 py-1 text-gray-700">
+                                    <input 
+                                        id={n.id}
+                                        name={`nota-${n.id}`}
+                                        type="text" 
+                                        placeholder={"Digite o lembrete"}
+                                        value={n.texto}
+                                        onChange={(e) => editarNota(n.id, e.target.value)}
+                                        disabled={editandoNotas.editando && editandoNotas.idNota == n.id ? false : true}
+                                        required
+                                        className="rounded-sm w-full"
+                                    />
+                                    {!editandoNotas.editando && editandoNotas.idNota != n.id ?
+                                        <Trash2 className="inline" onClick={() => confirmarExcluirNota(n.id)}/>
+                                        :
+                                        null
+                                    }
+                                </li>
+                            ))
+                                :
+                                <p className="text-center">Esse usuário não tem anotações</p>
+                            }
+                        </ul>
+                        {editandoNotas.editando &&
+                            <div className="absolute flex right-6 bottom-5 gap-2">
+                                <button type="submit" className="bg-green-300 p-1 rounded-sm w-[100px] focus:bg-green-400">
+                                    Salvar
+                                </button>
+                                <button type="button" className="bg-red-300 p-1 rounded-sm w-[100px] focus: bg-red-400" onClick={cancelarEdicaoNotas}>
+                                    Cancelar
+                                </button>
+                            </div>
+                        }
+                    </form>
                 </Card>
             </div>
 

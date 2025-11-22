@@ -17,10 +17,12 @@ export function Modal({ titulo, mensagem, className = "", children , aberto, onF
                 </div>
 
                 <hr className="border-gray-300" />
-
-                <div className="py-5">
-                    {mensagem}
-                </div>
+    
+                {mensagem &&
+                    <div className="py-5">
+                        {mensagem}
+                    </div>
+                }
 
                 {children}
             </Card>

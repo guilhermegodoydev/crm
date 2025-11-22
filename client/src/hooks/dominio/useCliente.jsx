@@ -69,5 +69,19 @@ export function useCliente() {
         );
     };
 
-    return { clientes, carregando, erro, criar, atualizar, remover, buscar, salvarNota, removerNota, removerAtividade };
+    const salvarAtividade = (idCliente, novaAtividade) => {
+        setClientes(prev => 
+            prev.map(cli =>
+                cli.id == idCliente
+                ? {
+                    ...cli,
+                    atividades: [...(cli.atividades || []), novaAtividade]
+                }
+                :
+                cli
+            )
+        );
+    };
+
+    return { clientes, carregando, erro, criar, atualizar, remover, buscar, salvarNota, removerNota, salvarAtividade, removerAtividade };
 }

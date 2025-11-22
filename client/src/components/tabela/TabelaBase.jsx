@@ -37,7 +37,7 @@ export function Tabela({dadosTabela, colunas}) {
                             </CabecalhoOrdenavel> 
                             
                         ) : (
-                            <th key={`cabecalho-item-${c.chave}`}>{c.label}</th>
+                            <th key={`cabecalho-item-${c.chave}`} className={index == 0 ? "rounded-tl-md" : (index+1 == colunas.length ? "rounded-tr-md" : "")}>{c.label}</th>
                         )
                     ))}
                 </tr>

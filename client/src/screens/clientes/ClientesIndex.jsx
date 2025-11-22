@@ -125,7 +125,7 @@ export default function ClientesIndex() {
       </div>
 
       {desktop ? 
-        <div className="max-h-[72vh] overflow-y-auto rounded-md shadow-md">
+        <div className="max-h-[72vh] overflow-y-auto">
           <Tabela dadosTabela={dados} colunas={colunas} />
         </div>
         :

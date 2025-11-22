@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef, Children } from "react";
+import { useEffect, useState, useRef } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { Plus, Trash2 } from "lucide-react";
 
@@ -26,7 +26,7 @@ const dadosCli = [
 
 export function ClienteDetalhes() {
     const { id } = useParams();
-    const { carregando, erro, buscar, atualizar, remover, salvarNota, removerNota, removerAtividade } = useCliente();
+    const { carregando, erro, buscar, atualizar, remover, salvarNota, removerNota, salvarAtividade, removerAtividade } = useCliente();
     const cliente = buscar(id);
     const { exibirAlerta } = useAlerta();
 
@@ -47,7 +47,7 @@ export function ClienteDetalhes() {
     if (carregando) return <p>Carregando...</p> ;
     if (!cliente) return <p>Cliente não encontrado</p>;
     if (erro) return <p>Erro ao buscar o cliente</p>;
-
+    console.log("oi");
     const colunas = [
         { chave: "data", label: "Data", ordenavel: true, tipo: "numero" },
         { chave: "tipo", label: "Tipo", ordenavel: false, tipo: "texto" },
@@ -112,6 +112,7 @@ export function ClienteDetalhes() {
             mensagem: "Tem certeza que deseja excluir esse registro?"
         });
     }
+
     const excluirAtividade = (idAtividade) => {
         setDadosCliente(prev => ({
             ...prev,
@@ -121,21 +122,80 @@ export function ClienteDetalhes() {
         setModal({acao: null, aberto: false, mensagem: ""});
     };
 
+    const confirmarCriarAtividade = (e) => {
+        e.preventDefault();
+        const formData = new FormData (e.target);
+        
+        const atividade = Object.fromEntries(formData);
+
+        salvarAtividade(id, atividade);
+
+        setModal({aberto: false, acao: null});
+        setDadosCliente(prev => ({
+            ...prev,
+            atividades: [atividade, ...(prev.atividades || [])]
+        }));
+
+    };
+
     const criarAtividade = () => {
-        setAtividas(prev => ({...prev, data: new Date(), tipo: "", descricao: ""}));
+        const maxData = new Date().toISOString().split("T")[0];
+
+        setModal({
+            aberto: true,
+            acao: null,
+            titulo: "Criar nova atividade",
+            children: 
+            <form onSubmit={(e) => confirmarCriarAtividade(e)} className="space-y-3">
+                <div>
+                    <label htmlFor="data">Data:</label>
+                    <input type="date" max={maxData} name="data" id="data" className="border rounded-md px-1 ml-5" required/>
+                </div>
+
+                <div>
+                    <label htmlFor="tipo">Tipo:</label>
+                    <select name="tipo" id="tipo" className="border rounded-md px-1 min-w-[38%] ml-5" required>
+                        <option value="email">Email</option>
+                        <option value="reuniao">Reunião</option>
+                        <option value="ligacao">Ligação</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label htmlFor="descricao" className="block">Descrição:</label>
+                    <textarea 
+                        id="descricao" 
+                        name="descricao" 
+                        className="resize-none mb-2 border rounded-md px-2 block w-full" 
+                        placeholder="Discussão sobre integrações..."
+                        required
+                    ></textarea>
+                </div>
+
+                <div className="flex gap-3">
+                    <button className="bg-green-300 p-2 rounded-sm w-1/2" type="submit">Confirmar</button>
+                    <button className="bg-red-300 p-2 rounded-sm w-1/2" type="button" onClick={() => setModal({acao: null, aberto: false})}>Cancelar</button>
+                </div>
+            </form>
+        });
     };
 
     return (
         <>
             <Modal 
                 aberto={modal.aberto} 
-                onFechar={() => setModalAberto(false)} 
+                onFechar={() => setModal({aberto: false, acao: null})} 
                 mensagem={modal.mensagem}
+                titulo={modal.titulo}
             >
-                <div className="flex gap-3">
-                    <button className="bg-green-300 p-2 rounded-sm w-1/2" onClick={modal.acao}>Confirmar</button>
-                    <button className="bg-red-300 p-2 rounded-sm w-1/2" onClick={() => setModal({acao: null, aberto: false})}>Cancelar</button>
-                </div>
+                {modal.children ? 
+                    modal.children
+                    :
+                    <div className="flex gap-3">
+                        <button className="bg-green-300 p-2 rounded-sm w-1/2" onClick={modal.acao}>Confirmar</button>
+                        <button className="bg-red-300 p-2 rounded-sm w-1/2" onClick={() => setModal({acao: null, aberto: false})}>Cancelar</button>
+                    </div>
+                }
             </Modal>
 
             <div className="flex justify-between items-start">
@@ -174,7 +234,7 @@ export function ClienteDetalhes() {
                                                 value={dadosCliente[dado.chave]}
                                                 disabled={!editandoDados}
                                                 onChange={(e) => editarDados(e.target.name, e.target.value)}
-                                                className="font-semibold"
+                                                className={`font-semibold px-1 ${editandoDados ? "border rounded-md" : ""}`}
                                             >
                                                 {dado.opcoes.map(o => (
                                                     <option key={o.valor} value={o.valor}>
@@ -187,7 +247,7 @@ export function ClienteDetalhes() {
                                         <>
                                             <p className="text-gray-500">{dado.label}</p>
                                             <input 
-                                                className="font-semibold"
+                                                className={`font-semibold px-1 ${editandoDados ? "border rounded-md" : ""}`}
                                                 name={dado.chave}
                                                 value={dadosCliente[dado.chave]}
                                                 disabled={!editandoDados}

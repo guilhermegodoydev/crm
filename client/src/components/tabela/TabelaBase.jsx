@@ -19,10 +19,10 @@ export function Tabela({dadosTabela, colunas}) {
     [dadosTabela, ordenado]); 
 
     return (
-        <table className="w-full">
+        <table className="w-full rounded-md">
             <thead className="text-white bg-[#1b4e9b] sticky top-0">
                 <tr>
-                    {colunas.map(c => (
+                    {colunas.map((c, index) => (
                         c.ordenavel ? (
                             <CabecalhoOrdenavel
                                 key={`cabecalho-item-${c.chave}`}
@@ -32,12 +32,12 @@ export function Tabela({dadosTabela, colunas}) {
                                 direcao = {ordenado.campo === c.chave ? (ordenado.ativo ? "asc" : "desc"): null}
                                 onClick={() => alterarOrdenacao(c.chave)}
                                 ariaLabel={`Clique para ordenar por ${c.label}`}
-                                className="px-3"
+                                className={index == 0 ? "rounded-tl-md" : (index+1 == colunas.length ? "rounded-tr-md" : "")}
                             >
                             </CabecalhoOrdenavel> 
                             
                         ) : (
-                            <th key={`cabecalho-item-${c.chave}`} className="p-2">{c.label}</th>
+                            <th key={`cabecalho-item-${c.chave}`}>{c.label}</th>
                         )
                     ))}
                 </tr>
@@ -46,12 +46,12 @@ export function Tabela({dadosTabela, colunas}) {
                 {dados && dados.length > 0 ? dados.map((item, index) => (
                     <tr 
                         key={`linha-${item.id}`}
-                        className={`border border-gray-300 ${index % 2 === 0 ? "bg-gray-100" : "bg-gray-300"}`}
+                        className={`rounded-md ${index % 2 === 0 ? "bg-gray-100" : "bg-gray-300"}`}
                     >
-                        {colunas.map((c) => (
+                        {colunas.map((c, index) => (
                             <td 
                                 key={`coluna-${item.id}-${c.chave}`} 
-                                className={`px-2 py-1 ${typeof item[c.chave] === "number" ? "text-center" : ""} ${c.className}`}
+                                className={`px-2 py-1 ${typeof item[c.chave] === "number" ? "text-center" : ""} ${index == 0 ? "rounded-bl-md" : (index+1 == colunas.length ? "rounded-br-md" : "")} ${c.className}`}
                                 >
                                     {typeof c.children === 'function'
                                         ? c.children(item)
@@ -61,8 +61,8 @@ export function Tabela({dadosTabela, colunas}) {
                         ))}
                     </tr>
                 )) : (
-                    <tr>
-                        <td colSpan={colunas.length} className="text-center p-4">
+                    <tr className="bg-gray-700">
+                        <td colSpan={colunas.length} className="text-center px-2 py-1 rounded-b-md">
                             Nenhum dado Encontrado
                         </td>
                     </tr>

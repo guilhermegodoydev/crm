@@ -1,6 +1,6 @@
 import { ArrowDown01, ArrowDownAZ, ArrowUp01, ArrowUpAZ } from "lucide-react";
 
-export function CabecalhoOrdenavel({titulo, tipo, ordenado, direcao, onClick, ariaLabel }) {
+export function CabecalhoOrdenavel({titulo, tipo, ordenado, direcao, onClick, ariaLabel, className }) {
     let iconeAsc = null;
     let iconDesc = null;
 
@@ -18,7 +18,7 @@ export function CabecalhoOrdenavel({titulo, tipo, ordenado, direcao, onClick, ar
     const icone = ordenado ? iconeAsc : iconDesc;
 
     return (
-        <th className="p-2">
+        <th className={`p-2 ${className}`}>
             <button 
                 className="flex justify-center gap-2 cursor-pointer w-fit m-auto" 
                 onClick={onClick}

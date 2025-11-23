@@ -46,7 +46,7 @@ export function ClienteDetalhes() {
     if (carregando) return <p>Carregando...</p> ;
     if (!cliente) return <p>Cliente não encontrado</p>;
     if (erro) return <p>Erro ao buscar o cliente</p>;
-    console.log("oi");
+
     const colunas = [
         { chave: "data", label: "Data", ordenavel: true, tipo: "numero" },
         { chave: "tipo", label: "Tipo", ordenavel: false, tipo: "texto" },
@@ -343,13 +343,13 @@ export function ClienteDetalhes() {
                     </form>
                 </Card>
 
-                <Card className="relative w-[30%] max-h-105 overflow-y-auto">
+                <Card className="relative w-[30%]">
                     <div className="flex items-center justify-between">
                         <h2>Notas e Lembrentes</h2>
                         <Plus onClick={criarNota} className="cursor-pointer"/>
                     </div>
                     <form onSubmit={(e) => salvarNovaNota(e)}>
-                        <ul className="space-y-5 mt-4">
+                        <ul className="space-y-5 mt-4 max-h-68 overflow-y-auto">
                             {dadosCliente.notas.length > 0 ? dadosCliente.notas.map(n => (
                                 <li key={n.id} className="flex items-center gap-5 bg-gray-100 px-2 py-1 text-gray-700">
                                     <input 
@@ -363,9 +363,11 @@ export function ClienteDetalhes() {
                                         required
                                         className="rounded-sm w-full"
                                     />
-                                    {editandoNotas.idNota != n.id ?
+                                    {!editandoNotas.editando ?
                                         <>
-                                            <Pen onClick={() => setEditandoNotas({editando: true, idNota: n.id})}/>
+                                            <Pen onClick={() => {
+                                                setEditandoNotas({editando: true, idNota: n.id})}
+                                            }/>
                                             <Trash2 onClick={() => confirmarExcluirNota(n.id)}/>
                                         </>
                                         :
@@ -378,11 +380,11 @@ export function ClienteDetalhes() {
                             }
                         </ul>
                         {editandoNotas.editando &&
-                            <div className="absolute flex right-6 bottom-5 gap-2">
+                            <div className="flex justify-end mt-3 gap-2 w-full">
                                 <button type="submit" className="bg-green-300 p-1 rounded-sm w-[100px] focus:bg-green-400">
                                     Salvar
                                 </button>
-                                <button type="button" className="bg-red-300 p-1 rounded-sm w-[100px] focus: bg-red-400" onClick={cancelarEdicaoNotas}>
+                                <button type="button" className="bg-red-300 p-1 rounded-sm w-[100px] focus:bg-red-400" onClick={cancelarEdicaoNotas}>
                                     Cancelar
                                 </button>
                             </div>

@@ -2,6 +2,7 @@ import { useCallback, useEffect } from "react";
 
 import { useFetch } from "../helpers/useFetch";
 import { useLocalStorage } from "../helpers/useLocalStorage";
+import { data } from "react-router-dom";
 
 export function useCliente() {
     const { dados: mock, carregando, erro } = useFetch("/mock/clientes.json");
@@ -28,13 +29,18 @@ export function useCliente() {
         return clientes.find(c => c.id == clienteId);
     };
 
-    const salvarNota = (clienteId, texto) => {
-        const novaNota = { id: Date.now(), texto}
+    const salvarNota = (clienteId, nota) => {
         setClientes(prev => 
             prev.map(c => 
                 c.id == clienteId 
-                    ? { ...c, notas: [...(c.notas || []), novaNota]} 
-                : c
+                    ? { 
+                        ...c, 
+                        notas: [
+                            ...(c?.notas.filter(n => n.id != nota.id) || []), 
+                            nota
+                        ]
+                    } 
+                    : c
             )
         );
     };

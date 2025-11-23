@@ -1,6 +1,6 @@
-import { useEffect, useState, useRef } from "react";
-import { data, useNavigate, useParams } from "react-router-dom";
-import { Plus, Trash2 } from "lucide-react";
+import { useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
+import { Pen, Plus, Trash2 } from "lucide-react";
 
 import { Card } from "../../components/Card";
 import { Tabela } from "../../components/tabela/TabelaBase";
@@ -195,7 +195,7 @@ export function ClienteDetalhes() {
         });
         setDadosCliente(prev => ({
             ...prev,
-            notas: [novaNota, ...(prev.notas || [])]
+            notas: [novaNota, ...(prev.notas ?? [])]
         }));
     };
 
@@ -213,18 +213,25 @@ export function ClienteDetalhes() {
     };
 
     const cancelarEdicaoNotas = () => {
+        const clienteAtual = buscar(id);
+        
+        const existe = clienteAtual.notas.some(n => n.id == editandoNotas.idNota);
+
         setDadosCliente(prev => ({
             ...prev,
-            notas: prev.notas.length > 0 ? [prev.notas.shift()] : []
+            notas: existe
+                ? clienteAtual.notas.map(n => ({ ...n}))
+                : prev.notas.filter(n => n.id != editandoNotas.idNota)
         }));
-        setEditandoNotas({editando: false, id: 0});
+
+        setEditandoNotas({editando: false, idNota: 0});
     };
 
     const salvarNovaNota = (e) => {
         e.preventDefault();
-        const nota = dadosCliente.notas[0];
-        setEditandoNotas({editando: false, id: 0});
-        salvarNota(id, nota.texto);
+        const nota = dadosCliente.notas.find(n => n.id == editandoNotas.idNota);
+        salvarNota(id, nota);
+        setEditandoNotas({editando: false, idNota: 0});
     };
 
     return (
@@ -356,8 +363,11 @@ export function ClienteDetalhes() {
                                         required
                                         className="rounded-sm w-full"
                                     />
-                                    {!editandoNotas.editando && editandoNotas.idNota != n.id ?
-                                        <Trash2 className="inline" onClick={() => confirmarExcluirNota(n.id)}/>
+                                    {editandoNotas.idNota != n.id ?
+                                        <>
+                                            <Pen onClick={() => setEditandoNotas({editando: true, idNota: n.id})}/>
+                                            <Trash2 onClick={() => confirmarExcluirNota(n.id)}/>
+                                        </>
                                         :
                                         null
                                     }

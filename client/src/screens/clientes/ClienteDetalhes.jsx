@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { Pen, Plus, Trash2 } from "lucide-react";
 
@@ -39,11 +39,20 @@ export function ClienteDetalhes() {
     const { exibirAlerta } = useAlerta();
 
     const [ modal, setModal ] = useState({});
-    const [ editando, setEditando ] = useState(false);
     const [ editandoNotas, setEditandoNotas ] = useState({editando: false, idNota: 0});
     const [ editandoDados, setEditandoDados ] = useState(false);
     const [ dadosCliente, setDadosCliente ] = useState(cliente);
     const navigate = useNavigate();
+
+    useEffect(() => {
+        if (cliente) {
+            setDadosCliente({
+                ...cliente,
+                notas: cliente.notas ? [...cliente.notas] : [],
+                atividades: cliente.atividades ? [...cliente.atividades] : []
+            });
+        }
+    }, [ cliente ]);
 
     if (carregando) return <p>Carregando...</p> ;
     if (!cliente) return <p>Cliente não encontrado</p>;
@@ -127,9 +136,9 @@ export function ClienteDetalhes() {
     const confirmarCriarAtividade = (e) => {
         e.preventDefault();
         const formData = new FormData (e.target);
-        
         const atividade = Object.fromEntries(formData);
 
+        atividade.id = crypto?.randomUUID?.() ?? `${Date.now()}-${Math.random()}`;
         salvarAtividade(id, atividade);
 
         setModal({aberto: false, acao: null});
@@ -264,7 +273,7 @@ export function ClienteDetalhes() {
 
             <div className="flex justify-between items-start">
                 <div>
-                    <h1>{editando ? dadosCliente.nome : cliente.nome}</h1>
+                    <h1>{editandoDados ? cliente.nome : dadosCliente.nome}</h1>
                     <div className="flex gap-4 mt-3 mb-1">
                         <p className="text-blue-500 bg-blue-300 w-fit px-2 rounded-sm">VIP</p>
                         <p className="text-gray-700 bg-gray-200 w-fit px-2 rounded-sm">Pessoa Física</p>
@@ -294,9 +303,9 @@ export function ClienteDetalhes() {
                                             </label>
                                             <select 
                                                 id={`cliente-${dado.chave}`} 
-                                                name={`cliente-${dado.chave}`} 
+                                                name={dado.chave} 
                                                 value={dadosCliente[dado.chave]}
-                                                onChange={(e) => editarDados(e.target.name, e.target.value)}
+                                                onChange={(e) => editarDados(dado.chave, e.target.value)}
                                                 className={`font-semibold ${editandoDados ? "border rounded-md px-1" : "appearance-none"}`}
                                             >
                                                 {dado.opcoes.map(o => (

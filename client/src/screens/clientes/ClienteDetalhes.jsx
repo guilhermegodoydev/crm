@@ -4,10 +4,12 @@ import { Pen, Plus, Trash2 } from "lucide-react";
 
 import { Card } from "../../components/Card";
 import { Tabela } from "../../components/tabela/TabelaBase";
+import { Modal } from "../../components/Modal";
+import { Filtro } from "../../components/Filtro";
 
 import { useCliente } from "../../hooks/dominio/useCliente";
-import { Modal } from "../../components/Modal";
 import { useAlerta } from "../../context/AlertaContexto";
+import { filtrar } from "../../utils/filtrar";
 
 const dadosCli = [
     { label: "Nome", chave: "nome", tipo: "text"},
@@ -234,6 +236,14 @@ export function ClienteDetalhes() {
         setEditandoNotas({editando: false, idNota: 0});
     };
 
+    const filtrarAtividades = (valor) => {
+        const dadosFiltrados =  filtrar([...cliente.atividades], {"tipo": valor});
+        setDadosCliente(prev => ({
+            ...prev,
+            atividades: dadosFiltrados
+        }));
+    };
+
     return (
         <>
             <Modal 
@@ -394,6 +404,18 @@ export function ClienteDetalhes() {
             </div>
 
             <h2>Histórico de Atividades</h2>
+            <Filtro 
+                id="filtro-atividades" 
+                nome="filtro-atividades" 
+                label="Tipo" 
+                onChange={(e) => filtrarAtividades(e.target.value)}
+                opcoes={[
+                    {texto: "Não Filtrar", valor: ""},
+                    {texto: "Email", valor: "email"},
+                    {texto: "Ligação", valor: "ligação"},
+                    {texto: "Reunião", valor: "reunião"}
+                ]}
+            />
             <Tabela dadosTabela={dadosCliente.atividades} colunas={colunas}/>
         </>
     );

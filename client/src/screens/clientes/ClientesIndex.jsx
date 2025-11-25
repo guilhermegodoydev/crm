@@ -16,7 +16,7 @@ import { useCliente } from "../../hooks/dominio/useCliente";
 const colunas = [
   { chave: "nome", label: "Nome", ordenavel: true, tipo: "texto", className: "font-semibold" },
   { chave: "idade", label: "Idade", ordenavel: true, tipo: "numero" },
-  { chave: "observacao", label: "Observação", ordenavel: false, tipo: "texto" },
+  { chave: "observacao", label: "Observação", ordenavel: false, tipo: "texto", className: "overflow-x-auto max-w-[230px]"},
   { chave: "categoria", label: "Categoria", ordenavel: false, tipo: "texto"},
   { chave: "tipo", label: "Tipo", ordenavel: false, tipo: "texto" },
   { chave: "negociosFechados", label: "Negócios Fechados", ordenavel: true, tipo: "numero" },

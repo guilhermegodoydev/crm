@@ -66,7 +66,7 @@ export function useCliente() {
                 cli.id == clienteId 
                 ? {
                     ...cli,
-                    notas: prev.notas.map(n => n.id == nota.id ? nota : n)
+                    notas: cli.notas.map(n => n.id == nota.id ? nota : n)
                 }
                 :
                 cli

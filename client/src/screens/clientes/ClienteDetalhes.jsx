@@ -10,7 +10,8 @@ import { Filtro } from "../../components/Filtro";
 import { useCliente } from "../../hooks/dominio/useCliente";
 import { useAlerta } from "../../context/AlertaContexto";
 import { filtrar } from "../../utils/filtrar";
-import { NotasViewer } from "../../components/NotasViewer";
+
+import { NotasViewer } from "../../components/viewers/NotasViewer";
 
 const dadosCli = [
     { label: "Nome", chave: "nome", tipo: "text"},

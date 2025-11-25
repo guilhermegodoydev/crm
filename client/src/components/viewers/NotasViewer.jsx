@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Plus, Pen, Trash2 } from "lucide-react";
 
-import { Card } from "./Card";
+import { Card } from "../Card";
 
 export function NotasViewer({ notas, onSalvar, onExcluir }) {
     const [ editando, setEditando ] = useState({ 

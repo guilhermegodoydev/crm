@@ -20,6 +20,7 @@ const colunas = [
   { chave: "categoria", label: "Categoria", ordenavel: false, tipo: "texto"},
   { chave: "tipo", label: "Tipo", ordenavel: false, tipo: "texto" },
   { chave: "negociosFechados", label: "Negócios Fechados", ordenavel: true, tipo: "numero" },
+  { chave: "ultimoContato", label: "Último Contato", ordenavel: true, tipo: "numero", className: "text-center"},
   { chave: "status", label: "Status", ordenavel: false, tipo: "texto" },
   { chave: "acoes", label: "Ações", ordenavel: false, tipo: "texto", className: "text-center", 
     children: (item) => (
@@ -100,7 +101,7 @@ export default function ClientesIndex() {
         {texto: "Pessoa Física", valor: "PF"},
         {texto: "Empresarial", valor: "PJ"}
       ]
-    },
+    }
   ];
 
   if (carregando) return <p>Carregando clientes...</p>;

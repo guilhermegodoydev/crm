@@ -2,7 +2,7 @@
   {
     "id": 1,
     "nome": "Vera Santos",
-    "idade": 32,
+    "dataNascimento": "1993-01-01",
     "email": "vera.santos@alphacorp.com",
     "telefone": "(11) 98321-4421",
     "ultimoContato": "2025-01-20",
@@ -25,7 +25,7 @@
   {
     "id": 2,
     "nome": "Felipe Oliveira",
-    "idade": 29,
+    "dataNascimento": "1996-01-01",
     "email": "felipe.oliveira@gmail.com",
     "telefone": "(21) 99918-2256",
     "ultimoContato": "2025-01-17",
@@ -47,7 +47,7 @@
   {
     "id": 3,
     "nome": "Otávio Ramos",
-    "idade": 41,
+    "dataNascimento": "1984-01-01",
     "email": "otavio.ramos@biotec.com",
     "telefone": "(31) 98811-8841",
     "ultimoContato": "2025-01-19",
@@ -70,7 +70,7 @@
   {
     "id": 4,
     "nome": "Davi Albuquerque",
-    "idade": 36,
+    "dataNascimento": "1989-01-01",
     "email": "davi.albuquerque@nextsolutions.com",
     "telefone": "(19) 98442-5512",
     "ultimoContato": "2025-01-11",
@@ -93,7 +93,7 @@
   {
     "id": 5,
     "nome": "Larissa Mendes",
-    "idade": 27,
+    "dataNascimento": "1998-01-01",
     "email": "larissa.mendes@gmail.com",
     "telefone": "(11) 99123-4567",
     "ultimoContato": "2025-01-16",
@@ -114,7 +114,7 @@
   {
     "id": 6,
     "nome": "Ricardo Lima",
-    "idade": 45,
+    "dataNascimento": "1980-01-01",
     "email": "ricardo.lima@techcorp.com",
     "telefone": "(21) 98765-4321",
     "ultimoContato": "2025-01-14",
@@ -136,7 +136,7 @@
   {
     "id": 7,
     "nome": "Juliana Costa",
-    "idade": 34,
+    "dataNascimento": "1991-01-01",
     "email": "juliana.costa@startup.com",
     "telefone": "(31) 99999-1111",
     "ultimoContato": "2025-01-13",

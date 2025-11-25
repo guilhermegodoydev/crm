@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { Pen, Plus, Trash2 } from "lucide-react";
+import { Trash2 } from "lucide-react";
 
 import { Card } from "../../components/Card";
 import { Tabela } from "../../components/tabela/TabelaBase";
@@ -10,6 +10,7 @@ import { Filtro } from "../../components/Filtro";
 import { useCliente } from "../../hooks/dominio/useCliente";
 import { useAlerta } from "../../context/AlertaContexto";
 import { filtrar } from "../../utils/filtrar";
+import { NotasViewer } from "../../components/NotasViewer";
 
 const dadosCli = [
     { label: "Nome", chave: "nome", tipo: "text"},
@@ -34,25 +35,24 @@ const tipoAtividades = [
 
 export function ClienteDetalhes() {
     const { id } = useParams();
-    const { carregando, erro, buscar, atualizar, remover, salvarNota, removerNota, salvarAtividade, removerAtividade } = useCliente();
-    const cliente = buscar(id);
+    const { carregando, erro, buscar, atualizar, remover, editarNota: edNota, salvarNota: slNota, removerNota: rmNota, salvarAtividade, removerAtividade } = useCliente();
+    const [ cliente, setCliente ] = useState(null);
     const { exibirAlerta } = useAlerta();
 
     const [ modal, setModal ] = useState({});
-    const [ editandoNotas, setEditandoNotas ] = useState({editando: false, idNota: 0});
     const [ editandoDados, setEditandoDados ] = useState(false);
     const [ dadosCliente, setDadosCliente ] = useState(cliente);
     const navigate = useNavigate();
 
     useEffect(() => {
-        if (cliente) {
-            setDadosCliente({
-                ...cliente,
-                notas: cliente.notas ? [...cliente.notas] : [],
-                atividades: cliente.atividades ? [...cliente.atividades] : []
-            });
+        const cliente = buscar(id);
+        
+        if (cliente)
+        {
+            setDadosCliente(cliente);
+            setCliente(cliente);
         }
-    }, [ cliente ]);
+    }, []);
 
     if (carregando) return <p>Carregando...</p> ;
     if (!cliente) return <p>Cliente não encontrado</p>;
@@ -64,31 +64,38 @@ export function ClienteDetalhes() {
         { chave: "descricao", label: "Descrição", ordenavel: false, tipo: "texto" },
         { chave: "acoes", label: "Ações", ordenavel: false, className: "text-center",
             children: (atividade) => (
-                <Trash2 
+                <button
                     onClick={() => confirmarExcluirAtividade(atividade.id)}
-                    title={`Editar ${atividade.nome}`}
-                    className="inline-flex rounded" 
-                />
+                    aria-label={`Deletar atividade`}
+                    title={`Clique para deletar a atividade`}
+                    className="inline-flex rounded cursor-pointer text-gray-600" 
+                >
+                    <Trash2/>
+                </button>
             )
         }
     ];
 
-    const removerNotaLocal = (notaId) => {
+    console.log(dadosCliente.notas);
+    const removerNota = (notaId) => {
         setModal({acao: null, aberto: false, mensagem: ""});
+        
         setDadosCliente(prev => ({
             ...prev,
             notas: prev.notas.filter(n => n.id != notaId)
         }));
-        removerNota(id, notaId);
+        
+        rmNota(id, notaId);
     };
 
     const confirmarExcluirNota = (notaId) => {
         setModal({
-            acao: () => removerNotaLocal(notaId), 
+            acao: () => removerNota(notaId), 
             aberto: true, 
             mensagem: "Tem certeza que deseja excluir essa nota? Essa ação não pode ser revertida."
         });
     };
+    
 
     const confirmarExcluirUsuario = () => {
         setModal({acao : () => {
@@ -191,58 +198,24 @@ export function ClienteDetalhes() {
         });
     };
 
-    const criarNota = () => {
-        if (editandoNotas.editando)
-            return
+    const salvarNota = (nota) => {
+        const existe = dadosCliente.notas.some(n => n.id == nota.id);
 
-        const novaNota = {
-            id: crypto.randomUUID(),
-            data: new Date().toISOString(),
-            texto: ""
-        };
-        setEditandoNotas({
-            editando: true,
-            idNota: novaNota.id
-        });
-        setDadosCliente(prev => ({
-            ...prev,
-            notas: [novaNota, ...(prev.notas ?? [])]
-        }));
-    };
-
-    const editarNota = (notaId, textoNota) => {
-        setDadosCliente(prev => ({
-            ...prev,
-            notas: prev.notas.map(n => 
-                n.id == notaId
-                ?
-                {...n , texto: textoNota}
-                :
-                n
-            )
-        }));
-    };
-
-    const cancelarEdicaoNotas = () => {
-        const clienteAtual = buscar(id);
-        
-        const existe = clienteAtual.notas.some(n => n.id == editandoNotas.idNota);
-
-        setDadosCliente(prev => ({
-            ...prev,
-            notas: existe
-                ? clienteAtual.notas.map(n => ({ ...n}))
-                : prev.notas.filter(n => n.id != editandoNotas.idNota)
-        }));
-
-        setEditandoNotas({editando: false, idNota: 0});
-    };
-
-    const salvarNovaNota = (e) => {
-        e.preventDefault();
-        const nota = dadosCliente.notas.find(n => n.id == editandoNotas.idNota);
-        salvarNota(id, nota);
-        setEditandoNotas({editando: false, idNota: 0});
+        if (existe) 
+        {
+            setDadosCliente(prev => ({
+                ...prev,
+                notas: prev.notas.map(n => n.id == nota.id ? nota : n)
+            }));
+            edNota(id, nota);
+        }   
+        else {
+            setDadosCliente(prev => ({
+                ...prev,
+                notas: [nota, ...prev.notas]
+            }));
+            slNota(id, nota);
+        }
     };
 
     const filtrarAtividades = (valor) => {
@@ -306,6 +279,7 @@ export function ClienteDetalhes() {
                                                 name={dado.chave} 
                                                 value={dadosCliente[dado.chave]}
                                                 onChange={(e) => editarDados(dado.chave, e.target.value)}
+                                                disabled={!editandoDados}
                                                 className={`font-semibold ${editandoDados ? "border rounded-md px-1" : "appearance-none"}`}
                                             >
                                                 {dado.opcoes.map(o => (
@@ -362,54 +336,11 @@ export function ClienteDetalhes() {
                     </form>
                 </Card>
 
-                <Card className="relative w-[30%]">
-                    <div className="flex items-center justify-between">
-                        <h2>Notas e Lembrentes</h2>
-                        <Plus onClick={criarNota} className="cursor-pointer"/>
-                    </div>
-                    <form onSubmit={(e) => salvarNovaNota(e)}>
-                        <ul className="space-y-5 mt-4 max-h-68 overflow-y-auto">
-                            {dadosCliente.notas.length > 0 ? dadosCliente.notas.map(n => (
-                                <li key={n.id} className="flex items-center gap-5 bg-gray-100 px-2 py-1 text-gray-700">
-                                    <input 
-                                        id={n.id}
-                                        name={`nota-${n.id}`}
-                                        type="text" 
-                                        placeholder={"Digite o lembrete"}
-                                        value={n.texto}
-                                        onChange={(e) => editarNota(n.id, e.target.value)}
-                                        disabled={editandoNotas.editando && editandoNotas.idNota == n.id ? false : true}
-                                        required
-                                        className="rounded-sm w-full"
-                                    />
-                                    {!editandoNotas.editando ?
-                                        <>
-                                            <Pen onClick={() => {
-                                                setEditandoNotas({editando: true, idNota: n.id})}
-                                            }/>
-                                            <Trash2 onClick={() => confirmarExcluirNota(n.id)}/>
-                                        </>
-                                        :
-                                        null
-                                    }
-                                </li>
-                            ))
-                                :
-                                <p className="text-center">Esse usuário não tem anotações</p>
-                            }
-                        </ul>
-                        {editandoNotas.editando &&
-                            <div className="flex justify-end mt-3 gap-2 w-full">
-                                <button type="submit" className="bg-green-300 p-1 rounded-sm w-[100px] focus:bg-green-400">
-                                    Salvar
-                                </button>
-                                <button type="button" className="bg-red-300 p-1 rounded-sm w-[100px] focus:bg-red-400" onClick={cancelarEdicaoNotas}>
-                                    Cancelar
-                                </button>
-                            </div>
-                        }
-                    </form>
-                </Card>
+                <NotasViewer 
+                    notas={dadosCliente.notas} 
+                    onSalvar={(nota) => salvarNota(nota)}
+                    onExcluir={confirmarExcluirNota}
+                />
             </div>
 
             <h2>Histórico de Atividades</h2>

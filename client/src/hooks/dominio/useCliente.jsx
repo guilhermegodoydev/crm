@@ -60,6 +60,20 @@ export function useCliente() {
         );
     };
 
+    const editarNota = (clienteId, nota) => {
+        setClientes(prev =>
+            prev.map(cli =>
+                cli.id == clienteId 
+                ? {
+                    ...cli,
+                    notas: prev.notas.map(n => n.id == nota.id ? nota : n)
+                }
+                :
+                cli
+            )
+        );
+    };
+
     const removerAtividade = (clienteId, atividadeId) => {
         setClientes(prev =>
             prev.map(cli => 
@@ -89,5 +103,5 @@ export function useCliente() {
         );
     };
 
-    return { clientes, carregando, erro, criar, atualizar, remover, buscar, salvarNota, removerNota, salvarAtividade, removerAtividade };
+    return { clientes, carregando, erro, criar, atualizar, remover, buscar, salvarNota, editarNota, removerNota, salvarAtividade, removerAtividade };
 }

@@ -69,9 +69,9 @@ export function NotasViewer({ notas, onSalvar, onExcluir }) {
     );
 
     return (
-        <Card className="relative w-[30%]">
-            <div className="flex items-center justify-between">
-                <h2>Notas e Lembretes</h2>
+        <Card className="relative col-span-1">
+            <div className="flex items-center justify-between mb-4">
+                <h1 className="text-2xl">Notas e Lembretes</h1>
                 <button
                     onClick={iniciarCriacao}
                     className="cursor-pointer"
@@ -83,7 +83,7 @@ export function NotasViewer({ notas, onSalvar, onExcluir }) {
             </div>
 
             <form onSubmit={salvar}>
-                <ul className="space-y-5 mt-4 max-h-68 overflow-y-auto">
+                <ul className="space-y-5 max-h-68 overflow-y-auto">
                     {editando.ativo && renderNotaEditando()}
                     
                     {notas.length > 0 ? 
@@ -104,21 +104,21 @@ export function NotasViewer({ notas, onSalvar, onExcluir }) {
                                     />
 
                                     {!editando.ativo ?
-                                        <>
+                                        <div className="flex gap-3">
                                             <Pen 
                                                 role="button" 
                                                 aria-label="Editar Nota" 
                                                 title="Clique para editar a nota" 
-                                                className="cursor-pointer" 
+                                                className="w-4.5 h-4.5 cursor-pointer text-gray-500 hover:text-gray-700" 
                                                 onClick={() => iniciarEdicao(n.id, n.texto)}
                                             />
                                             <Trash2 
                                                 role="button" 
                                                 aria-label="Deletar Nota" 
                                                 title="Clique para deletar a nota" 
-                                                className="cursor-pointer" 
+                                                className="w-4.5 h-4.5 cursor-pointer text-gray-500 hover:text-gray-700"
                                                 onClick={() => onExcluir(n.id)}/>
-                                        </>
+                                        </div>
                                         :
                                         null
                                     }

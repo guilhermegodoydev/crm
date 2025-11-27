@@ -48,7 +48,7 @@ export default function Dashboard() {
                 />
 
                 <GraficoLinhas 
-                    className="col-span-2 lg:h-auto h-55" 
+                    className="col-span-2 lg:h-58 h-55" 
                     titulo="Novos Leads" 
                     data={dados.metricas.linha} eixoXKey="nome" 
                     larguraEixoY={36}
@@ -58,7 +58,7 @@ export default function Dashboard() {
                 />
 
                 <GraficoPizza 
-                    className="lg:h-auto h-75"
+                    className="lg:h-58 h-75"
                     titulo="Origem dos Leads" 
                     data={dados.metricas.pizza}
                     dataKey="leads" 

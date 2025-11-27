@@ -73,7 +73,7 @@ export default function ClientesIndex() {
       id: 1,
       label: "Categoria:",
       nome: "categoriaCliente",
-      onChange: (e) => handleFiltroOnChange("categoria", e.target.value),
+      chave: "categoria",
       opcoes: [
         {texto: "Não Filtrar", valor: ""},
         {texto: "Regular", valor: "regular"},
@@ -84,7 +84,7 @@ export default function ClientesIndex() {
       id: 2,
       label: "Status:",
       nome: "stCliente",
-      onChange: (e) => handleFiltroOnChange("status", e.target.value),
+      chave: "status",
       opcoes: [
         {texto: "Não Filtrar", valor: ""},
         {texto: "Ativo", valor: "ativo"},
@@ -95,7 +95,7 @@ export default function ClientesIndex() {
       id: 3,
       label: "Tipo:",
       nome: "tipoCliente",
-      onChange: (e) => handleFiltroOnChange("tipo", e.target.value),
+      chave: "tipo",
       opcoes: [
         {texto: "Não Filtrar", valor: ""},
         {texto: "Pessoa Física", valor: "PF"},
@@ -119,7 +119,7 @@ export default function ClientesIndex() {
             id={`filtro-${fil.nome}`}
             nome={fil.nome}
             label={fil.label}
-            onChange={fil.onChange}
+            onChange={(e) => handleFiltroOnChange(fil.chave, e.target.value)}
             opcoes={fil.opcoes}
           />
         ))}

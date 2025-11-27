@@ -126,7 +126,10 @@ export function NotasViewer({ notas, onSalvar, onExcluir }) {
                             )
                         )
                         :
-                        <p className="text-center">Esse usuário não tem anotações</p>
+                        !editando.ativo ?
+                            <p className="text-center">Esse usuário não tem anotações</p>
+                            :
+                            null
                     }
                 </ul>
 

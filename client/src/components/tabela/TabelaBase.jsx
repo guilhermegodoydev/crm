@@ -46,12 +46,17 @@ export function Tabela({dadosTabela, colunas}) {
                 {dados && dados.length > 0 ? dados.map((item, index) => (
                     <tr 
                         key={`linha-${item.id}`}
-                        className={`rounded-md ${index % 2 === 0 ? "bg-gray-100" : "bg-gray-300"}`}
+                        className={`${index % 2 === 0 ? "bg-gray-100" : "bg-gray-300"}`}
                     >
-                        {colunas.map((c, index) => (
+                        {colunas.map((c, cindex) => (
                             <td 
                                 key={`coluna-${item.id}-${c.chave}`} 
-                                className={`px-2 py-1 ${typeof item[c.chave] === "number" ? "text-center" : ""} ${index == 0 ? "rounded-bl-md" : (index+1 == colunas.length ? "rounded-br-md" : "")} ${c.className}`}
+                                className={`px-2 py-1 
+                                        ${typeof item[c.chave] === "number" ? "text-center" : ""} 
+                                        ${cindex === 0 && index === dados.length - 1 ? "rounded-bl-md" : ""} 
+                                        ${cindex === colunas.length - 1 && index === dados.length - 1 ? "rounded-br-md" : ""} 
+                                        ${c.className}
+                                    `}
                                 >
                                     {typeof c.children === 'function'
                                         ? c.children(item)

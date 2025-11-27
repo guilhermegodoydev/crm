@@ -21,9 +21,13 @@ export function MenuLateral() {
         <>
             {!desktop && <Menu onClick={() => setAberto(!aberto)}/>}
             {(desktop || aberto) &&
-                <aside className={`bg-[#1b4e9b] h-screen p-2 lg:sticky absolute top-0 w/34`}>
+                <aside className={`bg-[#1b4e9b] h-screen p-2 lg:sticky absolute left-0 top-0`}>
                         <nav>
-                            <ul>
+                            <ul className="space-y-2">
+                                <li className="w-9 m-auto">
+                                    <img src="/public/logo.png" alt="" className="pt-[16px] mb-1"/>
+                                    <hr className="border-t-0.5 border-white pb-2"/>
+                                </li>
                                 <li className={estiloElementos}>
                                     <Link to="/" aria-label="Clique para ir à página de dashboar">
                                         <ChartNoAxesCombined />

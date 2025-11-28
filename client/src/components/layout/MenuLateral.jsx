@@ -25,7 +25,7 @@ export function MenuLateral() {
                         <nav>
                             <ul className="space-y-2">
                                 <li className="w-9 m-auto">
-                                    <img src="/public/logo.png" alt="" className="pt-[16px] mb-1"/>
+                                    <img src="/logo.png" alt="" className="pt-[16px] mb-1"/>
                                     <hr className="border-t-0.5 border-white pb-2"/>
                                 </li>
                                 <li className={estiloElementos}>

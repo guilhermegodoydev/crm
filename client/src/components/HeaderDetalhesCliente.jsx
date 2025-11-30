@@ -2,7 +2,7 @@ export function HeaderDetalhesCliente({ clienteParcial, onEditar, onAddAtividade
     const { nome, idade, status, ultimoContato } = clienteParcial;
 
     return (
-        <div className="lg:flex justify-between items-start">
+        <header className="lg:flex justify-between items-start">
             <div>
                 <h1>{nome} - {idade} anos</h1>
                 <p className="block text-gray-400">Último Contato: {ultimoContato} • Status: {status}</p>
@@ -18,6 +18,6 @@ export function HeaderDetalhesCliente({ clienteParcial, onEditar, onAddAtividade
                     Excluir
                 </button>
             </div>
-        </div>
+        </header>
     );
 }

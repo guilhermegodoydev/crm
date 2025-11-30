@@ -21,15 +21,6 @@ const tipoAtividades = [
     { key: "reuniao", label: "Reunião"}
 ];
 
-//========================================================================================
-//
-//
-//PERMITIR ALTERAÇÃO DO CMAPO DE STATUS DO CLIENTE
-//ADICIONAR VALIDAÇÃO NO CAMPO DE TELEFONE PARA SEGUIR O FORMATO DE TELEFONE
-//
-//ADICIONAR EDIÇÃO DE ATIVIDADE DO HISTÓRICO DE ATIVIDADES
-//
-//========================================================================================
 export function ClienteDetalhes() {
     const { id } = useParams();
     const { carregando, erro, buscar, atualizar, remover, editarNota: edNota, salvarNota: slNota, removerNota: rmNota, salvarAtividade, removerAtividade } = useCliente();

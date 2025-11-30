@@ -65,7 +65,17 @@ export function useCliente() {
     };
 
     const buscar = (clienteId) => {
-        return clientes.find(c => c.id == clienteId);
+        const cli = clientes.find(c => c.id == clienteId);
+
+        if (!cli) {
+            throw {
+                status: 404,
+                statusText: "Cliente não encontrado",
+                message: "O cliente informado não existe ou foi movido.",
+            };
+        }
+
+        return cli;
     };
 
     const salvarNota = (clienteId, nota) => {

@@ -2,6 +2,7 @@ import { useEffect } from "react";
 
 import { useFetch } from "../helpers/useFetch";
 import { useLocalStorage } from "../helpers/useLocalStorage";
+import { ordenar } from "../../utils/ordenar";
 
 function calcularIdade(dataNascimento) {
     if (!dataNascimento) return null;
@@ -19,9 +20,12 @@ function calcularIdade(dataNascimento) {
 }
 
 function normalizarCliente(cliente) {
+    const atividadesOrdenadas = ordenar(cliente.atividades, "data", "number");
+    const atividadeMaisRecente = atividadesOrdenadas[0].data;
     return {
         ...cliente,
-        idade: calcularIdade(cliente.dataNascimento)
+        idade: calcularIdade(cliente.dataNascimento),
+        ultimoContato: atividadeMaisRecente
     };
 }
 
@@ -35,6 +39,7 @@ export function useCliente() {
             setClientes(normalizados);
         }
     }, [mock, carregando, erro]);
+
 
     const criar = (cliente) => {
         const clienteNormalizado = normalizarCliente({

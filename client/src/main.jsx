@@ -11,11 +11,13 @@ import Etapas from "./screens/Etapas.jsx";
 import Relatorios from "./screens/Relatorios.jsx";
 import { ClientesBase } from "./screens/clientes/ClientesBase.jsx";
 import { ClienteDetalhes } from "./screens/clientes/ClienteDetalhes.jsx";
+import { PaginaErro } from "./screens/PaginaErro.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App/>,
+    errorElement: <PaginaErro/>,
     children: [
       {
         path: "/",

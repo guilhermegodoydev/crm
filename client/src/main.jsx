@@ -12,6 +12,7 @@ import Relatorios from "./screens/Relatorios.jsx";
 import { ClientesBase } from "./screens/clientes/ClientesBase.jsx";
 import { ClienteDetalhes } from "./screens/clientes/ClienteDetalhes.jsx";
 import { PaginaErro } from "./screens/PaginaErro.jsx";
+import { Configuracoes } from "./screens/Configuracoes.jsx";
 
 const router = createBrowserRouter([
   {
@@ -41,6 +42,11 @@ const router = createBrowserRouter([
         path: "/relatorios",
         element: <Relatorios/>,
         handle: { title: "Relatórios"}
+      },
+      {
+        path: "/configuracoes",
+        element: <Configuracoes/>,
+        handle: { title: "Configurações"}
       }
     ]
   }

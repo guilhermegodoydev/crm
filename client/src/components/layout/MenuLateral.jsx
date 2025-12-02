@@ -1,57 +1,72 @@
-import { ChartNoAxesCombined, Layers, UsersRound, Files, Menu} from 'lucide-react';
-import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { ChartPie, Layers, UsersRound, FileChartColumnIncreasing, Menu, Settings} from "lucide-react";
+import { useEffect, useState,  } from "react";
+import { NavLink } from "react-router-dom";
 
-const estiloElementos = "cursor-pointer text-white p-2 hover:bg-blue-700 hover:font-bold";
+const itensMenu = [
+    {label: "Dashboard", navegateTo: "/", icon: <ChartPie/>, IconOnActive: "chart-pie-active"},
+    {label: "Clientes", navegateTo: "/clientes", icon: <UsersRound/> , IconOnActive: "users-round-active"},
+    {label: "Etapas", navegateTo: "/etapas", icon: <Layers/>, IconOnActive: "layers-active"},
+    {label: "Relatórios", navegateTo: "/relatorios", icon: <FileChartColumnIncreasing/>, IconOnActive: "file-chart-column-increasing-active"},
+    {label: "Configurações", navegateTo: "/configuracoes", icon: <Settings/>, IconOnActive: "settings-active"},
+];
+
+const transicaoOpacidade = "transition-opacity duration-300 ease-in-out";
 
 export function MenuLateral() {
+    const [ onHover, setOnHover ] = useState(false);
     const [aberto, setAberto] = useState(false);
-    const [desktop, setDesktop] = useState(window.innerWidth >= 1024);
 
-    useEffect(() => {
-        const handleResize = () => {
-            setDesktop(window.innerWidth >= 1024);
-        };
-
-        window.addEventListener("resize", handleResize);
-        return () => window.removeEventListener("resize", handleResize);
-    }, []);
+    const menuWidth = onHover ? "w-64" : "w-14";
+    const opacidadeTexto = onHover ? "opacity-100" : "opacity-0";
 
     return (
-        <>
-            {!desktop && <Menu onClick={() => setAberto(!aberto)}/>}
-            {(desktop || aberto) &&
-                <aside className={`bg-[#1b4e9b] h-screen p-2 lg:sticky absolute left-0 top-0`}>
-                        <nav>
-                            <ul className="space-y-2">
-                                <li className="w-9 m-auto">
-                                    <img src="/logo.png" alt="" className="pt-[16px] mb-1"/>
-                                    <hr className="border-t-0.5 border-white pb-2"/>
-                                </li>
-                                <li className={estiloElementos}>
-                                    <Link to="/" aria-label="Clique para ir à página de dashboar">
-                                        <ChartNoAxesCombined />
-                                    </Link>
-                                </li>
-                                <li className={estiloElementos}>
-                                    <Link to="/clientes" aria-label="Clique para ir à página de clientes">
-                                        <UsersRound />
-                                    </Link>
-                                </li>
-                                <li className={estiloElementos}>
-                                    <Link to="/etapas" aria-label="Clique para ir à página de etapas">
-                                        <Layers/>
-                                    </Link>
-                                </li>
-                                <li className={estiloElementos}>
-                                    <Link to="/relatorios" aria-label="Clique para ir à página de etapas">
-                                        <Files />
-                                    </Link>
-                                </li>
-                            </ul>
-                        </nav>
-                </aside>
-            }
-        </>
+        <aside 
+            onMouseEnter={() => setOnHover(true)} 
+            onMouseLeave={() => setOnHover(false)} 
+            className={`h-screen p-2 lg:sticky absolute left-0 top-0 transition-all duration-800 ease-in-out bg-[#1b4e9b] ${menuWidth}`}
+        >
+                <nav className="overflow-x-hidden">
+                    <ul className="space-y-2">
+                        <li>
+                            <div className="flex items-end mb-1">
+                                <img src="/logo.png" alt="" className="pt-[16px] w-10"/>
+                                {onHover && 
+                                    <h2 className={`ml-3 text-white ${opacidadeTexto} ${transicaoOpacidade}`}>NexaFlow</h2>
+                                }
+                            </div>
+                            <hr className="border-t-0.5 border-white pb-2"/>
+                        </li>
+                        {itensMenu.map(item => (
+                            <li key={item.label} className="cursor-pointer text-white p-2 hover:bg-blue-700 hover:font-semibold">
+                                <NavLink to={item.navegateTo}>
+                                    {({ isActive }) => (
+                                        <div className="flex gap-3">
+                                            {isActive ? 
+                                                <img 
+                                                    src={`src/assets/icons/menuLateral/${item.IconOnActive}.svg`} 
+                                                    className="w-6" 
+                                                    alt="Icone ativo"
+                                                />
+                                                : 
+                                                <div className="w-6">
+                                                    {item.icon}
+                                                </div>
+                                            }
+                                            
+                                            <p className={`border-l-2 pl-3 ${transicaoOpacidade} 
+                                                            ${isActive ? "font-semibold" : ""}
+                                                            ${opacidadeTexto}
+                                                        `}
+                                            >
+                                                {item.label}
+                                            </p>
+                                        </div>
+                                    )}
+                                </NavLink>
+                            </li>
+                        ))}
+                    </ul>
+                </nav>
+        </aside>
     )   
 }

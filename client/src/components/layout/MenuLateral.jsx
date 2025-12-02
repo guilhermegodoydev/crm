@@ -14,7 +14,6 @@ const transicaoOpacidade = "transition-opacity duration-300 ease-in-out";
 
 export function MenuLateral() {
     const [ onHover, setOnHover ] = useState(false);
-    const [aberto, setAberto] = useState(false);
 
     const menuWidth = onHover ? "w-64" : "w-14";
     const opacidadeTexto = onHover ? "opacity-100" : "opacity-0";
@@ -23,9 +22,9 @@ export function MenuLateral() {
         <aside 
             onMouseEnter={() => setOnHover(true)} 
             onMouseLeave={() => setOnHover(false)} 
-            className={`h-screen p-2 lg:sticky absolute left-0 top-0 transition-all duration-800 ease-in-out bg-[#1b4e9b] ${menuWidth}`}
+            className={`fixed z-2 overflow-hidden h-screen p-2 transition-all duration-500 ease-in-out bg-[#1b4e9b] ${menuWidth}`}
         >
-                <nav className="overflow-x-hidden">
+                <nav>
                     <ul className="space-y-2">
                         <li>
                             <div className="flex items-end mb-1">

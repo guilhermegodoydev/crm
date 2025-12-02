@@ -11,9 +11,9 @@ function App() {
     return (
         <ConfigProvider>
             <AlertaProvider>
-                <div className="flex">
+                <div className="flex overflow-x-hidden">
                     <MenuLateral/>   
-                    <main className="flex flex-col flex-1 p-4">
+                    <main className="ml-14 flex flex-col flex-1 p-4">
                         {titulo && 
                             <>
                                 <h1>{titulo}</h1>

@@ -9,9 +9,8 @@ import { BarraBusca } from "../../components/BarraBusca";
 import { filtrar } from "../../utils/filtrar"
 import { buscar } from "../../utils/buscar";
 
-import { useTela } from "../../context/TelaContexto";
-
 import { useCliente } from "../../hooks/dominio/useCliente";
+import { useMediaQuery } from "react-responsive";
 
 const colunas = [
   { chave: "nome", label: "Nome", ordenavel: true, tipo: "texto", className: "font-semibold" },
@@ -36,7 +35,7 @@ export default function ClientesIndex() {
   const [filtrado, setFiltrado] = useState({nome: ""});
   const tempoDigitacao = useRef(null);
   const { clientes, carregando, erro } = useCliente();
-  const { desktop } = useTela();
+  const isMobile = useMediaQuery({ maxWidth: 1024});
    
   const dados = useMemo(() => {
     if (!clientes || clientes.length === 0) return [];
@@ -125,11 +124,7 @@ export default function ClientesIndex() {
         ))}
       </div>
 
-      {desktop ? 
-        <div className="max-h-[72vh] overflow-y-auto">
-          <Tabela dadosTabela={dados} colunas={colunas} />
-        </div>
-        :
+      {isMobile ? 
         <div className="space-y-5 bg-gray-50">
           {dados.length === 0 ? <p>Nenhum dado Encontrado</p> : dados.map((cliente) => (
             <div key={cliente.id} className="items-center shadow-md rounded-md p-2 bg-white border-1 border-gray-200">
@@ -163,6 +158,10 @@ export default function ClientesIndex() {
               </div>
             </div>
           ))}
+        </div>
+        :
+        <div className="max-h-[72vh] overflow-y-auto">
+          <Tabela dadosTabela={dados} colunas={colunas} />
         </div>
       }
     </section>

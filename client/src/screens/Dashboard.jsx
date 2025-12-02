@@ -1,14 +1,14 @@
+import { useMediaQuery } from "react-responsive";
+
 import { GraficoBarras } from "../components/graficos/GraficoBarras";
 import { GraficoLinhas } from "../components/graficos/GraficoLinhas";
 import { GraficoPizza} from "../components/graficos/GraficoPizza";
 import { CardMetrica } from "../components/CardMetrica";
 
-import { useTela } from "../context/TelaContexto";
-
 import { useFetch } from "../hooks/helpers/useFetch";
 
 export default function Dashboard() {
-    const { desktop } = useTela();
+    const isMobile = useMediaQuery({ maxWidth: 1024});
     const { dados, carregando, erro} = useFetch("/mock/metricas.json");
 
     if (carregando) return <div>Carregando...</div>;
@@ -38,10 +38,10 @@ export default function Dashboard() {
                     className="col-span-1 lg:h-auto h-55"
                     titulo="Etapas de Leads"
                     data={dados.metricas.barra}
-                    layout={desktop ? "vertical" : "horizontal"}
-                    eixoYKey={desktop ? "nome" : "leads"}
-                    eixoXkey={desktop ? "leads" : "nome"}
-                    larguraEixoY={desktop ? 100 : 45}
+                    layout={isMobile ? "horizontal" : "vertical"}
+                    eixoYKey={isMobile ? "leads" : "nome"}
+                    eixoXkey={isMobile ? "nome" : "leads"}
+                    larguraEixoY={isMobile ? 45 : 100}
                     barras={[
                         {id: "barra-leads", dataKey: "leads", stackId: "a", fill: "#1b4e9b"}
                     ]}
